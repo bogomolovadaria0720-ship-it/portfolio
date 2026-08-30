@@ -6,72 +6,136 @@
 
 <title>Дарья Богомолова — Ассистент маркетолога</title>
 
-<meta name="description" content="Портфолио Дарьи Богомоловой — маркетинг, коммуникации, PR и event-проекты.">
-
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+:root {
+    --bg: #f5f1eb;
+    --paper: #fbf9f5;
+    --dark: #242321;
+    --muted: #77716a;
+    --line: #d9d1c7;
+    --soft: #e9e1d8;
+    --pink: #ead8d5;
+    --green: #dce4d8;
+    --yellow: #eee4c9;
+}
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f7f4ef;
-  color: #292725;
-  line-height: 1.5;
-  overflow-x: hidden;
+    background: var(--bg);
+    color: var(--dark);
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.5;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 img {
-  display: block;
-  width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
 }
 
 .container {
-  width: min(1180px, calc(100% - 48px));
-  margin: 0 auto;
+    width: min(1380px, calc(100% - 70px));
+    margin: 0 auto;
 }
 
 /* =========================
-   HEADER
+   NAVIGATION
 ========================= */
 
-header {
-  padding: 28px 0;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.topbar {
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1380px, calc(100% - 50px));
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: rgba(251,249,245,.88);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(36,35,33,.1);
+    border-radius: 50px;
 }
 
 .logo {
-  font-family: Georgia, serif;
-  font-size: 25px;
-  letter-spacing: -0.07em;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -.02em;
 }
 
-.nav-links {
-  display: flex;
-  gap: 28px;
-  font-size: 13px;
-  color: #6e6862;
+.nav {
+    display: flex;
+    gap: 24px;
 }
 
-.nav-links a:hover {
-  opacity: .55;
+.nav a {
+    font-size: 12px;
+    color: var(--muted);
+    transition: .25s;
+}
+
+.nav a:hover {
+    color: var(--dark);
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.section {
+    padding: 150px 0;
+    position: relative;
+}
+
+.section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    color: #918980;
+    margin-bottom: 18px;
+}
+
+.section-title {
+    font-size: clamp(42px, 5vw, 76px);
+    line-height: .96;
+    letter-spacing: -.055em;
+    max-width: 800px;
+}
+
+.section-intro {
+    margin-top: 25px;
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 17px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: var(--line);
+    margin: 70px 0;
 }
 
 /* =========================
@@ -79,880 +143,1098 @@ header {
 ========================= */
 
 .hero {
-  min-height: calc(100vh - 90px);
-  display: grid;
-  grid-template-columns: .92fr 1.08fr;
-  gap: 75px;
-  align-items: center;
-  padding: 45px 0 95px;
-  position: relative;
+    min-height: 100vh;
+    padding: 120px 0 70px;
+    display: grid;
+    grid-template-columns: 48% 52%;
+    align-items: center;
+    gap: 60px;
 }
 
-.hero:before {
-  content: "";
-  position: absolute;
-  width: 380px;
-  height: 180px;
-  border: 1px solid #c7bbb0;
-  border-radius: 50%;
-  transform: rotate(-22deg);
-  left: -145px;
-  top: 170px;
-  opacity: .65;
-  pointer-events: none;
+.hero-photo {
+    position: relative;
+    min-height: 700px;
+    background: var(--soft);
+    border-radius: 0 100px 25px 25px;
+    overflow: hidden;
 }
 
-.photo-wrap {
-  height: 650px;
-  position: relative;
-}
-
-.photo-card {
-  width: 100%;
-  height: 100%;
-  background: #e9e1d8;
-  border-radius: 34px;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.photo-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    object-fit: cover;
+    object-position: center top;
 }
 
 .photo-label {
-  position: absolute;
-  left: 22px;
-  bottom: 20px;
-  background: rgba(247,244,239,.9);
-  padding: 9px 14px;
-  border-radius: 50px;
-  font-size: 11px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: #625c56;
-  z-index: 3;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background: rgba(251,249,245,.94);
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
+    padding-right: 5%;
 }
 
 .eyebrow {
-  font-size: 11px;
-  letter-spacing: .25em;
-  text-transform: uppercase;
-  color: #8c8176;
-  margin-bottom: 24px;
+    font-size: 12px;
+    letter-spacing: .25em;
+    color: #918980;
+    text-transform: uppercase;
+    margin-bottom: 35px;
 }
 
 .hero h1 {
-  font-size: clamp(58px, 7.2vw, 98px);
-  line-height: .91;
-  letter-spacing: -.075em;
-  font-weight: 700;
-  margin-bottom: 28px;
+    font-size: clamp(65px, 8vw, 125px);
+    line-height: .83;
+    letter-spacing: -.075em;
+    margin-bottom: 42px;
 }
 
 .position {
-  font-size: clamp(24px, 3vw, 37px);
-  line-height: 1.15;
-  font-weight: 400;
-  letter-spacing: -.035em;
-  margin-bottom: 24px;
+    font-size: clamp(25px, 3vw, 42px);
+    letter-spacing: -.04em;
+    margin-bottom: 25px;
 }
 
-.position-line {
-  width: 380px;
-  max-width: 100%;
-  height: 1px;
-  background: #cfc6bd;
-  margin-bottom: 25px;
+.hero-line {
+    height: 1px;
+    width: 100%;
+    background: var(--line);
+    margin-bottom: 27px;
 }
 
-.specialization {
-  max-width: 570px;
-  font-size: 16px;
-  line-height: 1.65;
-  color: #68635e;
-  margin-bottom: 30px;
+.hero-description {
+    max-width: 610px;
+    color: var(--muted);
+    font-size: 17px;
 }
 
-/* CONTACT ICONS */
-
-.contacts {
-  display: flex;
-  gap: 11px;
-  margin-bottom: 32px;
+.socials {
+    display: flex;
+    gap: 12px;
+    margin: 35px 0;
 }
 
-.contact-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid #d5cec6;
-  background: rgba(255,255,255,.58);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: .25s ease;
+.social {
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    background: var(--paper);
 }
 
-.contact-icon:hover {
-  transform: translateY(-3px);
-  background: #292725;
-  color: white;
+.social:hover {
+    transform: translateY(-4px);
+    background: var(--dark);
+    color: white;
 }
 
-.contact-icon svg {
-  width: 21px;
-  height: 21px;
+.social svg {
+    width: 20px;
+    height: 20px;
 }
 
-.hh-icon {
-  font-size: 15px;
-  font-weight: 700;
-  color: #d92d2d;
+.hh {
+    font-weight: 700;
+    font-size: 16px;
+    color: #d63c3c;
 }
 
-.contact-icon:hover .hh-icon {
-  color: white;
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+    padding: 8px 9px 8px 25px;
+    background: var(--dark);
+    color: white;
+    border-radius: 50px;
+    font-size: 14px;
+    transition: .3s;
 }
 
-/* BUTTON */
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 35px;
-  min-width: 270px;
-  padding: 16px 20px 16px 24px;
-  border-radius: 60px;
-  background: #292725;
-  color: white;
-  font-size: 14px;
-  transition: .25s ease;
+.primary-button:hover {
+    transform: translateY(-3px);
 }
 
-.button:hover {
-  transform: translateY(-3px);
-}
-
-.button-arrow {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.13);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.primary-button span {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #4a4845;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* =========================
    ABOUT
 ========================= */
 
-.about {
-  padding: 115px 0 130px;
-  border-top: 1px solid #ded7cf;
-}
-
-.section-number {
-  font-size: 11px;
-  color: #8c8176;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-}
-
 .about-grid {
-  display: grid;
-  grid-template-columns: .72fr 1.28fr;
-  gap: 85px;
-}
-
-.about h2 {
-  font-size: clamp(45px,5.4vw,72px);
-  line-height: .94;
-  letter-spacing: -.07em;
-  font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 100px;
+    align-items: start;
 }
 
 .about-text {
-  font-family: Georgia, serif;
-  font-size: clamp(23px,2.5vw,33px);
-  line-height: 1.35;
-  max-width: 760px;
+    font-size: clamp(25px, 3vw, 43px);
+    line-height: 1.13;
+    letter-spacing: -.04em;
+}
+
+.about-text em {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+
+.about-side {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 550px;
+}
+
+.about-side p + p {
+    margin-top: 22px;
+}
+
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+.tag {
+    border: 1px solid var(--line);
+    padding: 9px 15px;
+    border-radius: 30px;
+    font-size: 12px;
 }
 
 /* =========================
-   GENERAL SECTIONS
+   SKILLS
 ========================= */
 
-.portfolio-section {
-  padding: 120px 0;
-}
-
-.section-heading {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 70px;
-  align-items: end;
-  margin-bottom: 70px;
-}
-
-.section-heading h2 {
-  font-size: clamp(48px,7vw,88px);
-  line-height: .95;
-  font-weight: 500;
-  letter-spacing: -.045em;
-}
-
-.section-heading p {
-  max-width: 360px;
-  font-size: 17px;
-  line-height: 1.6;
-  color: #716b65;
-}
-
-/* =========================
-   02 SKILLS
-========================= */
-
-.skills-section {
-  background: #eee8df;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  gap: 18px;
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 65px;
 }
 
 .skill-card {
-  padding: 35px;
-  min-height: 310px;
-  background: #f8f5ef;
-  border-radius: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    min-height: 330px;
+    padding: 32px;
+    border-radius: 28px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .35s;
 }
 
-.skill-large {
-  grid-row: span 2;
-  min-height: 638px;
+.skill-card:hover {
+    transform: translateY(-7px) rotate(-.4deg);
 }
 
-.skill-card-top {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  opacity: .5;
+.skill-card:nth-child(2) {
+    background: var(--pink);
+}
+
+.skill-card:nth-child(3) {
+    background: var(--green);
+}
+
+.skill-number {
+    font-size: 11px;
+    letter-spacing: .18em;
+    color: var(--muted);
+}
+
+.skill-icon {
+    font-size: 40px;
+    margin-bottom: 25px;
 }
 
 .skill-card h3 {
-  margin: 40px 0 25px;
-  font-size: clamp(32px,4vw,54px);
-  line-height: .98;
-  font-weight: 500;
-  letter-spacing: -.04em;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -.04em;
+    max-width: 250px;
 }
 
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.skill-list {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
 }
 
-.skill-tags span {
-  padding: 9px 13px;
-  border: 1px solid rgba(0,0,0,.12);
-  border-radius: 100px;
-  font-size: 13px;
+.skill-list span {
+    background: rgba(255,255,255,.55);
+    border-radius: 20px;
+    padding: 7px 10px;
+    font-size: 11px;
 }
 
-.tools-heading {
-  margin-top: 110px;
-  margin-bottom: 35px;
-}
+/* TOOLS */
 
-.tools-heading span {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  opacity: .5;
-}
-
-.tools-heading h3 {
-  margin-top: 8px;
-  font-size: 38px;
-  font-weight: 500;
+.tools-title {
+    margin-top: 90px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: var(--muted);
 }
 
 .tools-grid {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 12px;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
 }
 
 .tool {
-  min-height: 130px;
-  background: #f8f5ef;
-  border-radius: 22px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+    transition: .25s;
+}
+
+.tool:hover {
+    transform: translateY(-4px);
 }
 
 .tool-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 13px;
-  background: #e5ded3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.tool span {
-  font-size: 14px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
 }
 
 /* =========================
-   03 EXPERIENCE
+   EXPERIENCE
 ========================= */
-
-.experience-section {
-  background: #f8f5ef;
-}
 
 .experience-card {
-  padding: 55px;
-  border-radius: 30px;
-  margin-bottom: 22px;
-  background: #e8e0d6;
+    margin-top: 60px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 35px;
+    padding: 50px;
 }
 
-.mts-card {
-  background: #eee8df;
+.experience-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 35px;
 }
 
-.company-line {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  opacity: .55;
-}
-
-.experience-main h3 {
-  margin: 35px 0 55px;
-  font-size: clamp(38px,5vw,68px);
-  line-height: .98;
-  font-weight: 500;
-  letter-spacing: -.04em;
-}
-
-.experience-columns {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 35px;
-}
-
-.block-label {
-  display: block;
-  margin-bottom: 18px;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  opacity: .55;
-}
-
-.experience-block ul {
-  list-style: none;
-}
-
-.experience-block li {
-  margin-bottom: 14px;
-  font-size: 14px;
-  line-height: 1.55;
-}
-
-/* =========================
-   04 CASE STUDY
-========================= */
-
-.case-section {
-  background: #ddd4ca;
-}
-
-.case-intro {
-  display: grid;
-  grid-template-columns: 1fr .8fr;
-  gap: 80px;
-  align-items: end;
-}
-
-.case-kicker {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  opacity: .55;
-}
-
-.case-intro h2 {
-  margin-top: 20px;
-  font-size: clamp(70px,12vw,150px);
-  line-height: .78;
-  font-weight: 500;
-  letter-spacing: -.07em;
-}
-
-.case-description p {
-  margin-bottom: 18px;
-  font-size: 17px;
-  line-height: 1.55;
-}
-
-.case-task {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 30px;
-  margin: 100px 0;
-  padding-top: 30px;
-  border-top: 1px solid rgba(0,0,0,.2);
-}
-
-.case-task-text {
-  max-width: 720px;
-  font-size: 28px;
-  line-height: 1.25;
-}
-
-.mini-label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  opacity: .55;
-}
-
-.case-gallery {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 18px;
-}
-
-.case-image {
-  min-height: 330px;
-  border-radius: 25px;
-  overflow: hidden;
-}
-
-.case-wide {
-  grid-column: span 2;
-}
-
-.image-placeholder {
-  width: 100%;
-  height: 100%;
-  min-height: 330px;
-  background: #eee8df;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 12px;
-  color: rgba(0,0,0,.4);
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-
-.case-bottom {
-  margin-top: 60px;
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  align-items: center;
-}
-
-.case-bottom p {
-  max-width: 520px;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.outline-button {
-  display: inline-flex;
-  padding: 16px 22px;
-  border: 1px solid rgba(0,0,0,.3);
-  border-radius: 100px;
-}
-
-.outline-button:hover {
-  background: #292725;
-  color: white;
-}
-
-/* =========================
-   05 FESTIVALS
-========================= */
-
-.festivals-section {
-  background: #f8f5ef;
-}
-
-.festival-grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 25px;
-}
-
-.festival-card {
-  background: #e9e1d7;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.festival-photo {
-  min-height: 480px;
-}
-
-.festival-photo .image-placeholder {
-  min-height: 480px;
-}
-
-.festival-info {
-  padding: 35px;
-}
-
-.festival-meta {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  opacity: .55;
-}
-
-.festival-info h3 {
-  margin: 20px 0;
-  font-size: 45px;
-  line-height: .95;
-  font-weight: 500;
-  letter-spacing: -.04em;
+.company {
+    font-size: clamp(45px, 6vw, 85px);
+    line-height: .9;
+    letter-spacing: -.06em;
 }
 
 .role {
-  font-size: 15px;
-  color: #716b65;
+    margin-top: 15px;
+    color: var(--muted);
+    font-size: 17px;
 }
 
-.festival-info ul {
-  list-style: none;
-  margin-top: 20px;
+.period {
+    color: var(--muted);
+    font-size: 13px;
+    white-space: nowrap;
 }
 
-.festival-info li {
-  padding: 12px 0;
-  border-top: 1px solid rgba(0,0,0,.12);
-  font-size: 14px;
+.experience-columns {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 35px;
+    margin-top: 45px;
 }
 
-/* =========================
-   06 CONTENT & PR
-========================= */
-
-.content-section {
-  background: #e7ded4;
+.experience-column {
+    padding-right: 20px;
 }
 
-.content-project {
-  padding: 70px 0;
-  border-top: 1px solid rgba(0,0,0,.18);
+.experience-column h3 {
+    font-size: 20px;
+    margin-bottom: 22px;
+    letter-spacing: -.03em;
 }
 
-.content-project-heading {
-  display: grid;
-  grid-template-columns: 1fr .7fr;
-  gap: 50px;
-  align-items: end;
-  margin-bottom: 50px;
+.experience-column ul {
+    list-style: none;
 }
 
-.content-project-heading h3 {
-  margin-top: 18px;
-  font-size: clamp(40px,5vw,65px);
-  line-height: .95;
-  font-weight: 500;
-  letter-spacing: -.04em;
+.experience-column li {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 14px;
+    padding-left: 17px;
+    position: relative;
 }
 
-.content-project-heading p {
-  font-size: 16px;
-  line-height: 1.55;
-}
-
-.post-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 15px;
-}
-
-.post-card {
-  aspect-ratio: 4/5;
-  border-radius: 22px;
-  overflow: hidden;
-}
-
-.longread-grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 20px;
-}
-
-.longread-card {
-  background: #f8f5ef;
-  border-radius: 25px;
-  overflow: hidden;
-}
-
-.longread-cover {
-  aspect-ratio: 16/10;
-}
-
-.longread-info {
-  padding: 25px;
-}
-
-.longread-info h4 {
-  margin-bottom: 12px;
-  font-size: 25px;
-  font-weight: 500;
-}
-
-.magazine-grid {
-  display: grid;
-  grid-template-columns: .65fr 1.35fr;
-  gap: 20px;
-}
-
-.magazine-cover,
-.magazine-page {
-  border-radius: 25px;
-  overflow: hidden;
-}
-
-.magazine-pages {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 15px;
-}
-
-.magazine-cover .image-placeholder,
-.magazine-page .image-placeholder {
-  min-height: 600px;
-}
-
-.ladoga-grid {
-  display: grid;
-  grid-template-columns: 1.25fr .75fr;
-  gap: 20px;
-}
-
-.ladoga-main-image {
-  border-radius: 25px;
-  overflow: hidden;
-}
-
-.ladoga-main-image .image-placeholder {
-  min-height: 650px;
-}
-
-.media-publications {
-  display: grid;
-  gap: 20px;
-}
-
-.media-item {
-  background: #f8f5ef;
-  border-radius: 22px;
-  padding: 15px;
+.experience-column li:before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--dark);
+    position: absolute;
+    left: 0;
+    top: 9px;
 }
 
 /* =========================
-   07 CONTACTS
+   CASE STUDY
 ========================= */
 
-.final-contact {
-  background: #d7cdc2;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
+.case-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 65px;
 }
 
-.contact-final-grid {
-  display: grid;
-  grid-template-columns: 1fr .8fr;
-  gap: 100px;
-  align-items: end;
+.case-title {
+    font-size: clamp(50px, 7vw, 100px);
+    line-height: .86;
+    letter-spacing: -.07em;
 }
 
-.final-kicker {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  opacity: .55;
+.case-context {
+    color: var(--muted);
+    max-width: 500px;
 }
 
-.final-contact h2 {
-  margin-top: 25px;
-  font-size: clamp(70px,10vw,130px);
-  line-height: .8;
-  font-weight: 500;
-  letter-spacing: -.07em;
+.case-context strong {
+    color: var(--dark);
 }
 
-.final-contact-info p {
-  font-size: 17px;
-  line-height: 1.55;
+.case-grid {
+    columns: 2 400px;
+    column-gap: 20px;
 }
 
-.final-links {
-  margin-top: 45px;
+.case-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--paper);
 }
 
-.final-links a {
-  display: flex;
-  justify-content: space-between;
-  padding: 17px 0;
-  border-bottom: 1px solid rgba(0,0,0,.2);
-  font-size: 16px;
+.case-visual {
+    min-height: 310px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
 }
 
-.footer-line {
-  margin-top: 100px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(0,0,0,.2);
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  opacity: .5;
+.case-visual.canvas {
+    background: var(--yellow);
+}
+
+.case-visual.cjm {
+    background: var(--green);
+    min-height: 430px;
+}
+
+.case-visual.avatar {
+    background: var(--pink);
+}
+
+.case-visual.email {
+    background: #e5e1dc;
+    min-height: 390px;
+}
+
+.case-visual.print {
+    background: #ddd8d0;
+    min-height: 480px;
+}
+
+.case-visual.outdoor {
+    background: #d8d7d0;
+    min-height: 360px;
+}
+
+.visual-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: var(--muted);
+}
+
+.fake-design {
+    margin: auto;
+    width: 82%;
+    height: 62%;
+    background: var(--paper);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+}
+
+.fake-line {
+    height: 7px;
+    background: var(--dark);
+    border-radius: 10px;
+    width: 70%;
+    margin-bottom: 12px;
+}
+
+.fake-line.small {
+    width: 45%;
+    opacity: .4;
+}
+
+.fake-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.fake-box {
+    height: 50px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+}
+
+.case-caption {
+    padding: 20px 24px 25px;
+}
+
+.case-caption h3 {
+    font-size: 21px;
+    letter-spacing: -.03em;
+}
+
+.case-caption p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.case-more {
+    margin-top: 60px;
+    padding: 45px;
+    background: var(--dark);
+    color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.case-more p {
+    color: #bdb8b1;
+    max-width: 600px;
+}
+
+.light-button {
+    background: white;
+    color: var(--dark);
+    padding: 15px 22px;
+    border-radius: 30px;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+/* =========================
+   FESTIVALS
+========================= */
+
+.festival {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 45px;
+    align-items: stretch;
+}
+
+.festival:nth-child(odd) {
+    direction: rtl;
+}
+
+.festival:nth-child(odd) > * {
+    direction: ltr;
+}
+
+.festival-photo {
+    min-height: 520px;
+    border-radius: 35px;
+    overflow: hidden;
+    background: var(--soft);
+    position: relative;
+}
+
+.festival-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg,#ded7ce,#eee9e2);
+    color: #8a8178;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+}
+
+.festival-info {
+    padding: 35px 10px;
+}
+
+.festival-number {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: .2em;
+}
+
+.festival h3 {
+    font-size: clamp(35px, 4vw, 62px);
+    line-height: .95;
+    letter-spacing: -.055em;
+    margin: 30px 0;
+}
+
+.festival-role {
+    display: inline-block;
+    padding: 8px 13px;
+    background: var(--pink);
+    border-radius: 20px;
+    font-size: 11px;
+    margin-bottom: 25px;
+}
+
+.festival ul {
+    list-style: none;
+}
+
+.festival li {
+    color: var(--muted);
+    margin-bottom: 12px;
+    font-size: 14px;
+    padding-left: 18px;
+    position: relative;
+}
+
+.festival li:before {
+    content: "↳";
+    position: absolute;
+    left: 0;
+}
+
+/* =========================
+   CONTENT / PR
+========================= */
+
+.content-block {
+    margin-top: 65px;
+}
+
+.content-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 25px;
+}
+
+.content-heading h3 {
+    font-size: clamp(35px, 4vw, 58px);
+    letter-spacing: -.05em;
+}
+
+.content-heading p {
+    color: var(--muted);
+    max-width: 420px;
+    font-size: 14px;
+}
+
+.masonry {
+    columns: 3 300px;
+    column-gap: 15px;
+}
+
+.masonry-card {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.masonry-image {
+    min-height: 270px;
+    background: var(--soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #857d74;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+.masonry-card:nth-child(2) .masonry-image {
+    min-height: 380px;
+    background: var(--pink);
+}
+
+.masonry-card:nth-child(3) .masonry-image {
+    min-height: 320px;
+    background: var(--green);
+}
+
+.masonry-card:nth-child(4) .masonry-image {
+    min-height: 430px;
+    background: var(--yellow);
+}
+
+.masonry-caption {
+    padding: 18px;
+}
+
+.masonry-caption h4 {
+    font-size: 16px;
+}
+
+.masonry-caption p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* CAROUSEL */
+
+.carousel-wrapper {
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 8px;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-card {
+    flex: 0 0 330px;
+    scroll-snap-align: start;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.carousel-image {
+    height: 380px;
+    background: var(--soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #857d74;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.carousel-card:nth-child(2) .carousel-image {
+    background: var(--pink);
+}
+
+.carousel-card:nth-child(3) .carousel-image {
+    background: var(--green);
+}
+
+.carousel-card:nth-child(4) .carousel-image {
+    background: var(--yellow);
+}
+
+.carousel-caption {
+    padding: 20px;
+}
+
+.carousel-caption h4 {
+    font-size: 18px;
+}
+
+.carousel-caption p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.read-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+/* LAMPA */
+
+.lampa {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 50px;
+    margin-top: 60px;
+    align-items: center;
+}
+
+.magazine {
+    min-height: 550px;
+    border-radius: 25px;
+    background: var(--dark);
+    color: white;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.magazine-name {
+    font-family: "Playfair Display", serif;
+    font-size: 75px;
+}
+
+.magazine-label {
+    font-size: 11px;
+    letter-spacing: .2em;
+}
+
+.lampa-info h3 {
+    font-size: 45px;
+    line-height: 1;
+    letter-spacing: -.05em;
+}
+
+.lampa-info p {
+    margin-top: 25px;
+    color: var(--muted);
+    max-width: 550px;
+}
+
+.article-links {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.article-link {
+    border: 1px solid var(--line);
+    padding: 11px 16px;
+    border-radius: 25px;
+    font-size: 12px;
+}
+
+/* LADOGA */
+
+.media-case {
+    margin-top: 70px;
+    background: var(--green);
+    border-radius: 35px;
+    padding: 45px;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.media-card {
+    min-height: 300px;
+    background: var(--paper);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* =========================
+   CONTACTS
+========================= */
+
+.contact-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact-box {
+    width: 100%;
+    background: var(--dark);
+    color: white;
+    border-radius: 45px;
+    padding: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-box:after {
+    content: "";
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+    position: absolute;
+    right: -100px;
+    bottom: -150px;
+}
+
+.contact-box .section-label {
+    color: #aaa49d;
+}
+
+.contact-title {
+    font-size: clamp(60px, 9vw, 140px);
+    line-height: .8;
+    letter-spacing: -.075em;
+    max-width: 950px;
+}
+
+.contact-subtitle {
+    margin-top: 30px;
+    color: #aaa49d;
+    max-width: 500px;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 45px;
+}
+
+.contact-link {
+    border: 1px solid #514e4a;
+    border-radius: 30px;
+    padding: 13px 19px;
+    font-size: 13px;
+    transition: .25s;
+}
+
+.contact-link:hover {
+    background: white;
+    color: var(--dark);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 0;
+    color: var(--muted);
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* =========================
    MOBILE
 ========================= */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
-  .container {
-    width: calc(100% - 40px);
-  }
+    .container {
+        width: min(100% - 30px, 700px);
+    }
 
-  .nav-links {
-    display: none;
-  }
+    .topbar {
+        width: calc(100% - 20px);
+    }
 
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 30px 0 80px;
-  }
+    .nav {
+        display: none;
+    }
 
-  .hero-content {
-    order: 1;
-  }
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 110px;
+    }
 
-  .photo-wrap {
-    order: 2;
-    height: 480px;
-  }
+    .hero-photo {
+        min-height: 550px;
+        order: 1;
+    }
 
-  .hero h1 {
-    font-size: 60px;
-  }
+    .hero-photo img {
+        min-height: 550px;
+    }
 
-  .about-grid,
-  .section-heading,
-  .case-intro,
-  .content-project-heading,
-  .contact-final-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
+    .hero-content {
+        order: 2;
+        padding-right: 0;
+    }
 
-  .skills-grid,
-  .festival-grid,
-  .longread-grid,
-  .magazine-grid,
-  .ladoga-grid {
-    grid-template-columns: 1fr;
-  }
+    .hero h1 {
+        font-size: 65px;
+    }
 
-  .skill-large {
-    grid-row: auto;
-    min-height: 420px;
-  }
+    .about-grid,
+    .case-intro,
+    .festival,
+    .lampa {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
 
-  .tools-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .experience-columns {
-    grid-template-columns: 1fr;
-  }
+    .tools-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
 
-  .experience-card {
-    padding: 30px;
-  }
+    .experience-columns {
+        grid-template-columns: 1fr;
+    }
 
-  .case-gallery {
-    grid-template-columns: 1fr;
-  }
+    .experience-card {
+        padding: 30px;
+    }
 
-  .case-wide {
-    grid-column: auto;
-  }
+    .experience-head {
+        flex-direction: column;
+    }
 
-  .case-task {
-    grid-template-columns: 1fr;
-  }
+    .festival:nth-child(odd) {
+        direction: ltr;
+    }
 
-  .case-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .festival-photo,
+    .photo-placeholder {
+        min-height: 400px;
+    }
 
-  .post-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .magazine-pages {
-    grid-template-columns: repeat(2,1fr);
-  }
+    .media-case {
+        padding: 25px;
+    }
 
-  .final-contact {
-    min-height: auto;
-    padding: 100px 0;
-  }
+    .contact-box {
+        padding: 40px 25px;
+        border-radius: 30px;
+    }
 
+    .contact-title {
+        font-size: 65px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .section {
+        padding: 100px 0;
+    }
+
+    .hero {
+        padding-top: 95px;
+    }
+
+    .hero-photo {
+        min-height: 450px;
+        border-radius: 0 60px 20px 20px;
+    }
+
+    .hero-photo img {
+        min-height: 450px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .position {
+        font-size: 27px;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-grid {
+        columns: 1;
+    }
+
+    .carousel-card {
+        flex-basis: 285px;
+    }
+
+    .magazine {
+        min-height: 420px;
+    }
+
+    .magazine-name {
+        font-size: 60px;
+    }
 }
 
 </style>
@@ -960,112 +1242,106 @@ header {
 
 <body>
 
-<header>
-  <div class="container nav">
-    <div class="logo">DB.</div>
-
-    <nav class="nav-links">
-      <a href="#skills">Навыки</a>
-      <a href="#experience">Опыт</a>
-      <a href="#projects">Проекты</a>
-      <a href="#content">Контент</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
-  </div>
-</header>
-
-
 <!-- =========================
-     01 — ГЛАВНАЯ
+     NAVIGATION
 ========================= -->
 
-<main>
+<nav class="topbar">
+    <a href="#top" class="logo">DB.</a>
 
-<section class="container hero">
-
-  <div class="photo-wrap">
-    <div class="photo-card">
-
-      <img src="darya_portrait.png" alt="Дарья Богомолова">
-
-      <div class="photo-label">
-        MARKETING · COMMUNICATIONS
-      </div>
-
+    <div class="nav">
+        <a href="#about">Обо мне</a>
+        <a href="#skills">Навыки</a>
+        <a href="#experience">Опыт</a>
+        <a href="#case">Case Study</a>
+        <a href="#festivals">Фестивали</a>
+        <a href="#content">Content & PR</a>
+        <a href="#contacts">Контакты</a>
     </div>
-  </div>
+</nav>
 
 
-  <div class="hero-content">
+<main id="top">
 
-    <div class="eyebrow">
-      PORTFOLIO / 2026
-    </div>
+<!-- =========================
+     01 — HERO
+========================= -->
 
-    <h1>
-      Дарья<br>
-      Богомолова
-    </h1>
+<section class="hero container">
 
-    <div class="position">
-      Ассистент маркетолога
-    </div>
+    <div class="hero-photo">
 
-    <div class="position-line"></div>
+        <img src="darya_portrait.png" alt="Дарья Богомолова">
 
-    <p class="specialization">
-      Развиваюсь в направлениях бренд-маркетинга,
-      коммуникаций, PR и event-проектов.
-      Люблю идеи, людей и проекты, которые объединяют.
-    </p>
-
-
-    <div class="contacts">
-
-      <a class="contact-icon" href="#" aria-label="Telegram">
-
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M21.8 4.2 18.7 19c-.2 1-0.8 1.3-1.6.8l-4.4-3.2-2.1 2c-.2.2-.4.4-.8.4l.3-4.5 8.2-7.4c.4-.3-.1-.5-.6-.2L7.6 13.5 3.3 12.1c-.9-.3-.9-.9.2-1.3L20.2 4c.8-.3 1.5.2 1.6.2Z"/>
-        </svg>
-
-      </a>
-
-
-      <a class="contact-icon" href="tel:+70000000000" aria-label="Телефон">
-
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-          <path d="M6.5 3.5 9 3l2 5-2 1.5c1 2.2 2.3 3.5 4.5 4.5L15 12l5 2-0.5 2.5c-.2 1.1-1.2 2-2.4 2C10 19 5 14 5 7.9c0-1.2.9-2.2 1.5-2.4Z"/>
-        </svg>
-
-      </a>
-
-
-      <a class="contact-icon" href="mailto:your@email.com" aria-label="Email">
-
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-          <rect x="3" y="5" width="18" height="14" rx="2"/>
-          <path d="m4 7 8 6 8-6"/>
-        </svg>
-
-      </a>
-
-
-      <a class="contact-icon" href="#" aria-label="HH.ru">
-        <span class="hh-icon">hh</span>
-      </a>
+        <div class="photo-label">
+            Marketing · Communications
+        </div>
 
     </div>
 
 
-    <a href="#projects" class="button">
+    <div class="hero-content">
 
-      <span>Посмотреть проекты</span>
+        <div class="eyebrow">
+            Portfolio / 2026
+        </div>
 
-      <span class="button-arrow">→</span>
+        <h1>
+            Дарья<br>
+            Богомолова
+        </h1>
 
-    </a>
+        <div class="position">
+            Ассистент маркетолога
+        </div>
 
-  </div>
+        <div class="hero-line"></div>
+
+        <p class="hero-description">
+            Развиваюсь в направлениях бренд-маркетинга,
+            коммуникаций, PR и event-проектов.
+            Люблю идеи, людей и проекты, которые объединяют.
+        </p>
+
+
+        <div class="socials">
+
+            <!-- Telegram -->
+            <a class="social" href="#" aria-label="Telegram">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M21.5 4.5L18.3 19.6C18.1 20.7 17.5 21 16.6 20.5L11.3 16.6L8.7 19.1C8.4 19.4 8.1 19.7 7.5 19.7L7.9 14.3L17.7 5.5C18.1 5.1 17.6 4.9 17.1 5.2L5 12.8L-.2 11.2C-1.3 10.9-1.3 10.1.1 9.5L20.2 1.7C21.2 1.3 22 1.9 21.5 4.5Z" fill="currentColor"/>
+                </svg>
+            </a>
+
+            <!-- Phone -->
+            <a class="social" href="tel:+70000000000" aria-label="Телефон">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6.5 3.5l3 2.2-1.7 3.1c1 2.1 2.3 3.4 4.4 4.4l3.1-1.7 2.2 3c.4.6.3 1.4-.2 1.9l-1.5 1.5c-.5.5-1.3.7-2 .4C7.9 16.2 4.8 13.1 2.4 7.2c-.3-.7-.1-1.5.4-2l1.7-1.7c.5-.5 1.4-.4 2 .0Z"/>
+                </svg>
+            </a>
+
+            <!-- Email -->
+            <a class="social" href="mailto:your-email@example.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="5" width="18" height="14" rx="2"/>
+                    <path d="M4 7l8 6 8-6"/>
+                </svg>
+            </a>
+
+            <!-- HH -->
+            <a class="social hh" href="#" aria-label="HH.ru">
+                hh
+            </a>
+
+        </div>
+
+
+        <a href="#case" class="primary-button">
+            Посмотреть проекты
+            <span>→</span>
+        </a>
+
+    </div>
 
 </section>
 
@@ -1074,330 +1350,426 @@ header {
      ОБО МНЕ
 ========================= -->
 
-<section class="about">
+<section class="section container" id="about">
 
-  <div class="container">
-
-    <div class="section-number">
-      01 / Обо мне
+    <div class="section-label">
+        01 / About me
     </div>
 
     <div class="about-grid">
 
-      <h2>
-        Маркетинг,<br>
-        коммуникации<br>
-        и проекты
-      </h2>
+        <div>
+            <h2 class="section-title">
+                Обо<br>
+                мне
+            </h2>
+        </div>
 
-      <div class="about-text">
+        <div>
 
-        Я развиваюсь в бренд-маркетинге,
-        коммуникациях, PR и event-проектах.
+            <div class="about-text">
+                Маркетинг для меня — это способ
+                <em>соединять идеи, людей и задачи</em>
+                в понятные коммуникации.
+            </div>
 
-        Мне интересны задачи, где нужно
-        разобраться в аудитории, найти идею,
-        выстроить коммуникацию и довести
-        проект до реализации.
+            <div class="about-side">
 
-        Хочу развиваться в маркетинге,
-        работать с брендами и проектами,
-        которые объединяют стратегию,
-        контент и коммуникации.
+                <p>
+                    Интересуюсь бренд-маркетингом,
+                    коммуникациями, PR и event-проектами.
+                    Мне интересно работать на стыке аналитики,
+                    контента и визуальной подачи.
+                </p>
 
-      </div>
+                <p>
+                    Умею работать с задачами от подготовки
+                    материалов и коммуникаций до организации
+                    мероприятий и создания маркетинговых решений.
+                </p>
+
+                <p>
+                    Хочу развиваться в маркетинге,
+                    брать больше самостоятельных задач
+                    и постепенно переходить к полноценной
+                    работе над проектами.
+                </p>
+
+                <div class="about-tags">
+                    <span class="tag">Brand Marketing</span>
+                    <span class="tag">Communications</span>
+                    <span class="tag">PR</span>
+                    <span class="tag">Events</span>
+                    <span class="tag">Content</span>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================
-     02 — НАВЫКИ
+     02 — SKILLS
 ========================= -->
 
-<section class="portfolio-section skills-section" id="skills">
+<section class="section container" id="skills">
 
-  <div class="container">
-
-    <div class="section-number">
-      02 / Навыки и инструменты
+    <div class="section-label">
+        02 / Skills
     </div>
 
-    <div class="section-heading">
-
-      <h2>
+    <h2 class="section-title">
         Что я умею<br>
         и чем работаю
-      </h2>
+    </h2>
 
-      <p>
-        Компетенции, которые помогают
-        работать с задачами от идеи
-        до реализации.
-      </p>
+    <p class="section-intro">
+        Компетенции, которые помогают мне работать
+        с задачами от идеи до реализации.
+    </p>
+
+
+    <div class="skill-grid">
+
+        <div class="skill-card">
+
+            <div class="skill-number">01 / MARKETING</div>
+
+            <div>
+                <div class="skill-icon">✦</div>
+
+                <h3>
+                    Маркетинг<br>
+                    и аналитика
+                </h3>
+
+                <div class="skill-list">
+                    <span>Анализ ЦА</span>
+                    <span>Сегментация</span>
+                    <span>Конкурентный анализ</span>
+                    <span>CJM</span>
+                    <span>SWOT</span>
+                    <span>Рекламные стратегии</span>
+                    <span>Медиапланирование</span>
+                    <span>KPI</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <div class="skill-number">02 / CONTENT & PR</div>
+
+            <div>
+                <div class="skill-icon">✎</div>
+
+                <h3>
+                    Контент<br>
+                    и коммуникации
+                </h3>
+
+                <div class="skill-list">
+                    <span>Тексты</span>
+                    <span>Социальные сети</span>
+                    <span>PR</span>
+                    <span>Пресс-релизы</span>
+                    <span>Email</span>
+                    <span>Рекламные тексты</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <div class="skill-number">03 / EVENTS</div>
+
+            <div>
+                <div class="skill-icon">◎</div>
+
+                <h3>
+                    Event
+                </h3>
+
+                <div class="skill-list">
+                    <span>Организация мероприятий</span>
+                    <span>Площадки</span>
+                    <span>Подрядчики</span>
+                    <span>Участники</span>
+                    <span>Логистика</span>
+                    <span>Материалы</span>
+                    <span>Командная работа</span>
+                </div>
+            </div>
+
+        </div>
 
     </div>
 
 
-    <div class="skills-grid">
-
-      <div class="skill-card skill-large">
-
-        <div class="skill-card-top">
-          <span>01</span>
-          <span>Marketing</span>
-        </div>
-
-        <h3>
-          Маркетинг<br>
-          и аналитика
-        </h3>
-
-        <div class="skill-tags">
-          <span>Анализ ЦА</span>
-          <span>Сегментация</span>
-          <span>Конкурентный анализ</span>
-          <span>CJM</span>
-          <span>SWOT</span>
-          <span>Рекламные стратегии</span>
-          <span>Медиапланирование</span>
-          <span>KPI</span>
-        </div>
-
-      </div>
-
-
-      <div class="skill-card">
-
-        <div class="skill-card-top">
-          <span>02</span>
-          <span>Content & PR</span>
-        </div>
-
-        <h3>
-          Контент<br>
-          и коммуникации
-        </h3>
-
-        <div class="skill-tags">
-          <span>Написание текстов</span>
-          <span>Социальные сети</span>
-          <span>PR</span>
-          <span>Пресс-релизы</span>
-          <span>Email-коммуникации</span>
-          <span>Рекламные тексты</span>
-        </div>
-
-      </div>
-
-
-      <div class="skill-card">
-
-        <div class="skill-card-top">
-          <span>03</span>
-          <span>Events</span>
-        </div>
-
-        <h3>
-          Event
-        </h3>
-
-        <div class="skill-tags">
-          <span>Организация мероприятий</span>
-          <span>Площадки</span>
-          <span>Подрядчики</span>
-          <span>Участники</span>
-          <span>Логистика</span>
-          <span>Материалы</span>
-          <span>Командная работа</span>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="tools-heading">
-
-      <span>Tools</span>
-
-      <h3>Инструменты</h3>
-
+    <div class="tools-title">
+        Tools / Инструменты
     </div>
 
 
     <div class="tools-grid">
 
-      <div class="tool">
-        <div class="tool-icon">T</div>
-        <span>Tilda</span>
-      </div>
+        <div class="tool">
+            <div class="tool-icon">T</div>
+            Tilda
+        </div>
 
-      <div class="tool">
-        <div class="tool-icon">F</div>
-        <span>Figma</span>
-      </div>
+        <div class="tool">
+            <div class="tool-icon">F</div>
+            Figma
+        </div>
 
-      <div class="tool">
-        <div class="tool-icon">C</div>
-        <span>Canva</span>
-      </div>
+        <div class="tool">
+            <div class="tool-icon">C</div>
+            Canva
+        </div>
 
-      <div class="tool">
-        <div class="tool-icon">Ps</div>
-        <span>Photoshop</span>
-      </div>
+        <div class="tool">
+            <div class="tool-icon">Ps</div>
+            Photoshop
+        </div>
 
-      <div class="tool">
-        <div class="tool-icon">G</div>
-        <span>Google Sheets</span>
-      </div>
+        <div class="tool">
+            <div class="tool-icon">G</div>
+            Google Sheets
+        </div>
 
-      <div class="tool">
-        <div class="tool-icon">P</div>
-        <span>Google Презентации</span>
-      </div>
+        <div class="tool">
+            <div class="tool-icon">P</div>
+            Google Презентации
+        </div>
 
-      <div class="tool">
-        <div class="tool-icon">AI</div>
-        <span>AI-инструменты</span>
-      </div>
+        <div class="tool">
+            <div class="tool-icon">AI</div>
+            AI-инструменты
+        </div>
 
-      <div class="tool">
-        <div class="tool-icon">Я</div>
-        <span>Яндекс Директ</span>
-      </div>
+        <div class="tool">
+            <div class="tool-icon">Я</div>
+            Яндекс Директ
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================
-     03 — ОПЫТ
+     03 — EXPERIENCE
 ========================= -->
 
-<section class="portfolio-section experience-section" id="experience">
+<section class="section container" id="experience">
 
-  <div class="container">
-
-    <div class="section-number">
-      03 / Опыт работы
+    <div class="section-label">
+        03 / Experience
     </div>
 
-    <div class="section-heading">
-
-      <h2>
-        Опыт, который<br>
-        можно показать
-      </h2>
-
-      <p>
-        Практический опыт в маркетинге,
-        организации мероприятий
-        и коммуникациях.
-      </p>
-
-    </div>
+    <h2 class="section-title">
+        Опыт<br>
+        работы
+    </h2>
 
 
-    <article class="experience-card">
+    <!-- PSB -->
 
-      <div class="company-line">
-        <span>ПСБ</span>
-        <span>Маркетинг</span>
-      </div>
+    <div class="experience-card">
 
-      <div class="experience-main">
+        <div class="experience-head">
 
-        <h3>
-          Маркетинг и организация
-          проектов
-        </h3>
+            <div>
+                <div class="company">ПСБ</div>
+                <div class="role">Маркетинг</div>
+            </div>
+
+            <div class="period">
+                Опыт работы
+            </div>
+
+        </div>
 
 
         <div class="experience-columns">
 
-          <div class="experience-block">
+            <div class="experience-column">
 
-            <span class="block-label">
-              Мероприятия
-            </span>
+                <h3>Мероприятия</h3>
 
-            <ul>
-              <li>Подготовка и координация мероприятий.</li>
-              <li>Взаимодействие с участниками и подрядчиками.</li>
-              <li>Подготовка материалов и отчётности.</li>
-            </ul>
+                <ul>
+                    <li>
+                        Подготовка и координация мероприятий.
+                    </li>
 
-          </div>
+                    <li>
+                        Поиск площадок и взаимодействие
+                        с подрядчиками.
+                    </li>
 
+                    <li>
+                        Организационное сопровождение
+                        участников и контроль тайминга.
+                    </li>
 
-          <div class="experience-block">
+                    <li>
+                        Подготовка материалов
+                        и пост-отчётности по мероприятиям.
+                    </li>
+                </ul>
 
-            <span class="block-label">
-              Организация и взаимодействие
-            </span>
-
-            <ul>
-              <li>Работа с документами и организационными задачами.</li>
-              <li>Взаимодействие с подразделениями.</li>
-              <li>Координация логистики и подрядчиков.</li>
-            </ul>
-
-          </div>
+            </div>
 
 
-          <div class="experience-block">
+            <div class="experience-column">
 
-            <span class="block-label">
-              Рекламные материалы
-            </span>
+                <h3>Организация и взаимодействие</h3>
 
-            <ul>
-              <li>Работа с рекламными материалами.</li>
-              <li>Заказ сувенирной продукции.</li>
-              <li>Учёт потребностей подразделений, заказов и поставок.</li>
-            </ul>
+                <ul>
 
-          </div>
+                    <li>
+                        Взаимодействие с подразделениями
+                        по организационным задачам.
+                    </li>
+
+                    <li>
+                        Работа с документами.
+                    </li>
+
+                    <li>
+                        Координация организационных вопросов
+                        и поставок.
+                    </li>
+
+                    <li>
+                        Взаимодействие с подрядчиками.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="experience-column">
+
+                <h3>Рекламные материалы</h3>
+
+                <ul>
+
+                    <li>
+                        Заказ рекламных и информационных материалов.
+                    </li>
+
+                    <li>
+                        Работа с полиграфической продукцией.
+                    </li>
+
+                    <li>
+                        Заказ сувенирной продукции.
+                    </li>
+
+                    <li>
+                        Контроль потребностей подразделений
+                        и пополнения материалов.
+                    </li>
+
+                </ul>
+
+            </div>
 
         </div>
 
-      </div>
-
-    </article>
+    </div>
 
 
-    <article class="experience-card mts-card">
+    <!-- MTS -->
 
-      <div class="company-line">
-        <span>МТС</span>
-        <span>Опыт работы</span>
-      </div>
+    <div class="experience-card">
 
-      <div class="experience-main">
+        <div class="experience-head">
 
-        <h3>
-          МТС
-        </h3>
+            <div>
+                <div class="company">МТС</div>
+                <div class="role">
+                    Опыт в маркетинговом направлении
+                </div>
+            </div>
 
-        <p>
-          Здесь мы разместим точные формулировки
-          из твоего резюме после того, как отдельно
-          их перенесём в сайт.
-        </p>
+            <div class="period">
+                MTS
+            </div>
 
-      </div>
+        </div>
 
-    </article>
 
-  </div>
+        <div class="experience-columns">
+
+            <div class="experience-column">
+
+                <h3>Задачи</h3>
+
+                <ul>
+                    <li>
+                        Работа с маркетинговыми задачами
+                        и коммуникациями.
+                    </li>
+
+                    <li>
+                        Подготовка материалов.
+                    </li>
+
+                    <li>
+                        Взаимодействие с командой.
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="experience-column">
+
+                <h3>Проекты</h3>
+
+                <ul>
+                    <li>
+                        Участие в рабочих задачах
+                        маркетингового направления.
+                    </li>
+
+                    <li>
+                        Подготовка и оформление информации
+                        для внутренних задач.
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="experience-column">
+
+                <h3>Результат</h3>
+
+                <ul>
+                    <li>
+                        Практический опыт работы
+                        внутри крупной компании.
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -1406,595 +1778,791 @@ header {
      04 — CASE STUDY
 ========================= -->
 
-<section class="portfolio-section case-section" id="projects">
+<section class="section container" id="case">
 
-  <div class="container">
-
-    <div class="section-number">
-      04 / Case Study
+    <div class="section-label">
+        04 / Case Study
     </div>
+
 
     <div class="case-intro">
 
-      <div>
+        <div>
+            <div class="case-title">
+                РОББО<br>
+                Клуб
+            </div>
+        </div>
 
-        <span class="case-kicker">
-          Учебный проект
-        </span>
+        <div class="case-context">
 
-        <h2>
-          ROBBO<br>
-          Club
-        </h2>
+            <p>
+                <strong>Учебный проект, выполненный
+                в рамках обучения на реальном брифе
+                компании РОББО Клуб.</strong>
+            </p>
 
-      </div>
+            <br>
 
+            <p>
+                В рамках проекта я работала над рекламной
+                кампанией и разрабатывала маркетинговые
+                материалы, опираясь на анализ аудитории,
+                задачи бренда и выбранную коммуникационную стратегию.
+            </p>
 
-      <div class="case-description">
-
-        <p>
-          Учебный проект, выполненный
-          в рамках обучения на реальном
-          брифе компании РОББО Клуб.
-        </p>
-
-        <p>
-          В рамках проекта разработана
-          рекламная кампания и комплекс
-          маркетинговых материалов.
-        </p>
-
-      </div>
+        </div>
 
     </div>
 
 
-    <div class="case-task">
+    <div class="case-grid">
 
-      <div class="mini-label">
-        Задача
-      </div>
 
-      <div class="case-task-text">
-        Разработать рекламную кампанию
-        для РОББО Клуба и создать комплекс
-        материалов, объединённых одной стратегией.
-      </div>
+        <div class="case-item">
+
+            <div class="case-visual canvas">
+
+                <div class="visual-label">
+                    Strategy / 01
+                </div>
+
+                <div class="fake-design">
+
+                    <div class="fake-line"></div>
+                    <div class="fake-line small"></div>
+
+                    <div class="fake-grid">
+                        <div class="fake-box"></div>
+                        <div class="fake-box"></div>
+                        <div class="fake-box"></div>
+                        <div class="fake-box"></div>
+                        <div class="fake-box"></div>
+                        <div class="fake-box"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="case-caption">
+                <h3>Lean Canvas</h3>
+                <p>Структурирование идеи и бизнес-модели проекта.</p>
+            </div>
+
+        </div>
+
+
+        <div class="case-item">
+
+            <div class="case-visual cjm">
+
+                <div class="visual-label">
+                    Research / 02
+                </div>
+
+                <div class="fake-design">
+
+                    <div class="fake-line"></div>
+
+                    <div class="fake-grid">
+                        <div class="fake-box"></div>
+                        <div class="fake-box"></div>
+                        <div class="fake-box"></div>
+                    </div>
+
+                    <div class="fake-grid">
+                        <div class="fake-box"></div>
+                        <div class="fake-box"></div>
+                        <div class="fake-box"></div>
+                    </div>
+
+                    <div class="fake-grid">
+                        <div class="fake-box"></div>
+                        <div class="fake-box"></div>
+                        <div class="fake-box"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="case-caption">
+                <h3>CJM</h3>
+                <p>Путь клиента и ключевые точки взаимодействия.</p>
+            </div>
+
+        </div>
+
+
+        <div class="case-item">
+
+            <div class="case-visual avatar">
+
+                <div class="visual-label">
+                    Audience / 03
+                </div>
+
+                <div class="fake-design">
+
+                    <div class="fake-line"></div>
+                    <div class="fake-line small"></div>
+
+                    <div style="
+                        width:90px;
+                        height:90px;
+                        border-radius:50%;
+                        background:#d9d0c7;
+                        margin:25px auto;
+                    "></div>
+
+                    <div class="fake-line"></div>
+                    <div class="fake-line small"></div>
+
+                </div>
+
+            </div>
+
+            <div class="case-caption">
+                <h3>Аватар клиента</h3>
+                <p>Портрет целевой аудитории.</p>
+            </div>
+
+        </div>
+
+
+        <div class="case-item">
+
+            <div class="case-visual email">
+
+                <div class="visual-label">
+                    Communication / 04
+                </div>
+
+                <div class="fake-design">
+
+                    <div class="fake-line"></div>
+
+                    <div style="
+                        height:70px;
+                        background:#e9e1d8;
+                        border-radius:8px;
+                        margin:15px 0;
+                    "></div>
+
+                    <div class="fake-line small"></div>
+                    <div class="fake-line small"></div>
+
+                </div>
+
+            </div>
+
+            <div class="case-caption">
+                <h3>Email</h3>
+                <p>Макет рекламного письма.</p>
+            </div>
+
+        </div>
+
+
+        <div class="case-item">
+
+            <div class="case-visual print">
+
+                <div class="visual-label">
+                    Advertising / 05
+                </div>
+
+                <div class="fake-design">
+
+                    <div style="
+                        font-size:34px;
+                        font-weight:700;
+                        line-height:.9;
+                        margin-bottom:20px;
+                    ">
+                        РОББО
+                    </div>
+
+                    <div style="
+                        height:100px;
+                        background:#e4dbcf;
+                        border-radius:8px;
+                    "></div>
+
+                    <div class="fake-line" style="margin-top:20px"></div>
+                    <div class="fake-line small"></div>
+
+                </div>
+
+            </div>
+
+            <div class="case-caption">
+                <h3>Печатная реклама</h3>
+                <p>Разработка рекламного макета.</p>
+            </div>
+
+        </div>
+
+
+        <div class="case-item">
+
+            <div class="case-visual outdoor">
+
+                <div class="visual-label">
+                    Outdoor / 06
+                </div>
+
+                <div class="fake-design">
+
+                    <div style="
+                        font-size:26px;
+                        font-weight:700;
+                        margin-bottom:15px;
+                    ">
+                        РОББО КЛУБ
+                    </div>
+
+                    <div style="
+                        height:80px;
+                        background:#e2dbd1;
+                        border-radius:8px;
+                    "></div>
+
+                </div>
+
+            </div>
+
+            <div class="case-caption">
+                <h3>Наружная реклама</h3>
+                <p>Визуальные рекламные решения.</p>
+            </div>
+
+        </div>
 
     </div>
 
 
-    <div class="mini-label">
-      Что я разработала
-    </div>
+    <div class="case-more">
 
+        <div>
 
-    <div class="case-gallery">
+            <h3 style="font-size:30px; margin-bottom:12px;">
+                Подробная версия проекта
+            </h3>
 
-      <div class="case-image case-wide">
-        <div class="image-placeholder">
-          Lean Canvas
+            <p>
+                Полный проект с исследованием,
+                анализом и всеми разработанными материалами.
+            </p>
+
         </div>
-      </div>
 
-      <div class="case-image">
-        <div class="image-placeholder">
-          CJM
-        </div>
-      </div>
-
-      <div class="case-image">
-        <div class="image-placeholder">
-          Аватар клиента
-        </div>
-      </div>
-
-      <div class="case-image">
-        <div class="image-placeholder">
-          Email
-        </div>
-      </div>
-
-      <div class="case-image">
-        <div class="image-placeholder">
-          Печатная реклама
-        </div>
-      </div>
-
-      <div class="case-image">
-        <div class="image-placeholder">
-          Наружная реклама
-        </div>
-      </div>
+        <a href="#" class="light-button">
+            Открыть Google Документ →
+        </a>
 
     </div>
-
-
-    <div class="case-bottom">
-
-      <p>
-        В рамках проекта были детально проработаны
-        составляющие рекламной кампании и
-        маркетинговые материалы.
-      </p>
-
-      <a href="#" class="outline-button">
-        Подробная версия проекта →
-      </a>
-
-    </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================
-     05 — ФЕСТИВАЛИ
+     05 — FESTIVALS
 ========================= -->
 
-<section class="portfolio-section festivals-section">
+<section class="section container" id="festivals">
 
-  <div class="container">
-
-    <div class="section-number">
-      05 / Фестивали
+    <div class="section-label">
+        05 / Festivals
     </div>
 
-    <div class="section-heading">
-
-      <h2>
-        Проекты,<br>
-        которые проходят
-        вживую
-      </h2>
-
-      <p>
-        Опыт координации мероприятий,
-        работы с участниками, площадками
-        и командой.
-      </p>
-
-    </div>
+    <h2 class="section-title">
+        Фестивали<br>
+        и события
+    </h2>
 
 
-    <div class="festival-grid">
+    <!-- LETI -->
 
-
-      <article class="festival-card">
+    <div class="festival">
 
         <div class="festival-photo">
 
-          <div class="image-placeholder">
-            Фотографии LETI
-          </div>
+            <div class="photo-placeholder">
+                Фото фестиваля
+            </div>
 
         </div>
+
 
         <div class="festival-info">
 
-          <div class="festival-meta">
-            Festival project
-          </div>
+            <div class="festival-number">
+                01 / LETI
+            </div>
 
-          <h3>
-            LETI Communication
-            Experts Festival
-          </h3>
+            <h3>
+                LETI Communication
+                Experts Festival
+            </h3>
 
-          <div class="role">
-            Координатор направления
-            выездных мастер-классов
-          </div>
+            <div class="festival-role">
+                Координатор направления
+                выездных мастер-классов
+            </div>
 
-          <ul>
-            <li>Координация участников и команды.</li>
-            <li>Подготовка материалов.</li>
-            <li>Организация мастер-классов.</li>
-          </ul>
+            <ul>
 
-        </div>
+                <li>
+                    Подготовка и организация мастер-класса
+                    в рамках фестиваля.
+                </li>
 
-      </article>
+                <li>
+                    Взаимодействие с участниками,
+                    площадкой и командой организаторов.
+                </li>
 
+                <li>
+                    Координация участников
+                    и организационных процессов.
+                </li>
 
-      <article class="festival-card">
+                <li>
+                    Подготовка необходимых материалов
+                    и сопровождение мероприятия.
+                </li>
 
-        <div class="festival-photo">
-
-          <div class="image-placeholder">
-            Фотографии «Освети Науку»
-          </div>
-
-        </div>
-
-        <div class="festival-info">
-
-          <div class="festival-meta">
-            Festival project
-          </div>
-
-          <h3>
-            «Освети Науку»
-          </h3>
-
-          <div class="role">
-            Координатор
-          </div>
-
-          <ul>
-            <li>Координация участников.</li>
-            <li>Организация материалов.</li>
-            <li>Взаимодействие с командой проекта.</li>
-          </ul>
+            </ul>
 
         </div>
-
-      </article>
-
 
     </div>
 
-  </div>
+
+    <!-- OSVETI NAUKU -->
+
+    <div class="festival">
+
+        <div class="festival-photo">
+
+            <div class="photo-placeholder">
+                Фото фестиваля
+            </div>
+
+        </div>
+
+
+        <div class="festival-info">
+
+            <div class="festival-number">
+                02 / EVENT
+            </div>
+
+            <h3>
+                «Освети<br>
+                Науку»
+            </h3>
+
+            <div class="festival-role">
+                Координатор
+            </div>
+
+            <ul>
+
+                <li>
+                    Подготовка материалов
+                    и организационных процессов.
+                </li>
+
+                <li>
+                    Координация участников
+                    и команды.
+                </li>
+
+                <li>
+                    Взаимодействие с площадкой
+                    и участниками мероприятия.
+                </li>
+
+                <li>
+                    Сопровождение мероприятия
+                    от подготовки до завершения.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
 
 </section>
 
 
 <!-- =========================
-     06 — КОНТЕНТ И PR
+     06 — CONTENT & PR
 ========================= -->
 
-<section class="portfolio-section content-section" id="content">
+<section class="section container" id="content">
 
-  <div class="container">
-
-    <div class="section-number">
-      06 / Контент и PR
+    <div class="section-label">
+        06 / Content & PR
     </div>
 
-
-    <div class="section-heading">
-
-      <h2>
-        Контент,<br>
-        тексты и PR
-      </h2>
-
-      <p>
-        Визуальные и текстовые проекты:
-        социальные сети, медиа,
-        журнальные материалы и PR.
-      </p>
-
-    </div>
+    <h2 class="section-title">
+        Контент<br>
+        и PR
+    </h2>
 
 
     <!-- ETU MEDIA -->
 
-    <div class="content-project">
+    <div class="content-block">
 
-      <div class="content-project-heading">
+        <div class="content-heading">
 
-        <div>
+            <h3>ETU Media</h3>
 
-          <span>01 / ETU Media</span>
-
-          <h3>
-            Креативный контент
-            для медиацентра вуза
-          </h3>
+            <p>
+                Креативный контент для медиацентра
+                университета: тексты, карточки,
+                дайджесты и материалы о мероприятиях.
+            </p>
 
         </div>
 
-        <p>
-          Автор текстов и материалов
-          для университетского медиа.
-        </p>
 
-      </div>
+        <div class="carousel">
 
+            <div class="carousel-card">
 
-      <div class="mini-label">
-        Посты
-      </div>
+                <div class="carousel-image">
+                    Карточка публикации
+                </div>
 
-
-      <div class="post-grid">
-
-        <div class="post-card">
-          <div class="image-placeholder">
-            Пост 01
-          </div>
-        </div>
-
-        <div class="post-card">
-          <div class="image-placeholder">
-            Пост 02
-          </div>
-        </div>
-
-        <div class="post-card">
-          <div class="image-placeholder">
-            Пост 03
-          </div>
-        </div>
-
-      </div>
-
-
-      <div class="content-project" style="border:0;">
-
-        <div class="mini-label">
-          Лонгриды
-        </div>
-
-        <div class="longread-grid">
-
-          <article class="longread-card">
-
-            <div class="longread-cover">
-              <div class="image-placeholder">
-                Лонгрид 01
-              </div>
-            </div>
-
-            <div class="longread-info">
-
-              <h4>
-                Лонгрид
-              </h4>
-
-              <p>
-                Краткое описание материала.
-              </p>
-
-              <a href="#">
-                Читать полностью →
-              </a>
+                <div class="carousel-caption">
+                    <h4>Пост-карточка</h4>
+                    <p>Автор текста и контент.</p>
+                </div>
 
             </div>
 
-          </article>
 
+            <div class="carousel-card">
 
-          <article class="longread-card">
+                <div class="carousel-image">
+                    Скрин публикации
+                </div>
 
-            <div class="longread-cover">
-              <div class="image-placeholder">
-                Лонгрид 02
-              </div>
-            </div>
-
-            <div class="longread-info">
-
-              <h4>
-                Лонгрид
-              </h4>
-
-              <p>
-                Краткое описание материала.
-              </p>
-
-              <a href="#">
-                Читать полностью →
-              </a>
+                <div class="carousel-caption">
+                    <h4>Дайджест</h4>
+                    <p>Контент для социальных сетей.</p>
+                </div>
 
             </div>
 
-          </article>
+
+            <div class="carousel-card">
+
+                <div class="carousel-image">
+                    Материал медиа
+                </div>
+
+                <div class="carousel-caption">
+                    <h4>Анонс</h4>
+                    <p>Материалы о мероприятиях.</p>
+                </div>
+
+            </div>
+
+
+            <div class="carousel-card">
+
+                <div class="carousel-image">
+                    Публикация
+                </div>
+
+                <div class="carousel-caption">
+                    <h4>Контент</h4>
+                    <p>Текст + визуальная подача.</p>
+                </div>
+
+            </div>
 
         </div>
 
-      </div>
+
+        <div style="margin-top:70px;">
+
+            <div class="content-heading">
+
+                <h3>Лонгриды</h3>
+
+                <p>
+                    Авторские материалы
+                    для университетского медиа.
+                </p>
+
+            </div>
+
+
+            <div class="masonry">
+
+                <div class="masonry-card">
+
+                    <div class="masonry-image">
+                        Обложка лонгрида
+                    </div>
+
+                    <div class="masonry-caption">
+                        <h4>Лонгрид 01</h4>
+                        <p>
+                            Авторский материал
+                            для ETU Media.
+                        </p>
+
+                        <a href="#" class="read-link">
+                            Читать полностью →
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="masonry-card">
+
+                    <div class="masonry-image">
+                        Обложка лонгрида
+                    </div>
+
+                    <div class="masonry-caption">
+                        <h4>Лонгрид 02</h4>
+                        <p>
+                            Авторский материал
+                            для университетского медиа.
+                        </p>
+
+                        <a href="#" class="read-link">
+                            Читать полностью →
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="masonry-card">
+
+                    <div class="masonry-image">
+                        Материал
+                    </div>
+
+                    <div class="masonry-caption">
+                        <h4>Публикация</h4>
+                        <p>Контент и коммуникации.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
 
     <!-- LAMPA -->
 
-    <div class="content-project">
+    <div class="content-block">
 
-      <div class="content-project-heading">
+        <div class="content-heading">
 
-        <div>
+            <h3>LAMPA</h3>
 
-          <span>02 / LAMPA</span>
-
-          <h3>
-            Студенческий журнал
-          </h3>
-
-        </div>
-
-        <p>
-          Автор материалов для студенческого
-          журнала LAMPA.
-        </p>
-
-      </div>
-
-
-      <div class="magazine-grid">
-
-        <div class="magazine-cover">
-
-          <div class="image-placeholder">
-            Обложка LAMPA
-          </div>
+            <p>
+                Автор материалов для студенческого журнала.
+            </p>
 
         </div>
 
 
-        <div class="magazine-pages">
+        <div class="lampa">
 
-          <div class="magazine-page">
-            <div class="image-placeholder">
-              Разворот 01
+            <div class="magazine">
+
+                <div class="magazine-label">
+                    Student magazine
+                </div>
+
+                <div class="magazine-name">
+                    LAMPA
+                </div>
+
+                <div class="magazine-label">
+                    3 published articles
+                </div>
+
             </div>
-          </div>
 
-          <div class="magazine-page">
-            <div class="image-placeholder">
-              Разворот 02
+
+            <div class="lampa-info">
+
+                <h3>
+                    Тексты,<br>
+                    которые стали<br>
+                    публикациями.
+                </h3>
+
+                <p>
+                    Автор материалов для студенческого
+                    журнала LAMPA: 3 опубликованные статьи
+                    в двух выпусках.
+                </p>
+
+                <div class="article-links">
+
+                    <a href="#" class="article-link">
+                        Выпуск №1 →
+                    </a>
+
+                    <a href="#" class="article-link">
+                        Выпуск №2 →
+                    </a>
+
+                </div>
+
             </div>
-          </div>
 
         </div>
-
-      </div>
 
     </div>
 
 
     <!-- LADOGA -->
 
-    <div class="content-project">
+    <div class="content-block">
 
-      <div class="content-project-heading">
+        <div class="media-case">
 
-        <div>
+            <div class="content-heading">
 
-          <span>03 / Ладога — 2024</span>
+                <h3>
+                    «Ладога — 2024»
+                </h3>
 
-          <h3>
-            Медиаволонтёр
-          </h3>
+                <p>
+                    Медиаволонтёр на молодёжном форуме.
+                </p>
 
-        </div>
-
-        <p>
-          Пресс-релиз по итогам форума
-          и публикации в СМИ.
-        </p>
-
-      </div>
-
-
-      <div class="ladoga-grid">
-
-        <div class="ladoga-main-image">
-
-          <div class="image-placeholder">
-            Скрин пресс-релиза
-          </div>
-
-        </div>
-
-
-        <div class="media-publications">
-
-          <div class="media-item">
-
-            <div class="image-placeholder">
-              СМИ 01
             </div>
 
-            <a href="#">
-              Читать публикацию →
-            </a>
 
-          </div>
+            <p style="max-width:650px;color:#6d766b;font-size:15px;">
+                Написала пресс-релиз по итогам форума.
+                Материал был опубликован в двух онлайн-СМИ
+                Псковской области.
+            </p>
 
 
-          <div class="media-item">
+            <div class="media-grid">
 
-            <div class="image-placeholder">
-              СМИ 02
+                <div class="media-card">
+                    Скрин пресс-релиза
+                </div>
+
+                <div class="media-card">
+                    Публикация СМИ №1
+                </div>
+
+                <div class="media-card">
+                    Публикация СМИ №2
+                </div>
+
             </div>
 
-            <a href="#">
-              Читать публикацию →
-            </a>
 
-          </div>
+            <div class="article-links">
+
+                <a href="#" class="article-link">
+                    Читать публикацию №1 →
+                </a>
+
+                <a href="#" class="article-link">
+                    Читать публикацию №2 →
+                </a>
+
+            </div>
 
         </div>
-
-      </div>
 
     </div>
-
-
-  </div>
 
 </section>
 
 
 <!-- =========================
-     07 — КОНТАКТЫ
+     07 — CONTACTS
 ========================= -->
 
-<section class="final-contact" id="contacts">
+<section class="section container contact-section" id="contacts">
 
-  <div class="container">
+    <div class="contact-box">
 
-    <div class="contact-final-grid">
-
-      <div>
-
-        <div class="final-kicker">
-          07 / Контакты
+        <div class="section-label">
+            07 / Contacts
         </div>
 
-        <h2>
-          Давайте<br>
-          на связи
-        </h2>
+        <div class="contact-title">
+            Давайте<br>
+            на связи
+        </div>
 
-      </div>
-
-
-      <div class="final-contact-info">
-
-        <p>
-          Если вам интересен мой опыт
-          и вы хотите обсудить проект —
-          буду рада пообщаться.
+        <p class="contact-subtitle">
+            Открыта к интересным проектам,
+            новым задачам и возможностям
+            развиваться в маркетинге.
         </p>
 
 
-        <div class="final-links">
+        <div class="contact-links">
 
-          <a href="#">
-            Telegram
-            <span>↗</span>
-          </a>
+            <a href="#" class="contact-link">
+                Telegram →
+            </a>
 
-          <a href="tel:+70000000000">
-            Телефон
-            <span>↗</span>
-          </a>
+            <a href="tel:+70000000000" class="contact-link">
+                Телефон →
+            </a>
 
-          <a href="mailto:your@email.com">
-            Email
-            <span>↗</span>
-          </a>
+            <a href="mailto:your-email@example.com" class="contact-link">
+                Email →
+            </a>
 
-          <a href="#">
-            HH.ru
-            <span>↗</span>
-          </a>
+            <a href="#" class="contact-link">
+                HH.ru →
+            </a>
 
         </div>
 
-      </div>
-
     </div>
-
-
-    <div class="footer-line">
-
-      <span>Дарья Богомолова</span>
-
-      <span>Marketing · Communications · PR · Events</span>
-
-    </div>
-
-  </div>
 
 </section>
 
 </main>
+
+
+<footer class="container">
+
+    <div>
+        Дарья Богомолова · Portfolio 2026
+    </div>
+
+    <div>
+        Marketing · Communications · Events
+    </div>
+
+</footer>
+
 
 </body>
 </html>
