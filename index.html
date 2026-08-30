@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Дарья Богомолова — Marketing & Communications</title>
+  <title>Дарья Богомолова — Ассистент маркетолога</title>
 
-  <meta name="description" content="Портфолио Дарьи Богомоловой — маркетинг, коммуникации, PR и event.">
+  <meta name="description" content="Портфолио Дарьи Богомоловой. Маркетинг, коммуникации, PR и event-проекты.">
 
   <style>
+
+    /* =========================
+       ОСНОВА
+    ========================= */
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -22,8 +27,9 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f7f4ef;
-      color: #252525;
+      color: #272624;
       line-height: 1.5;
+      overflow-x: hidden;
     }
 
     a {
@@ -31,197 +37,377 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
-      width: min(1180px, calc(100% - 40px));
+      width: min(1180px, calc(100% - 48px));
       margin: 0 auto;
     }
 
-    /* HEADER */
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       padding: 28px 0;
       position: relative;
-      z-index: 10;
+      z-index: 20;
     }
 
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 30px;
+      justify-content: space-between;
     }
 
     .logo {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      letter-spacing: -0.08em;
     }
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      align-items: center;
+      gap: 30px;
       font-size: 13px;
-      color: #666;
+      color: #5f5b56;
     }
 
     .nav-links a {
+      position: relative;
       transition: opacity 0.2s ease;
     }
 
     .nav-links a:hover {
-      opacity: 0.5;
+      opacity: 0.55;
     }
 
-    /* HERO */
+    .resume-link {
+      padding: 11px 18px;
+      border-radius: 50px;
+      background: #292827;
+      color: white;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       min-height: calc(100vh - 90px);
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 70px;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 75px;
       align-items: center;
-      padding: 60px 0 100px;
+      padding: 45px 0 95px;
+      position: relative;
     }
 
-    .hero-photo {
-      height: 620px;
-      border-radius: 32px;
-      background: #e5dfd7;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #888;
-      font-size: 14px;
+    /* декоративная линия */
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 180px;
+      border: 1px solid #b9aea2;
+      border-radius: 50%;
+      transform: rotate(-22deg);
+      left: -145px;
+      top: 170px;
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    .photo-wrap {
+      position: relative;
+      height: 650px;
+    }
+
+    .photo-card {
+      height: 100%;
+      width: 100%;
+      border-radius: 34px;
+      background: #e9e1d8;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+    }
+
+    .photo-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(255,255,255,0.10),
+        transparent 30%
+      );
+      pointer-events: none;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+      position: relative;
+      z-index: 2;
+    }
+
+    .photo-label {
+      position: absolute;
+      left: 22px;
+      bottom: 20px;
+      z-index: 4;
+      background: rgba(247,244,239,0.88);
+      backdrop-filter: blur(8px);
+      padding: 9px 14px;
+      border-radius: 50px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #625c56;
     }
 
     .hero-content {
-      max-width: 650px;
+      position: relative;
+      z-index: 5;
     }
 
     .eyebrow {
-      font-size: 12px;
+      font-size: 11px;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #8a7d72;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 {
-      font-size: clamp(52px, 7vw, 96px);
-      line-height: 0.94;
-      letter-spacing: -0.065em;
-      font-weight: 700;
-      margin-bottom: 32px;
-    }
-
-    .position {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(25px, 3vw, 40px);
-      line-height: 1.15;
-      font-style: italic;
-      max-width: 620px;
+      color: #8c8176;
       margin-bottom: 24px;
     }
 
-    .specialization {
-      max-width: 520px;
-      color: #666;
-      font-size: 17px;
-      margin-bottom: 34px;
+    .hero h1 {
+      font-size: clamp(58px, 7.2vw, 98px);
+      line-height: 0.91;
+      letter-spacing: -0.075em;
+      font-weight: 700;
+      margin-bottom: 28px;
     }
+
+    .position {
+      font-size: clamp(24px, 3vw, 37px);
+      line-height: 1.15;
+      font-weight: 400;
+      letter-spacing: -0.035em;
+      margin-bottom: 24px;
+    }
+
+    .position-line {
+      width: 380px;
+      max-width: 100%;
+      height: 1px;
+      background: #cfc6bd;
+      margin-bottom: 25px;
+    }
+
+    .specialization {
+      max-width: 570px;
+      font-size: 16px;
+      line-height: 1.65;
+      color: #68635e;
+      margin-bottom: 30px;
+    }
+
+
+    /* =========================
+       CONTACT ICONS
+    ========================= */
 
     .contacts {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 34px;
+      align-items: center;
+      gap: 11px;
+      margin-bottom: 32px;
     }
 
-    .contact {
-      border: 1px solid #d8d0c7;
-      background: rgba(255,255,255,0.45);
-      padding: 10px 16px;
-      border-radius: 100px;
-      font-size: 13px;
-      transition: all 0.2s ease;
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #d5cec6;
+      background: rgba(255,255,255,0.58);
+      transition: all 0.25s ease;
     }
 
-    .contact:hover {
-      background: #252525;
+    .contact-icon svg {
+      width: 21px;
+      height: 21px;
+    }
+
+    .contact-icon:hover {
+      transform: translateY(-3px);
+      background: #292827;
       color: white;
-      border-color: #252525;
+      border-color: #292827;
     }
+
+    .hh-icon {
+      font-size: 16px;
+      font-weight: 700;
+      color: #d92d2d;
+    }
+
+    .contact-icon:hover .hh-icon {
+      color: white;
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
 
     .button {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      padding: 15px 24px;
-      border-radius: 100px;
-      background: #252525;
+      justify-content: space-between;
+      gap: 35px;
+      min-width: 270px;
+      padding: 16px 20px 16px 24px;
+      border-radius: 60px;
+      background: #292827;
       color: white;
       font-size: 14px;
-      transition: transform 0.2s ease;
+      transition: all 0.25s ease;
+    }
+
+    .button-arrow {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.13);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
     }
 
     .button:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(40,38,36,0.14);
     }
 
-    /* ABOUT */
+
+    /* =========================
+       SCROLL
+    ========================= */
+
+    .scroll-note {
+      position: absolute;
+      right: -25px;
+      bottom: 120px;
+      writing-mode: vertical-rl;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      color: #8c8176;
+      text-transform: uppercase;
+    }
+
+    .scroll-note span {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about {
-      padding: 110px 0;
+      padding: 115px 0 130px;
+      border-top: 1px solid #ded7cf;
+      position: relative;
     }
 
     .section-number {
-      font-size: 12px;
-      color: #8a7d72;
-      letter-spacing: 0.14em;
+      font-size: 11px;
+      color: #8c8176;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: 0.7fr 1.3fr;
-      gap: 80px;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: 85px;
       align-items: start;
     }
 
     .about h2 {
-      font-size: clamp(40px, 5vw, 68px);
-      line-height: 1;
-      letter-spacing: -0.05em;
+      font-size: clamp(45px, 5.4vw, 72px);
+      line-height: 0.94;
+      letter-spacing: -0.07em;
+      font-weight: 500;
     }
 
     .about-text {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(23px, 2.6vw, 34px);
-      line-height: 1.3;
-      max-width: 780px;
+      font-size: clamp(23px, 2.5vw, 33px);
+      line-height: 1.35;
+      max-width: 760px;
     }
 
-    /* PLACEHOLDER */
+    .about-accent {
+      display: inline-block;
+      margin-top: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8c8176;
+    }
+
+
+    /* =========================
+       ВРЕМЕННЫЙ БЛОК
+       Потом заменим на НАВЫКИ
+    ========================= */
 
     .next-section {
-      padding: 110px 0;
+      padding: 115px 0;
       border-top: 1px solid #ded7cf;
+      min-height: 500px;
     }
 
     .next-section h2 {
-      font-size: clamp(42px, 6vw, 78px);
-      letter-spacing: -0.06em;
-      line-height: 1;
+      font-size: clamp(45px, 6vw, 82px);
+      line-height: 0.95;
+      letter-spacing: -0.07em;
+      font-weight: 500;
     }
 
-    /* MOBILE */
 
-    @media (max-width: 800px) {
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
 
       .container {
-        width: min(100% - 28px, 1180px);
+        width: calc(100% - 28px);
+      }
+
+      header {
+        padding: 20px 0;
       }
 
       .nav-links {
@@ -230,12 +416,20 @@
 
       .hero {
         grid-template-columns: 1fr;
-        gap: 35px;
-        padding-top: 30px;
+        gap: 40px;
+        padding: 30px 0 80px;
+        min-height: auto;
       }
 
-      .hero-photo {
-        height: 440px;
+      .hero::before {
+        width: 250px;
+        height: 120px;
+        left: -110px;
+        top: 125px;
+      }
+
+      .photo-wrap {
+        height: 480px;
         order: 2;
       }
 
@@ -244,19 +438,33 @@
       }
 
       .hero h1 {
-        font-size: clamp(52px, 16vw, 82px);
+        font-size: clamp(55px, 17vw, 85px);
+        margin-bottom: 24px;
       }
 
       .position {
-        font-size: 28px;
+        font-size: 27px;
       }
 
       .specialization {
-        font-size: 16px;
+        font-size: 15px;
+      }
+
+      .scroll-note {
+        display: none;
+      }
+
+      .contacts {
+        margin-bottom: 26px;
+      }
+
+      .contact-icon {
+        width: 45px;
+        height: 45px;
       }
 
       .about {
-        padding: 80px 0;
+        padding: 80px 0 90px;
       }
 
       .about-grid {
@@ -264,39 +472,119 @@
         gap: 35px;
       }
 
+      .about h2 {
+        font-size: 52px;
+      }
+
       .about-text {
         font-size: 24px;
       }
+
+      .next-section {
+        padding: 80px 0;
+      }
     }
+
+
+    /* =========================
+       VERY SMALL PHONES
+    ========================= */
+
+    @media (max-width: 430px) {
+
+      .hero h1 {
+        font-size: 57px;
+      }
+
+      .photo-wrap {
+        height: 430px;
+      }
+
+      .button {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
 
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
+
     <div class="container nav">
-      <div class="logo">DB.</div>
+
+      <div class="logo">
+        DB.
+      </div>
 
       <nav class="nav-links">
-        <a href="#about">Обо мне</a>
-        <a href="#skills">Навыки</a>
-        <a href="#experience">Опыт</a>
-        <a href="#projects">Проекты</a>
-        <a href="#contacts">Контакты</a>
+
+        <a href="#about">
+          Обо мне
+        </a>
+
+        <a href="#skills">
+          Навыки
+        </a>
+
+        <a href="#experience">
+          Опыт
+        </a>
+
+        <a href="#projects">
+          Проекты
+        </a>
+
+        <a href="#contacts">
+          Контакты
+        </a>
+
+        <a href="#" class="resume-link">
+          Резюме ↓
+        </a>
+
       </nav>
+
     </div>
+
   </header>
 
 
   <main>
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero container">
 
-      <div class="hero-photo">
-        Здесь будет фото
+
+      <div class="photo-wrap">
+
+        <div class="photo-card">
+
+          <img
+            src="darya_portrait.png"
+            alt="Дарья Богомолова"
+          >
+
+          <div class="photo-label">
+            Marketing · Communications
+          </div>
+
+        </div>
+
       </div>
+
 
       <div class="hero-content">
 
@@ -304,57 +592,209 @@
           Portfolio / 2026
         </div>
 
+
         <h1>
           Дарья<br>
           Богомолова
         </h1>
 
+
         <div class="position">
-          «Маркетинг, коммуникации и проекты на стыке идей и людей»
+          Ассистент маркетолога
         </div>
+
+
+        <div class="position-line"></div>
+
 
         <p class="specialization">
-          Развиваюсь в направлении бренд-маркетинга,
+          Развиваюсь в направлениях бренд-маркетинга,
           коммуникаций, PR и event-проектов.
+          Люблю идеи, людей и проекты, которые
+          объединяют.
         </p>
 
+
+        <!-- CONTACT ICONS -->
+
         <div class="contacts">
-          <a class="contact" href="#">Telegram</a>
-          <a class="contact" href="#">Телефон</a>
-          <a class="contact" href="#">Email</a>
-          <a class="contact" href="#">HH.ru</a>
+
+
+          <!-- TELEGRAM -->
+
+          <a
+            href="#"
+            class="contact-icon"
+            aria-label="Telegram"
+            title="Telegram"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+
+              <path
+                d="M21.5 3.5L18.3 20c-.24 1.17-.88 1.46-1.78.91l-4.86-3.58-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.96 9.03-8.16c.39-.35-.08-.55-.61-.2L6.1 13.63l-4.7-1.47c-1.02-.32-1.04-1.02.21-1.51L20 3.08c.87-.32 1.63.2 1.5.42Z"
+                fill="currentColor"
+              />
+
+            </svg>
+
+          </a>
+
+
+          <!-- PHONE -->
+
+          <a
+            href="tel:+00000000000"
+            class="contact-icon"
+            aria-label="Телефон"
+            title="Телефон"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+
+              <path
+                d="M7.1 3.5L9.3 2.7C9.9 2.5 10.5 2.8 10.7 3.4L12 7.1C12.2 7.7 12 8.2 11.5 8.5L9.7 9.7C10.7 11.9 12.1 13.4 14.3 14.4L15.5 12.6C15.8 12.1 16.3 11.9 16.9 12.1L20.6 13.4C21.2 13.6 21.5 14.2 21.3 14.8L20.5 17C20.2 17.9 19.4 18.5 18.5 18.4C10.8 17.6 6.4 13.2 5.6 5.5C5.5 4.6 6.1 3.8 7.1 3.5Z"
+                fill="currentColor"
+              />
+
+            </svg>
+
+          </a>
+
+
+          <!-- EMAIL -->
+
+          <a
+            href="mailto:your@email.com"
+            class="contact-icon"
+            aria-label="Email"
+            title="Email"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+
+              <rect
+                x="3"
+                y="5"
+                width="18"
+                height="14"
+                rx="2"
+                stroke="currentColor"
+                stroke-width="1.7"
+              />
+
+              <path
+                d="M4 7L12 13L20 7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+            </svg>
+
+          </a>
+
+
+          <!-- HH -->
+
+          <a
+            href="#"
+            class="contact-icon"
+            aria-label="HH.ru"
+            title="HH.ru"
+          >
+
+            <span class="hh-icon">
+              hh
+            </span>
+
+          </a>
+
+
         </div>
 
-        <a class="button" href="#projects">
-          Посмотреть проекты →
+
+        <!-- PROJECT BUTTON -->
+
+        <a
+          href="#projects"
+          class="button"
+        >
+
+          <span>
+            Посмотреть проекты
+          </span>
+
+          <span class="button-arrow">
+            →
+          </span>
+
         </a>
 
+      </div>
+
+
+      <div class="scroll-note">
+        Scroll
+        <span>↓</span>
       </div>
 
     </section>
 
 
-    <!-- ABOUT -->
 
-    <section class="about container" id="about">
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section
+      class="about container"
+      id="about"
+    >
 
       <div class="section-number">
         01 / Обо мне
       </div>
 
+
       <div class="about-grid">
+
 
         <h2>
           Немного<br>
           обо мне
         </h2>
 
-        <div class="about-text">
-          Здесь разместим короткую профессиональную
-          презентацию: кто я как специалист, какие
-          задачи умею решать, какие направления мне
-          интересны и в каком направлении хочу
-          развиваться.
+
+        <div>
+
+          <div class="about-text">
+
+            Я — специалист в начале профессионального
+            пути в маркетинге. Интересуюсь
+            бренд-маркетингом, коммуникациями,
+            PR и event-проектами.
+
+          </div>
+
+
+          <span class="about-accent">
+            Здесь разместим финальную версию текста
+          </span>
+
         </div>
 
       </div>
@@ -362,13 +802,20 @@
     </section>
 
 
-    <!-- TEMPORARY -->
 
-    <section class="next-section container" id="skills">
+    <!-- =========================
+         TEMPORARY
+    ========================= -->
+
+    <section
+      class="next-section container"
+      id="skills"
+    >
 
       <div class="section-number">
         02 / Навыки и инструменты
       </div>
+
 
       <h2>
         Здесь появится<br>
@@ -376,6 +823,7 @@
       </h2>
 
     </section>
+
 
   </main>
 
