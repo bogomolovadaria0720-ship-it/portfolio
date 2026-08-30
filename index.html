@@ -1,2920 +1,1787 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Дарья Богомолова — Ассистент маркетолога</title>
-
-  <meta name="description" content="Портфолио Дарьи Богомоловой. Маркетинг, коммуникации, PR и event-проекты.">
-
-  <style>
-
-    /* =========================
-       ОСНОВА
-    ========================= */
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f4ef;
-      color: #272624;
-      line-height: 1.5;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1180px, calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-      padding: 28px 0;
-      position: relative;
-      z-index: 20;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 25px;
-      letter-spacing: -0.08em;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      font-size: 13px;
-      color: #5f5b56;
-    }
-
-    .nav-links a {
-      position: relative;
-      transition: opacity 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      opacity: 0.55;
-    }
-
-    .resume-link {
-      padding: 11px 18px;
-      border-radius: 50px;
-      background: #292827;
-      color: white;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: calc(100vh - 90px);
-      display: grid;
-      grid-template-columns: 0.92fr 1.08fr;
-      gap: 75px;
-      align-items: center;
-      padding: 45px 0 95px;
-      position: relative;
-    }
-
-    /* декоративная линия */
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 380px;
-      height: 180px;
-      border: 1px solid #b9aea2;
-      border-radius: 50%;
-      transform: rotate(-22deg);
-      left: -145px;
-      top: 170px;
-      opacity: 0.65;
-      pointer-events: none;
-    }
-
-    .photo-wrap {
-      position: relative;
-      height: 650px;
-    }
-
-    .photo-card {
-      height: 100%;
-      width: 100%;
-      border-radius: 34px;
-      background: #e9e1d8;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      position: relative;
-    }
-
-    .photo-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(255,255,255,0.10),
-        transparent 30%
-      );
-      pointer-events: none;
-    }
-
-    .photo-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center bottom;
-      position: relative;
-      z-index: 2;
-    }
-
-    .photo-label {
-      position: absolute;
-      left: 22px;
-      bottom: 20px;
-      z-index: 4;
-      background: rgba(247,244,239,0.88);
-      backdrop-filter: blur(8px);
-      padding: 9px 14px;
-      border-radius: 50px;
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #625c56;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 5;
-    }
-
-    .eyebrow {
-      font-size: 11px;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: #8c8176;
-      margin-bottom: 24px;
-    }
-
-    .hero h1 {
-      font-size: clamp(58px, 7.2vw, 98px);
-      line-height: 0.91;
-      letter-spacing: -0.075em;
-      font-weight: 700;
-      margin-bottom: 28px;
-    }
-
-    .position {
-      font-size: clamp(24px, 3vw, 37px);
-      line-height: 1.15;
-      font-weight: 400;
-      letter-spacing: -0.035em;
-      margin-bottom: 24px;
-    }
-
-    .position-line {
-      width: 380px;
-      max-width: 100%;
-      height: 1px;
-      background: #cfc6bd;
-      margin-bottom: 25px;
-    }
-
-    .specialization {
-      max-width: 570px;
-      font-size: 16px;
-      line-height: 1.65;
-      color: #68635e;
-      margin-bottom: 30px;
-    }
-
-
-    /* =========================
-       CONTACT ICONS
-    ========================= */
-
-    .contacts {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      margin-bottom: 32px;
-    }
-
-    .contact-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #d5cec6;
-      background: rgba(255,255,255,0.58);
-      transition: all 0.25s ease;
-    }
-
-    .contact-icon svg {
-      width: 21px;
-      height: 21px;
-    }
-
-    .contact-icon:hover {
-      transform: translateY(-3px);
-      background: #292827;
-      color: white;
-      border-color: #292827;
-    }
-
-    .hh-icon {
-      font-size: 16px;
-      font-weight: 700;
-      color: #d92d2d;
-    }
-
-    .contact-icon:hover .hh-icon {
-      color: white;
-    }
-
-
-    /* =========================
-       BUTTON
-    ========================= */
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 35px;
-      min-width: 270px;
-      padding: 16px 20px 16px 24px;
-      border-radius: 60px;
-      background: #292827;
-      color: white;
-      font-size: 14px;
-      transition: all 0.25s ease;
-    }
-
-    .button-arrow {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.13);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 17px;
-    }
-
-    .button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(40,38,36,0.14);
-    }
-
-
-    /* =========================
-       SCROLL
-    ========================= */
-
-    .scroll-note {
-      position: absolute;
-      right: -25px;
-      bottom: 120px;
-      writing-mode: vertical-rl;
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      color: #8c8176;
-      text-transform: uppercase;
-    }
-
-    .scroll-note span {
-      display: inline-block;
-      margin-top: 10px;
-      font-size: 18px;
-    }
-
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about {
-      padding: 115px 0 130px;
-      border-top: 1px solid #ded7cf;
-      position: relative;
-    }
-
-    .section-number {
-      font-size: 11px;
-      color: #8c8176;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 25px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.72fr 1.28fr;
-      gap: 85px;
-      align-items: start;
-    }
-
-    .about h2 {
-      font-size: clamp(45px, 5.4vw, 72px);
-      line-height: 0.94;
-      letter-spacing: -0.07em;
-      font-weight: 500;
-    }
-
-    .about-text {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(23px, 2.5vw, 33px);
-      line-height: 1.35;
-      max-width: 760px;
-    }
-
-    .about-accent {
-      display: inline-block;
-      margin-top: 30px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #8c8176;
-    }
-
-
-    /* =========================
-       ВРЕМЕННЫЙ БЛОК
-       Потом заменим на НАВЫКИ
-    ========================= */
-
-    .next-section {
-      padding: 115px 0;
-      border-top: 1px solid #ded7cf;
-      min-height: 500px;
-    }
-
-    .next-section h2 {
-      font-size: clamp(45px, 6vw, 82px);
-      line-height: 0.95;
-      letter-spacing: -0.07em;
-      font-weight: 500;
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 850px) {
-
-      .container {
-        width: calc(100% - 28px);
-      }
-
-      header {
-        padding: 20px 0;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 30px 0 80px;
-        min-height: auto;
-      }
-
-      .hero::before {
-        width: 250px;
-        height: 120px;
-        left: -110px;
-        top: 125px;
-      }
-
-      .photo-wrap {
-        height: 480px;
-        order: 2;
-      }
-
-      .hero-content {
-        order: 1;
-      }
-
-      .hero h1 {
-        font-size: clamp(55px, 17vw, 85px);
-        margin-bottom: 24px;
-      }
-
-      .position {
-        font-size: 27px;
-      }
-
-      .specialization {
-        font-size: 15px;
-      }
-
-      .scroll-note {
-        display: none;
-      }
-
-      .contacts {
-        margin-bottom: 26px;
-      }
-
-      .contact-icon {
-        width: 45px;
-        height: 45px;
-      }
-
-      .about {
-        padding: 80px 0 90px;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .about h2 {
-        font-size: 52px;
-      }
-
-      .about-text {
-        font-size: 24px;
-      }
-
-      .next-section {
-        padding: 80px 0;
-      }
-    }
-
-
-    /* =========================
-       VERY SMALL PHONES
-    ========================= */
-
-    @media (max-width: 430px) {
-
-      .hero h1 {
-        font-size: 57px;
-      }
-
-      .photo-wrap {
-        height: 430px;
-      }
-
-      .button {
-        width: 100%;
-        min-width: 0;
-      }
-    }
- <!-- =====================================================
-       02 — НАВЫКИ И ИНСТРУМЕНТЫ
-  ====================================================== -->
-
-  <section class="portfolio-section skills-section" id="skills">
-
-    <div class="container">
-
-      <div class="section-number">
-        02 / Навыки и инструменты
-      </div>
-
-      <div class="section-heading">
-        <h2>
-          Что я умею<br>
-          и чем работаю
-        </h2>
-
-        <p>
-          Компетенции, которые помогают мне
-          работать с задачами от идеи
-          до реализации.
-        </p>
-      </div>
-
-
-      <div class="skills-grid">
-
-
-        <!-- МАРКЕТИНГ -->
-
-        <div class="skill-card skill-large">
-
-          <div class="skill-card-top">
-            <span>01</span>
-            <span>Marketing</span>
-          </div>
-
-          <h3>
-            Маркетинг<br>
-            и аналитика
-          </h3>
-
-          <div class="skill-tags">
-
-            <span>Анализ ЦА</span>
-            <span>Сегментация</span>
-            <span>Конкурентный анализ</span>
-            <span>CJM</span>
-            <span>SWOT</span>
-            <span>Рекламные стратегии</span>
-            <span>Медиапланирование</span>
-            <span>KPI</span>
-
-          </div>
-
-        </div>
-
-
-        <!-- КОНТЕНТ -->
-
-        <div class="skill-card">
-
-          <div class="skill-card-top">
-            <span>02</span>
-            <span>Content & PR</span>
-          </div>
-
-          <h3>
-            Контент<br>
-            и коммуникации
-          </h3>
-
-          <div class="skill-tags">
-
-            <span>Тексты</span>
-            <span>Социальные сети</span>
-            <span>PR</span>
-            <span>Пресс-релизы</span>
-            <span>Email</span>
-            <span>Рекламные тексты</span>
-
-          </div>
-
-        </div>
-
-
-        <!-- EVENT -->
-
-        <div class="skill-card">
-
-          <div class="skill-card-top">
-            <span>03</span>
-            <span>Events</span>
-          </div>
-
-          <h3>
-            Event
-          </h3>
-
-          <div class="skill-tags">
-
-            <span>Организация мероприятий</span>
-            <span>Площадки</span>
-            <span>Подрядчики</span>
-            <span>Участники</span>
-            <span>Логистика</span>
-            <span>Материалы</span>
-            <span>Командная работа</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- ИНСТРУМЕНТЫ -->
-
-      <div class="tools-heading">
-
-        <span>Tools</span>
-
-        <h3>
-          Инструменты
-        </h3>
-
-      </div>
-
-
-      <div class="tools-grid">
-
-        <div class="tool">
-          <div class="tool-icon">T</div>
-          <span>Tilda</span>
-        </div>
-
-        <div class="tool">
-          <div class="tool-icon">F</div>
-          <span>Figma</span>
-        </div>
-
-        <div class="tool">
-          <div class="tool-icon">C</div>
-          <span>Canva</span>
-        </div>
-
-        <div class="tool">
-          <div class="tool-icon">Ps</div>
-          <span>Photoshop</span>
-        </div>
-
-        <div class="tool">
-          <div class="tool-icon">G</div>
-          <span>Google Sheets</span>
-        </div>
-
-        <div class="tool">
-          <div class="tool-icon">P</div>
-          <span>Google Презентации</span>
-        </div>
-
-        <div class="tool">
-          <div class="tool-icon">AI</div>
-          <span>AI-инструменты</span>
-        </div>
-
-        <div class="tool">
-          <div class="tool-icon">Я</div>
-          <span>Яндекс Директ</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =====================================================
-       03 — ОПЫТ РАБОТЫ
-  ====================================================== -->
-
-  <section class="portfolio-section experience-section" id="experience">
-
-    <div class="container">
-
-      <div class="section-number">
-        03 / Опыт работы
-      </div>
-
-      <div class="section-heading">
-        <h2>
-          Опыт, который<br>
-          можно показать
-        </h2>
-
-        <p>
-          Практический опыт в маркетинге,
-          организации мероприятий и
-          коммуникациях.
-        </p>
-      </div>
-
-
-      <!-- ПСБ -->
-
-      <article class="experience-card psb-card">
-
-        <div class="experience-number">
-          01
-        </div>
-
-        <div class="experience-main">
-
-          <div class="company-line">
-            <span>ПСБ</span>
-            <span>Маркетинг</span>
-          </div>
-
-          <h3>
-            Маркетинг и организация
-            проектов
-          </h3>
-
-
-          <div class="experience-columns">
-
-
-            <div class="experience-block">
-
-              <span class="block-label">
-                Мероприятия
-              </span>
-
-              <ul>
-
-                <li>
-                  Подготовка и координация мероприятий.
-                </li>
-
-                <li>
-                  Взаимодействие с участниками
-                  и подрядчиками.
-                </li>
-
-                <li>
-                  Подготовка материалов
-                  и отчётности.
-                </li>
-
-              </ul>
-
-            </div>
-
-
-            <div class="experience-block">
-
-              <span class="block-label">
-                Организация и взаимодействие
-              </span>
-
-              <ul>
-
-                <li>
-                  Работа с документами
-                  и организационными задачами.
-                </li>
-
-                <li>
-                  Взаимодействие с подразделениями.
-                </li>
-
-                <li>
-                  Координация логистики
-                  и подрядчиков.
-                </li>
-
-              </ul>
-
-            </div>
-
-
-            <div class="experience-block">
-
-              <span class="block-label">
-                Рекламные материалы
-              </span>
-
-              <ul>
-
-                <li>
-                  Работа с полиграфией
-                  и рекламными материалами.
-                </li>
-
-                <li>
-                  Заказ сувенирной продукции.
-                </li>
-
-                <li>
-                  Учёт потребностей подразделений,
-                  заказов и поставок.
-                </li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- МТС -->
-
-      <article class="experience-card mts-card">
-
-        <div class="experience-number">
-          02
-        </div>
-
-        <div class="experience-main">
-
-          <div class="company-line">
-            <span>МТС</span>
-            <span>Опыт работы</span>
-          </div>
-
-          <h3>
-            МТС
-          </h3>
-
-          <div class="mts-placeholder">
-
-            <p>
-              Здесь разместим точные формулировки
-              из твоего резюме.
-            </p>
-
-          </div>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =====================================================
-       04 — CASE STUDY
-  ====================================================== -->
-
-  <section class="portfolio-section case-section" id="projects">
-
-    <div class="container">
-
-      <div class="section-number">
-        04 / Case Study
-      </div>
-
-
-      <div class="case-intro">
-
-        <div>
-
-          <span class="case-kicker">
-            Учебный проект
-          </span>
-
-          <h2>
-            ROBBO<br>
-            Club
-          </h2>
-
-        </div>
-
-
-        <div class="case-description">
-
-          <p>
-            Учебный проект, выполненный
-            в рамках обучения на реальном
-            брифе компании РОББО Клуб.
-          </p>
-
-          <p>
-            В рамках проекта разработана
-            рекламная кампания и комплекс
-            маркетинговых материалов.
-          </p>
-
-        </div>
-
-      </div>
-
-
-
-      <!-- ЗАДАЧА -->
-
-      <div class="case-task">
-
-        <div class="mini-label">
-          Задача
-        </div>
-
-        <div class="case-task-text">
-
-          Разработать рекламную кампанию
-          для РОББО Клуба и создать
-          комплекс материалов,
-          объединённых одной стратегией.
-
-        </div>
-
-      </div>
-
-
-
-      <!-- ВИЗУАЛЬНЫЕ РЕЗУЛЬТАТЫ -->
-
-      <div class="case-results">
-
-        <div class="mini-label">
-          Что я разработала
-        </div>
-
-
-        <div class="case-gallery">
-
-
-          <div class="case-image case-wide">
-
-            <div class="image-placeholder">
-              <span>01</span>
-              Lean Canvas
-            </div>
-
-          </div>
-
-
-          <div class="case-image">
-
-            <div class="image-placeholder">
-              <span>02</span>
-              CJM
-            </div>
-
-          </div>
-
-
-          <div class="case-image">
-
-            <div class="image-placeholder">
-              <span>03</span>
-              Аватар клиента
-            </div>
-
-          </div>
-
-
-          <div class="case-image">
-
-            <div class="image-placeholder">
-              <span>04</span>
-              Email
-            </div>
-
-          </div>
-
-
-          <div class="case-image case-wide">
-
-            <div class="image-placeholder">
-              <span>05</span>
-              Печатная реклама
-            </div>
-
-          </div>
-
-
-          <div class="case-image">
-
-            <div class="image-placeholder">
-              <span>06</span>
-              Наружная реклама
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-
-
-      <div class="case-bottom">
-
-        <p>
-          В рамках проекта были разработаны
-          дополнительные материалы рекламной
-          кампании и проработаны основные
-          коммуникационные точки.
-        </p>
-
-        <a
-          href="#"
-          class="outline-button"
-        >
-          Подробная версия проекта →
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =====================================================
-       05 — ФЕСТИВАЛИ
-  ====================================================== -->
-
-  <section class="portfolio-section festivals-section" id="festivals">
-
-    <div class="container">
-
-      <div class="section-number">
-        05 / Фестивали
-      </div>
-
-
-      <div class="section-heading">
-
-        <h2>
-          Проекты,<br>
-          где важны люди
-        </h2>
-
-        <p>
-          Организация, координация,
-          коммуникация и работа
-          с участниками.
-        </p>
-
-      </div>
-
-
-
-      <div class="festival-grid">
-
-
-        <!-- LETI -->
-
-        <article class="festival-card">
-
-          <div class="festival-photo">
-
-            <div class="image-placeholder">
-              ФОТО
-            </div>
-
-            <span class="photo-number">
-              01
-            </span>
-
-          </div>
-
-
-          <div class="festival-info">
-
-            <div class="festival-meta">
-              LETI Communication Experts Festival
-            </div>
-
-            <h3>
-              Выездные
-              мастер-классы
-            </h3>
-
-            <p class="role">
-              Координатор направления
-              выездных мастер-классов
-            </p>
-
-            <ul>
-
-              <li>
-                Подготовка полного
-                pre-event цикла.
-              </li>
-
-              <li>
-                Поиск площадок и работа
-                с коммерческими предложениями.
-              </li>
-
-              <li>
-                Взаимодействие с подрядчиками
-                и участниками.
-              </li>
-
-              <li>
-                Координация мероприятий
-                и организационных задач.
-              </li>
-
-            </ul>
-
-            <div class="festival-stat">
-              <strong>≈ 25</strong>
-              <span>участников<br>на фестиваль</span>
-            </div>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- ОСВЕТИ НАУКУ -->
-
-        <article class="festival-card">
-
-          <div class="festival-photo festival-photo-alt">
-
-            <div class="image-placeholder">
-              ФОТО
-            </div>
-
-            <span class="photo-number">
-              02
-            </span>
-
-          </div>
-
-
-          <div class="festival-info">
-
-            <div class="festival-meta">
-              «Освети Науку»
-            </div>
-
-            <h3>
-              Научный фестиваль
-            </h3>
-
-            <p class="role">
-              Координатор
-            </p>
-
-            <ul>
-
-              <li>
-                Подготовка материалов
-                к мероприятию.
-              </li>
-
-              <li>
-                Организация и сопровождение
-                участников.
-              </li>
-
-              <li>
-                Координация команды
-                и организационных процессов.
-              </li>
-
-            </ul>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =====================================================
-       06 — КОНТЕНТ И PR
-  ====================================================== -->
-
-  <section class="portfolio-section content-section" id="content">
-
-    <div class="container">
-
-      <div class="section-number">
-        06 / Контент и PR
-      </div>
-
-
-      <div class="section-heading">
-
-        <h2>
-          Тексты,<br>
-          медиа и PR
-        </h2>
-
-        <p>
-          Проекты, в которых я работала
-          с текстом, визуалом и медиа.
-        </p>
-
-      </div>
-
-
-
-      <!-- ETU MEDIA -->
-
-      <div class="content-project">
-
-        <div class="content-project-heading">
-
-          <div>
-
-            <span>
-              01 / ETU Media
-            </span>
-
-            <h3>
-              Креативный контент
-              для медиацентра
-            </h3>
-
-          </div>
-
-          <p>
-            Автор текстов и контента
-            для медиацентра вуза.
-          </p>
-
-        </div>
-
-
-
-        <!-- ПОСТЫ -->
-
-        <div class="content-subsection">
-
-          <div class="mini-label">
-            Посты
-          </div>
-
-          <div class="post-grid">
-
-
-            <div class="post-card">
-              <div class="image-placeholder">
-                ПОСТ 01
-              </div>
-            </div>
-
-
-            <div class="post-card">
-              <div class="image-placeholder">
-                ПОСТ 02
-              </div>
-            </div>
-
-
-            <div class="post-card">
-              <div class="image-placeholder">
-                ПОСТ 03
-              </div>
-            </div>
-
-
-          </div>
-
-
-          <p class="content-note">
-            Посты-карточки · дайджесты · анонсы ·
-            материалы о мероприятиях
-          </p>
-
-        </div>
-
-
-
-        <!-- ЛОНГРИДЫ -->
-
-        <div class="content-subsection">
-
-          <div class="mini-label">
-            Лонгриды
-          </div>
-
-
-          <div class="longread-grid">
-
-
-            <article class="longread-card">
-
-              <div class="longread-cover">
-                <div class="image-placeholder">
-                  ЛОНГРИД 01
-                </div>
-              </div>
-
-              <div class="longread-info">
-
-                <h4>
-                  Название лонгрида
-                </h4>
-
-                <p>
-                  Короткое описание материала
-                  в 1–2 предложения.
-                </p>
-
-                <a href="#">
-                  Читать полностью →
-                </a>
-
-              </div>
-
-            </article>
-
-
-
-            <article class="longread-card">
-
-              <div class="longread-cover">
-                <div class="image-placeholder">
-                  ЛОНГРИД 02
-                </div>
-              </div>
-
-              <div class="longread-info">
-
-                <h4>
-                  Название лонгрида
-                </h4>
-
-                <p>
-                  Короткое описание материала
-                  в 1–2 предложения.
-                </p>
-
-                <a href="#">
-                  Читать полностью →
-                </a>
-
-              </div>
-
-            </article>
-
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-
-      <!-- LAMPA -->
-
-      <div class="content-project lampa-project">
-
-        <div class="content-project-heading">
-
-          <div>
-
-            <span>
-              02 / LAMPA
-            </span>
-
-            <h3>
-              Студенческий журнал
-            </h3>
-
-          </div>
-
-          <p>
-            Автор материалов для журнала:
-            3 опубликованные статьи
-            в двух выпусках.
-          </p>
-
-        </div>
-
-
-        <div class="magazine-grid">
-
-          <div class="magazine-cover">
-            <div class="image-placeholder">
-              ОБЛОЖКА LAMPA
-            </div>
-          </div>
-
-          <div class="magazine-pages">
-
-            <div class="magazine-page">
-              <div class="image-placeholder">
-                РАЗВОРОТ 01
-              </div>
-            </div>
-
-            <div class="magazine-page">
-              <div class="image-placeholder">
-                РАЗВОРОТ 02
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <a href="#" class="outline-button">
-          Открыть выпуски LAMPA →
-        </a>
-
-      </div>
-
-
-
-      <!-- ЛАДОГА -->
-
-      <div class="content-project ladoga-project">
-
-        <div class="content-project-heading">
-
-          <div>
-
-            <span>
-              03 / Ладога — 2024
-            </span>
-
-            <h3>
-              Медиаволонтёр
-            </h3>
-
-          </div>
-
-          <p>
-            Работа с текстом и публикациями
-            по итогам молодёжного форума.
-          </p>
-
-        </div>
-
-
-        <div class="ladoga-grid">
-
-
-          <div class="ladoga-main-image">
-
-            <div class="image-placeholder">
-              ПРЕСС-РЕЛИЗ
-            </div>
-
-          </div>
-
-
-          <div class="media-publications">
-
-            <div class="media-item">
-
-              <div class="image-placeholder">
-                СМИ 01
-              </div>
-
-              <a href="#">
-                Читать публикацию →
-              </a>
-
-            </div>
-
-
-            <div class="media-item">
-
-              <div class="image-placeholder">
-                СМИ 02
-              </div>
-
-              <a href="#">
-                Читать публикацию →
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =====================================================
-       07 — КОНТАКТЫ
-  ====================================================== -->
-
-  <section class="portfolio-section final-contact" id="contacts">
-
-    <div class="container">
-
-      <div class="section-number">
-        07 / Контакты
-      </div>
-
-
-      <div class="contact-final-grid">
-
-        <div>
-
-          <span class="final-kicker">
-            Будем на связи
-          </span>
-
-          <h2>
-            Давайте<br>
-            знакомиться
-          </h2>
-
-        </div>
-
-
-        <div class="final-contact-info">
-
-          <p>
-            Если вам интересен мой опыт
-            и подход к работе — буду рада
-            обсудить возможности сотрудничества.
-          </p>
-
-
-          <div class="final-links">
-
-            <a href="#">
-              Telegram
-              <span>↗</span>
-            </a>
-
-            <a href="tel:+00000000000">
-              Телефон
-              <span>↗</span>
-            </a>
-
-            <a href="mailto:your@email.com">
-              Email
-              <span>↗</span>
-            </a>
-
-            <a href="#">
-              HH.ru
-              <span>↗</span>
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="footer-line">
-
-        <span>
-          Дарья Богомолова
-        </span>
-
-        <span>
-          Marketing · Communications · Events
-        </span>
-
-        <span>
-          2026
-        </span>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Дарья Богомолова — Ассистент маркетолога</title>
+
+<meta name="description" content="Портфолио Дарьи Богомоловой — маркетинг, коммуникации, PR и event-проекты.">
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f4ef;
+  color: #292725;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  padding: 28px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  letter-spacing: -0.07em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 13px;
+  color: #6e6862;
+}
+
+.nav-links a:hover {
+  opacity: .55;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: calc(100vh - 90px);
+  display: grid;
+  grid-template-columns: .92fr 1.08fr;
+  gap: 75px;
+  align-items: center;
+  padding: 45px 0 95px;
+  position: relative;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 180px;
+  border: 1px solid #c7bbb0;
+  border-radius: 50%;
+  transform: rotate(-22deg);
+  left: -145px;
+  top: 170px;
+  opacity: .65;
+  pointer-events: none;
+}
+
+.photo-wrap {
+  height: 650px;
+  position: relative;
+}
+
+.photo-card {
+  width: 100%;
+  height: 100%;
+  background: #e9e1d8;
+  border-radius: 34px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.photo-label {
+  position: absolute;
+  left: 22px;
+  bottom: 20px;
+  background: rgba(247,244,239,.9);
+  padding: 9px 14px;
+  border-radius: 50px;
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #625c56;
+  z-index: 3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: #8c8176;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(58px, 7.2vw, 98px);
+  line-height: .91;
+  letter-spacing: -.075em;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.position {
+  font-size: clamp(24px, 3vw, 37px);
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -.035em;
+  margin-bottom: 24px;
+}
+
+.position-line {
+  width: 380px;
+  max-width: 100%;
+  height: 1px;
+  background: #cfc6bd;
+  margin-bottom: 25px;
+}
+
+.specialization {
+  max-width: 570px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #68635e;
+  margin-bottom: 30px;
+}
+
+/* CONTACT ICONS */
+
+.contacts {
+  display: flex;
+  gap: 11px;
+  margin-bottom: 32px;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #d5cec6;
+  background: rgba(255,255,255,.58);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .25s ease;
+}
+
+.contact-icon:hover {
+  transform: translateY(-3px);
+  background: #292725;
+  color: white;
+}
+
+.contact-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.hh-icon {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d92d2d;
+}
+
+.contact-icon:hover .hh-icon {
+  color: white;
+}
+
+/* BUTTON */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  min-width: 270px;
+  padding: 16px 20px 16px 24px;
+  border-radius: 60px;
+  background: #292725;
+  color: white;
+  font-size: 14px;
+  transition: .25s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.13);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  padding: 115px 0 130px;
+  border-top: 1px solid #ded7cf;
+}
+
+.section-number {
+  font-size: 11px;
+  color: #8c8176;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
+  gap: 85px;
+}
+
+.about h2 {
+  font-size: clamp(45px,5.4vw,72px);
+  line-height: .94;
+  letter-spacing: -.07em;
+  font-weight: 500;
+}
+
+.about-text {
+  font-family: Georgia, serif;
+  font-size: clamp(23px,2.5vw,33px);
+  line-height: 1.35;
+  max-width: 760px;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.portfolio-section {
+  padding: 120px 0;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 70px;
+}
+
+.section-heading h2 {
+  font-size: clamp(48px,7vw,88px);
+  line-height: .95;
+  font-weight: 500;
+  letter-spacing: -.045em;
+}
+
+.section-heading p {
+  max-width: 360px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #716b65;
+}
+
+/* =========================
+   02 SKILLS
+========================= */
+
+.skills-section {
+  background: #eee8df;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 18px;
+}
+
+.skill-card {
+  padding: 35px;
+  min-height: 310px;
+  background: #f8f5ef;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skill-large {
+  grid-row: span 2;
+  min-height: 638px;
+}
+
+.skill-card-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  opacity: .5;
+}
+
+.skill-card h3 {
+  margin: 40px 0 25px;
+  font-size: clamp(32px,4vw,54px);
+  line-height: .98;
+  font-weight: 500;
+  letter-spacing: -.04em;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tags span {
+  padding: 9px 13px;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 100px;
+  font-size: 13px;
+}
+
+.tools-heading {
+  margin-top: 110px;
+  margin-bottom: 35px;
+}
+
+.tools-heading span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  opacity: .5;
+}
+
+.tools-heading h3 {
+  margin-top: 8px;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+}
+
+.tool {
+  min-height: 130px;
+  background: #f8f5ef;
+  border-radius: 22px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tool-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: #e5ded3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tool span {
+  font-size: 14px;
+}
+
+/* =========================
+   03 EXPERIENCE
+========================= */
+
+.experience-section {
+  background: #f8f5ef;
+}
+
+.experience-card {
+  padding: 55px;
+  border-radius: 30px;
+  margin-bottom: 22px;
+  background: #e8e0d6;
+}
+
+.mts-card {
+  background: #eee8df;
+}
+
+.company-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  opacity: .55;
+}
+
+.experience-main h3 {
+  margin: 35px 0 55px;
+  font-size: clamp(38px,5vw,68px);
+  line-height: .98;
+  font-weight: 500;
+  letter-spacing: -.04em;
+}
+
+.experience-columns {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 35px;
+}
+
+.block-label {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  opacity: .55;
+}
+
+.experience-block ul {
+  list-style: none;
+}
+
+.experience-block li {
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* =========================
+   04 CASE STUDY
+========================= */
+
+.case-section {
+  background: #ddd4ca;
+}
+
+.case-intro {
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  gap: 80px;
+  align-items: end;
+}
+
+.case-kicker {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  opacity: .55;
+}
+
+.case-intro h2 {
+  margin-top: 20px;
+  font-size: clamp(70px,12vw,150px);
+  line-height: .78;
+  font-weight: 500;
+  letter-spacing: -.07em;
+}
+
+.case-description p {
+  margin-bottom: 18px;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.case-task {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 30px;
+  margin: 100px 0;
+  padding-top: 30px;
+  border-top: 1px solid rgba(0,0,0,.2);
+}
+
+.case-task-text {
+  max-width: 720px;
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+.mini-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  opacity: .55;
+}
+
+.case-gallery {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 18px;
+}
+
+.case-image {
+  min-height: 330px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.case-wide {
+  grid-column: span 2;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  background: #eee8df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  color: rgba(0,0,0,.4);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.case-bottom {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+}
+
+.case-bottom p {
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.outline-button {
+  display: inline-flex;
+  padding: 16px 22px;
+  border: 1px solid rgba(0,0,0,.3);
+  border-radius: 100px;
+}
+
+.outline-button:hover {
+  background: #292725;
+  color: white;
+}
+
+/* =========================
+   05 FESTIVALS
+========================= */
+
+.festivals-section {
+  background: #f8f5ef;
+}
+
+.festival-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+}
+
+.festival-card {
+  background: #e9e1d7;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.festival-photo {
+  min-height: 480px;
+}
+
+.festival-photo .image-placeholder {
+  min-height: 480px;
+}
+
+.festival-info {
+  padding: 35px;
+}
+
+.festival-meta {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  opacity: .55;
+}
+
+.festival-info h3 {
+  margin: 20px 0;
+  font-size: 45px;
+  line-height: .95;
+  font-weight: 500;
+  letter-spacing: -.04em;
+}
+
+.role {
+  font-size: 15px;
+  color: #716b65;
+}
+
+.festival-info ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.festival-info li {
+  padding: 12px 0;
+  border-top: 1px solid rgba(0,0,0,.12);
+  font-size: 14px;
+}
+
+/* =========================
+   06 CONTENT & PR
+========================= */
+
+.content-section {
+  background: #e7ded4;
+}
+
+.content-project {
+  padding: 70px 0;
+  border-top: 1px solid rgba(0,0,0,.18);
+}
+
+.content-project-heading {
+  display: grid;
+  grid-template-columns: 1fr .7fr;
+  gap: 50px;
+  align-items: end;
+  margin-bottom: 50px;
+}
+
+.content-project-heading h3 {
+  margin-top: 18px;
+  font-size: clamp(40px,5vw,65px);
+  line-height: .95;
+  font-weight: 500;
+  letter-spacing: -.04em;
+}
+
+.content-project-heading p {
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+}
+
+.post-card {
+  aspect-ratio: 4/5;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.longread-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.longread-card {
+  background: #f8f5ef;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.longread-cover {
+  aspect-ratio: 16/10;
+}
+
+.longread-info {
+  padding: 25px;
+}
+
+.longread-info h4 {
+  margin-bottom: 12px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.magazine-grid {
+  display: grid;
+  grid-template-columns: .65fr 1.35fr;
+  gap: 20px;
+}
+
+.magazine-cover,
+.magazine-page {
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.magazine-pages {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+}
+
+.magazine-cover .image-placeholder,
+.magazine-page .image-placeholder {
+  min-height: 600px;
+}
+
+.ladoga-grid {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 20px;
+}
+
+.ladoga-main-image {
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.ladoga-main-image .image-placeholder {
+  min-height: 650px;
+}
+
+.media-publications {
+  display: grid;
+  gap: 20px;
+}
+
+.media-item {
+  background: #f8f5ef;
+  border-radius: 22px;
+  padding: 15px;
+}
+
+/* =========================
+   07 CONTACTS
+========================= */
+
+.final-contact {
+  background: #d7cdc2;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-final-grid {
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  gap: 100px;
+  align-items: end;
+}
+
+.final-kicker {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  opacity: .55;
+}
+
+.final-contact h2 {
+  margin-top: 25px;
+  font-size: clamp(70px,10vw,130px);
+  line-height: .8;
+  font-weight: 500;
+  letter-spacing: -.07em;
+}
+
+.final-contact-info p {
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.final-links {
+  margin-top: 45px;
+}
+
+.final-links a {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  font-size: 16px;
+}
+
+.footer-line {
+  margin-top: 100px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0,0,0,.2);
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  opacity: .5;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .container {
+    width: calc(100% - 40px);
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 30px 0 80px;
+  }
+
+  .hero-content {
+    order: 1;
+  }
+
+  .photo-wrap {
+    order: 2;
+    height: 480px;
+  }
+
+  .hero h1 {
+    font-size: 60px;
+  }
+
+  .about-grid,
+  .section-heading,
+  .case-intro,
+  .content-project-heading,
+  .contact-final-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .skills-grid,
+  .festival-grid,
+  .longread-grid,
+  .magazine-grid,
+  .ladoga-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-large {
+    grid-row: auto;
+    min-height: 420px;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .experience-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card {
+    padding: 30px;
+  }
+
+  .case-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .case-wide {
+    grid-column: auto;
+  }
+
+  .case-task {
+    grid-template-columns: 1fr;
+  }
+
+  .case-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .magazine-pages {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .final-contact {
+    min-height: auto;
+    padding: 100px 0;
+  }
+
+}
+
+</style>
 </head>
-
 
 <body>
 
+<header>
+  <div class="container nav">
+    <div class="logo">DB.</div>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+    <nav class="nav-links">
+      <a href="#skills">Навыки</a>
+      <a href="#experience">Опыт</a>
+      <a href="#projects">Проекты</a>
+      <a href="#content">Контент</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
 
-  <header>
 
-    <div class="container nav">
+<!-- =========================
+     01 — ГЛАВНАЯ
+========================= -->
 
-      <div class="logo">
-        DB.
+<main>
+
+<section class="container hero">
+
+  <div class="photo-wrap">
+    <div class="photo-card">
+
+      <img src="darya_portrait.png" alt="Дарья Богомолова">
+
+      <div class="photo-label">
+        MARKETING · COMMUNICATIONS
       </div>
 
-      <nav class="nav-links">
+    </div>
+  </div>
 
-        <a href="#about">
-          Обо мне
-        </a>
 
-        <a href="#skills">
-          Навыки
-        </a>
+  <div class="hero-content">
 
-        <a href="#experience">
-          Опыт
-        </a>
+    <div class="eyebrow">
+      PORTFOLIO / 2026
+    </div>
 
-        <a href="#projects">
-          Проекты
-        </a>
+    <h1>
+      Дарья<br>
+      Богомолова
+    </h1>
 
-        <a href="#contacts">
-          Контакты
-        </a>
+    <div class="position">
+      Ассистент маркетолога
+    </div>
 
-        <a href="#" class="resume-link">
-          Резюме ↓
-        </a>
+    <div class="position-line"></div>
 
-      </nav>
+    <p class="specialization">
+      Развиваюсь в направлениях бренд-маркетинга,
+      коммуникаций, PR и event-проектов.
+      Люблю идеи, людей и проекты, которые объединяют.
+    </p>
+
+
+    <div class="contacts">
+
+      <a class="contact-icon" href="#" aria-label="Telegram">
+
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.8 4.2 18.7 19c-.2 1-0.8 1.3-1.6.8l-4.4-3.2-2.1 2c-.2.2-.4.4-.8.4l.3-4.5 8.2-7.4c.4-.3-.1-.5-.6-.2L7.6 13.5 3.3 12.1c-.9-.3-.9-.9.2-1.3L20.2 4c.8-.3 1.5.2 1.6.2Z"/>
+        </svg>
+
+      </a>
+
+
+      <a class="contact-icon" href="tel:+70000000000" aria-label="Телефон">
+
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M6.5 3.5 9 3l2 5-2 1.5c1 2.2 2.3 3.5 4.5 4.5L15 12l5 2-0.5 2.5c-.2 1.1-1.2 2-2.4 2C10 19 5 14 5 7.9c0-1.2.9-2.2 1.5-2.4Z"/>
+        </svg>
+
+      </a>
+
+
+      <a class="contact-icon" href="mailto:your@email.com" aria-label="Email">
+
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <path d="m4 7 8 6 8-6"/>
+        </svg>
+
+      </a>
+
+
+      <a class="contact-icon" href="#" aria-label="HH.ru">
+        <span class="hh-icon">hh</span>
+      </a>
 
     </div>
 
-  </header>
 
+    <a href="#projects" class="button">
 
-  <main>
+      <span>Посмотреть проекты</span>
 
+      <span class="button-arrow">→</span>
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    </a>
 
-    <section class="hero container">
+  </div>
 
+</section>
 
-      <div class="photo-wrap">
 
-        <div class="photo-card">
+<!-- =========================
+     ОБО МНЕ
+========================= -->
 
-          <img
-            src="./darya_portrait.png"
-            alt="Дарья Богомолова"
-          >
+<section class="about">
 
-          <div class="photo-label">
-            Marketing · Communications
-          </div>
+  <div class="container">
 
-        </div>
+    <div class="section-number">
+      01 / Обо мне
+    </div>
 
-      </div>
-
-
-      <div class="hero-content">
-
-        <div class="eyebrow">
-          Portfolio / 2026
-        </div>
-
-
-        <h1>
-          Дарья<br>
-          Богомолова
-        </h1>
-
-
-        <div class="position">
-          Ассистент маркетолога
-        </div>
-
-
-        <div class="position-line"></div>
-
-
-        <p class="specialization">
-          Развиваюсь в направлениях бренд-маркетинга,
-          коммуникаций, PR и event-проектов.
-          Люблю идеи, людей и проекты, которые
-          объединяют.
-        </p>
-
-
-        <!-- CONTACT ICONS -->
-
-        <div class="contacts">
-
-
-          <!-- TELEGRAM -->
-
-          <a
-            href="#"
-            class="contact-icon"
-            aria-label="Telegram"
-            title="Telegram"
-          >
-
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <path
-                d="M21.5 3.5L18.3 20c-.24 1.17-.88 1.46-1.78.91l-4.86-3.58-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.96 9.03-8.16c.39-.35-.08-.55-.61-.2L6.1 13.63l-4.7-1.47c-1.02-.32-1.04-1.02.21-1.51L20 3.08c.87-.32 1.63.2 1.5.42Z"
-                fill="currentColor"
-              />
-
-            </svg>
-
-          </a>
-
-
-          <!-- PHONE -->
-
-          <a
-            href="tel:+00000000000"
-            class="contact-icon"
-            aria-label="Телефон"
-            title="Телефон"
-          >
-
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <path
-                d="M7.1 3.5L9.3 2.7C9.9 2.5 10.5 2.8 10.7 3.4L12 7.1C12.2 7.7 12 8.2 11.5 8.5L9.7 9.7C10.7 11.9 12.1 13.4 14.3 14.4L15.5 12.6C15.8 12.1 16.3 11.9 16.9 12.1L20.6 13.4C21.2 13.6 21.5 14.2 21.3 14.8L20.5 17C20.2 17.9 19.4 18.5 18.5 18.4C10.8 17.6 6.4 13.2 5.6 5.5C5.5 4.6 6.1 3.8 7.1 3.5Z"
-                fill="currentColor"
-              />
-
-            </svg>
-
-          </a>
-
-
-          <!-- EMAIL -->
-
-          <a
-            href="mailto:your@email.com"
-            class="contact-icon"
-            aria-label="Email"
-            title="Email"
-          >
-
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <rect
-                x="3"
-                y="5"
-                width="18"
-                height="14"
-                rx="2"
-                stroke="currentColor"
-                stroke-width="1.7"
-              />
-
-              <path
-                d="M4 7L12 13L20 7"
-                stroke="currentColor"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-
-            </svg>
-
-          </a>
-
-
-          <!-- HH -->
-
-          <a
-            href="#"
-            class="contact-icon"
-            aria-label="HH.ru"
-            title="HH.ru"
-          >
-
-            <span class="hh-icon">
-              hh
-            </span>
-
-          </a>
-
-
-        </div>
-
-
-        <!-- PROJECT BUTTON -->
-
-        <a
-          href="#projects"
-          class="button"
-        >
-
-          <span>
-            Посмотреть проекты
-          </span>
-
-          <span class="button-arrow">
-            →
-          </span>
-
-        </a>
-
-      </div>
-
-
-      <div class="scroll-note">
-        Scroll
-        <span>↓</span>
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
-    <section
-      class="about container"
-      id="about"
-    >
-
-      <div class="section-number">
-        01 / Обо мне
-      </div>
-
-
-      <div class="about-grid">
-
-
-        <h2>
-          Немного<br>
-          обо мне
-        </h2>
-
-
-        <div>
-
-          <div class="about-text">
-
-            Развиваюсь в маркетинге на стыке бренда,
-  коммуникаций, PR и event-проектов. Мне
-  интересно превращать идеи в понятные
-  коммуникации и проекты, которые работают
-  на задачу бизнеса и вовлекают аудиторию.
-
-          </div>
-
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         TEMPORARY
-    ========================= -->
-
-    <section
-      class="next-section container"
-      id="skills"
-    >
-
-      <div class="section-number">
-        02 / Навыки и инструменты
-      </div>
-
+    <div class="about-grid">
 
       <h2>
-        Здесь появится<br>
-        следующий раздел
+        Маркетинг,<br>
+        коммуникации<br>
+        и проекты
       </h2>
 
-    </section>
+      <div class="about-text">
 
+        Я развиваюсь в бренд-маркетинге,
+        коммуникациях, PR и event-проектах.
 
-  </main>
-<!-- =====================================================
-       02 — НАВЫКИ И ИНСТРУМЕНТЫ
-  ====================================================== -->
+        Мне интересны задачи, где нужно
+        разобраться в аудитории, найти идею,
+        выстроить коммуникацию и довести
+        проект до реализации.
 
-  <section class="portfolio-section skills-section" id="skills">
-
-    <div class="container">
-
-      <div class="section-number">
-        02 / Навыки и инструменты
-      </div>
-
-      <div class="section-heading">
-        <h2>
-          Что я умею<br>
-          и чем работаю
-        </h2>
-
-        <p>
-          Компетенции, которые помогают мне
-          работать с задачами от идеи
-          до реализации.
-        </p>
-      </div>
-
-
-      <div class="skills-grid">
-
-
-        <!-- МАРКЕТИНГ -->
-
-        <div class="skill-card skill-large">
-
-          <div class="skill-card-top">
-            <span>01</span>
-            <span>Marketing</span>
-          </div>
-
-          <h3>
-            Маркетинг<br>
-            и аналитика
-          </h3>
-
-          <div class="skill-tags">
-
-            <span>Анализ ЦА</span>
-            <span>Сегментация</span>
-            <span>Конкурентный анализ</span>
-            <span>CJM</span>
-            <span>SWOT</span>
-            <span>Рекламные стратегии</span>
-            <span>Медиапланирование</span>
-            <span>KPI</span>
-
-          </div>
-
-        </div>
-
-
-        <!-- КОНТЕНТ -->
-
-        <div class="skill-card">
-
-          <div class="skill-card-top">
-            <span>02</span>
-            <span>Content & PR</span>
-          </div>
-
-          <h3>
-            Контент<br>
-            и коммуникации
-          </h3>
-
-          <div class="skill-tags">
-
-            <span>Тексты</span>
-            <span>Социальные сети</span>
-            <span>PR</span>
-            <span>Пресс-релизы</span>
-            <span>Email</span>
-            <span>Рекламные тексты</span>
-
-          </div>
-
-        </div>
-
-
-        <!-- EVENT -->
-
-        <div class="skill-card">
-
-          <div class="skill-card-top">
-            <span>03</span>
-            <span>Events</span>
-          </div>
-
-          <h3>
-            Event
-          </h3>
-
-          <div class="skill-tags">
-
-            <span>Организация мероприятий</span>
-            <span>Площадки</span>
-            <span>Подрядчики</span>
-            <span>Участники</span>
-            <span>Логистика</span>
-            <span>Материалы</span>
-            <span>Командная работа</span>
-
-          </div>
-
-        </div>
+        Хочу развиваться в маркетинге,
+        работать с брендами и проектами,
+        которые объединяют стратегию,
+        контент и коммуникации.
 
       </div>
 
+    </div>
 
-      <!-- ИНСТРУМЕНТЫ -->
+  </div>
 
-      <div class="tools-heading">
+</section>
 
-        <span>Tools</span>
+
+<!-- =========================
+     02 — НАВЫКИ
+========================= -->
+
+<section class="portfolio-section skills-section" id="skills">
+
+  <div class="container">
+
+    <div class="section-number">
+      02 / Навыки и инструменты
+    </div>
+
+    <div class="section-heading">
+
+      <h2>
+        Что я умею<br>
+        и чем работаю
+      </h2>
+
+      <p>
+        Компетенции, которые помогают
+        работать с задачами от идеи
+        до реализации.
+      </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+      <div class="skill-card skill-large">
+
+        <div class="skill-card-top">
+          <span>01</span>
+          <span>Marketing</span>
+        </div>
 
         <h3>
-          Инструменты
+          Маркетинг<br>
+          и аналитика
         </h3>
 
+        <div class="skill-tags">
+          <span>Анализ ЦА</span>
+          <span>Сегментация</span>
+          <span>Конкурентный анализ</span>
+          <span>CJM</span>
+          <span>SWOT</span>
+          <span>Рекламные стратегии</span>
+          <span>Медиапланирование</span>
+          <span>KPI</span>
+        </div>
+
       </div>
 
 
-      <div class="tools-grid">
+      <div class="skill-card">
 
-        <div class="tool">
-          <div class="tool-icon">T</div>
-          <span>Tilda</span>
+        <div class="skill-card-top">
+          <span>02</span>
+          <span>Content & PR</span>
         </div>
 
-        <div class="tool">
-          <div class="tool-icon">F</div>
-          <span>Figma</span>
+        <h3>
+          Контент<br>
+          и коммуникации
+        </h3>
+
+        <div class="skill-tags">
+          <span>Написание текстов</span>
+          <span>Социальные сети</span>
+          <span>PR</span>
+          <span>Пресс-релизы</span>
+          <span>Email-коммуникации</span>
+          <span>Рекламные тексты</span>
         </div>
 
-        <div class="tool">
-          <div class="tool-icon">C</div>
-          <span>Canva</span>
+      </div>
+
+
+      <div class="skill-card">
+
+        <div class="skill-card-top">
+          <span>03</span>
+          <span>Events</span>
         </div>
 
-        <div class="tool">
-          <div class="tool-icon">Ps</div>
-          <span>Photoshop</span>
-        </div>
+        <h3>
+          Event
+        </h3>
 
-        <div class="tool">
-          <div class="tool-icon">G</div>
-          <span>Google Sheets</span>
-        </div>
-
-        <div class="tool">
-          <div class="tool-icon">P</div>
-          <span>Google Презентации</span>
-        </div>
-
-        <div class="tool">
-          <div class="tool-icon">AI</div>
-          <span>AI-инструменты</span>
-        </div>
-
-        <div class="tool">
-          <div class="tool-icon">Я</div>
-          <span>Яндекс Директ</span>
+        <div class="skill-tags">
+          <span>Организация мероприятий</span>
+          <span>Площадки</span>
+          <span>Подрядчики</span>
+          <span>Участники</span>
+          <span>Логистика</span>
+          <span>Материалы</span>
+          <span>Командная работа</span>
         </div>
 
       </div>
 
     </div>
 
-  </section>
+
+    <div class="tools-heading">
+
+      <span>Tools</span>
+
+      <h3>Инструменты</h3>
+
+    </div>
 
 
+    <div class="tools-grid">
 
-  <!-- =====================================================
-       03 — ОПЫТ РАБОТЫ
-  ====================================================== -->
-
-  <section class="portfolio-section experience-section" id="experience">
-
-    <div class="container">
-
-      <div class="section-number">
-        03 / Опыт работы
+      <div class="tool">
+        <div class="tool-icon">T</div>
+        <span>Tilda</span>
       </div>
 
-      <div class="section-heading">
-        <h2>
-          Опыт, который<br>
-          можно показать
-        </h2>
-
-        <p>
-          Практический опыт в маркетинге,
-          организации мероприятий и
-          коммуникациях.
-        </p>
+      <div class="tool">
+        <div class="tool-icon">F</div>
+        <span>Figma</span>
       </div>
 
+      <div class="tool">
+        <div class="tool-icon">C</div>
+        <span>Canva</span>
+      </div>
 
-      <!-- ПСБ -->
+      <div class="tool">
+        <div class="tool-icon">Ps</div>
+        <span>Photoshop</span>
+      </div>
 
-      <article class="experience-card psb-card">
+      <div class="tool">
+        <div class="tool-icon">G</div>
+        <span>Google Sheets</span>
+      </div>
 
-        <div class="experience-number">
-          01
+      <div class="tool">
+        <div class="tool-icon">P</div>
+        <span>Google Презентации</span>
+      </div>
+
+      <div class="tool">
+        <div class="tool-icon">AI</div>
+        <span>AI-инструменты</span>
+      </div>
+
+      <div class="tool">
+        <div class="tool-icon">Я</div>
+        <span>Яндекс Директ</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     03 — ОПЫТ
+========================= -->
+
+<section class="portfolio-section experience-section" id="experience">
+
+  <div class="container">
+
+    <div class="section-number">
+      03 / Опыт работы
+    </div>
+
+    <div class="section-heading">
+
+      <h2>
+        Опыт, который<br>
+        можно показать
+      </h2>
+
+      <p>
+        Практический опыт в маркетинге,
+        организации мероприятий
+        и коммуникациях.
+      </p>
+
+    </div>
+
+
+    <article class="experience-card">
+
+      <div class="company-line">
+        <span>ПСБ</span>
+        <span>Маркетинг</span>
+      </div>
+
+      <div class="experience-main">
+
+        <h3>
+          Маркетинг и организация
+          проектов
+        </h3>
+
+
+        <div class="experience-columns">
+
+          <div class="experience-block">
+
+            <span class="block-label">
+              Мероприятия
+            </span>
+
+            <ul>
+              <li>Подготовка и координация мероприятий.</li>
+              <li>Взаимодействие с участниками и подрядчиками.</li>
+              <li>Подготовка материалов и отчётности.</li>
+            </ul>
+
+          </div>
+
+
+          <div class="experience-block">
+
+            <span class="block-label">
+              Организация и взаимодействие
+            </span>
+
+            <ul>
+              <li>Работа с документами и организационными задачами.</li>
+              <li>Взаимодействие с подразделениями.</li>
+              <li>Координация логистики и подрядчиков.</li>
+            </ul>
+
+          </div>
+
+
+          <div class="experience-block">
+
+            <span class="block-label">
+              Рекламные материалы
+            </span>
+
+            <ul>
+              <li>Работа с рекламными материалами.</li>
+              <li>Заказ сувенирной продукции.</li>
+              <li>Учёт потребностей подразделений, заказов и поставок.</li>
+            </ul>
+
+          </div>
+
         </div>
 
-        <div class="experience-main">
+      </div>
 
-          <div class="company-line">
-            <span>ПСБ</span>
-            <span>Маркетинг</span>
+    </article>
+
+
+    <article class="experience-card mts-card">
+
+      <div class="company-line">
+        <span>МТС</span>
+        <span>Опыт работы</span>
+      </div>
+
+      <div class="experience-main">
+
+        <h3>
+          МТС
+        </h3>
+
+        <p>
+          Здесь мы разместим точные формулировки
+          из твоего резюме после того, как отдельно
+          их перенесём в сайт.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     04 — CASE STUDY
+========================= -->
+
+<section class="portfolio-section case-section" id="projects">
+
+  <div class="container">
+
+    <div class="section-number">
+      04 / Case Study
+    </div>
+
+    <div class="case-intro">
+
+      <div>
+
+        <span class="case-kicker">
+          Учебный проект
+        </span>
+
+        <h2>
+          ROBBO<br>
+          Club
+        </h2>
+
+      </div>
+
+
+      <div class="case-description">
+
+        <p>
+          Учебный проект, выполненный
+          в рамках обучения на реальном
+          брифе компании РОББО Клуб.
+        </p>
+
+        <p>
+          В рамках проекта разработана
+          рекламная кампания и комплекс
+          маркетинговых материалов.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="case-task">
+
+      <div class="mini-label">
+        Задача
+      </div>
+
+      <div class="case-task-text">
+        Разработать рекламную кампанию
+        для РОББО Клуба и создать комплекс
+        материалов, объединённых одной стратегией.
+      </div>
+
+    </div>
+
+
+    <div class="mini-label">
+      Что я разработала
+    </div>
+
+
+    <div class="case-gallery">
+
+      <div class="case-image case-wide">
+        <div class="image-placeholder">
+          Lean Canvas
+        </div>
+      </div>
+
+      <div class="case-image">
+        <div class="image-placeholder">
+          CJM
+        </div>
+      </div>
+
+      <div class="case-image">
+        <div class="image-placeholder">
+          Аватар клиента
+        </div>
+      </div>
+
+      <div class="case-image">
+        <div class="image-placeholder">
+          Email
+        </div>
+      </div>
+
+      <div class="case-image">
+        <div class="image-placeholder">
+          Печатная реклама
+        </div>
+      </div>
+
+      <div class="case-image">
+        <div class="image-placeholder">
+          Наружная реклама
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="case-bottom">
+
+      <p>
+        В рамках проекта были детально проработаны
+        составляющие рекламной кампании и
+        маркетинговые материалы.
+      </p>
+
+      <a href="#" class="outline-button">
+        Подробная версия проекта →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     05 — ФЕСТИВАЛИ
+========================= -->
+
+<section class="portfolio-section festivals-section">
+
+  <div class="container">
+
+    <div class="section-number">
+      05 / Фестивали
+    </div>
+
+    <div class="section-heading">
+
+      <h2>
+        Проекты,<br>
+        которые проходят
+        вживую
+      </h2>
+
+      <p>
+        Опыт координации мероприятий,
+        работы с участниками, площадками
+        и командой.
+      </p>
+
+    </div>
+
+
+    <div class="festival-grid">
+
+
+      <article class="festival-card">
+
+        <div class="festival-photo">
+
+          <div class="image-placeholder">
+            Фотографии LETI
+          </div>
+
+        </div>
+
+        <div class="festival-info">
+
+          <div class="festival-meta">
+            Festival project
           </div>
 
           <h3>
-            Маркетинг и организация
-            проектов
+            LETI Communication
+            Experts Festival
           </h3>
 
-
-          <div class="experience-columns">
-
-
-            <div class="experience-block">
-
-              <span class="block-label">
-                Мероприятия
-              </span>
-
-              <ul>
-
-                <li>
-                  Подготовка и координация мероприятий.
-                </li>
-
-                <li>
-                  Взаимодействие с участниками
-                  и подрядчиками.
-                </li>
-
-                <li>
-                  Подготовка материалов
-                  и отчётности.
-                </li>
-
-              </ul>
-
-            </div>
-
-
-            <div class="experience-block">
-
-              <span class="block-label">
-                Организация и взаимодействие
-              </span>
-
-              <ul>
-
-                <li>
-                  Работа с документами
-                  и организационными задачами.
-                </li>
-
-                <li>
-                  Взаимодействие с подразделениями.
-                </li>
-
-                <li>
-                  Координация логистики
-                  и подрядчиков.
-                </li>
-
-              </ul>
-
-            </div>
-
-
-            <div class="experience-block">
-
-              <span class="block-label">
-                Рекламные материалы
-              </span>
-
-              <ul>
-
-                <li>
-                  Работа с полиграфией
-                  и рекламными материалами.
-                </li>
-
-                <li>
-                  Заказ сувенирной продукции.
-                </li>
-
-                <li>
-                  Учёт потребностей подразделений,
-                  заказов и поставок.
-                </li>
-
-              </ul>
-
-            </div>
-
+          <div class="role">
+            Координатор направления
+            выездных мастер-классов
           </div>
+
+          <ul>
+            <li>Координация участников и команды.</li>
+            <li>Подготовка материалов.</li>
+            <li>Организация мастер-классов.</li>
+          </ul>
 
         </div>
 
       </article>
 
 
+      <article class="festival-card">
 
-      <!-- МТС -->
+        <div class="festival-photo">
 
-      <article class="experience-card mts-card">
+          <div class="image-placeholder">
+            Фотографии «Освети Науку»
+          </div>
 
-        <div class="experience-number">
-          02
         </div>
 
-        <div class="experience-main">
+        <div class="festival-info">
 
-          <div class="company-line">
-            <span>МТС</span>
-            <span>Опыт работы</span>
+          <div class="festival-meta">
+            Festival project
           </div>
 
           <h3>
-            МТС
+            «Освети Науку»
           </h3>
 
-          <div class="mts-placeholder">
-
-            <p>
-              Здесь разместим точные формулировки
-              из твоего резюме.
-            </p>
-
+          <div class="role">
+            Координатор
           </div>
+
+          <ul>
+            <li>Координация участников.</li>
+            <li>Организация материалов.</li>
+            <li>Взаимодействие с командой проекта.</li>
+          </ul>
 
         </div>
 
       </article>
 
+
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
+<!-- =========================
+     06 — КОНТЕНТ И PR
+========================= -->
 
-  <!-- =====================================================
-       04 — CASE STUDY
-  ====================================================== -->
+<section class="portfolio-section content-section" id="content">
 
-  <section class="portfolio-section case-section" id="projects">
+  <div class="container">
 
-    <div class="container">
-
-      <div class="section-number">
-        04 / Case Study
-      </div>
+    <div class="section-number">
+      06 / Контент и PR
+    </div>
 
 
-      <div class="case-intro">
+    <div class="section-heading">
+
+      <h2>
+        Контент,<br>
+        тексты и PR
+      </h2>
+
+      <p>
+        Визуальные и текстовые проекты:
+        социальные сети, медиа,
+        журнальные материалы и PR.
+      </p>
+
+    </div>
+
+
+    <!-- ETU MEDIA -->
+
+    <div class="content-project">
+
+      <div class="content-project-heading">
 
         <div>
 
-          <span class="case-kicker">
-            Учебный проект
-          </span>
+          <span>01 / ETU Media</span>
 
-          <h2>
-            ROBBO<br>
-            Club
-          </h2>
+          <h3>
+            Креативный контент
+            для медиацентра вуза
+          </h3>
 
         </div>
 
+        <p>
+          Автор текстов и материалов
+          для университетского медиа.
+        </p>
 
-        <div class="case-description">
+      </div>
 
-          <p>
-            Учебный проект, выполненный
-            в рамках обучения на реальном
-            брифе компании РОББО Клуб.
-          </p>
 
-          <p>
-            В рамках проекта разработана
-            рекламная кампания и комплекс
-            маркетинговых материалов.
-          </p>
+      <div class="mini-label">
+        Посты
+      </div>
 
+
+      <div class="post-grid">
+
+        <div class="post-card">
+          <div class="image-placeholder">
+            Пост 01
+          </div>
+        </div>
+
+        <div class="post-card">
+          <div class="image-placeholder">
+            Пост 02
+          </div>
+        </div>
+
+        <div class="post-card">
+          <div class="image-placeholder">
+            Пост 03
+          </div>
         </div>
 
       </div>
 
 
-
-      <!-- ЗАДАЧА -->
-
-      <div class="case-task">
+      <div class="content-project" style="border:0;">
 
         <div class="mini-label">
-          Задача
+          Лонгриды
         </div>
 
-        <div class="case-task-text">
+        <div class="longread-grid">
 
-          Разработать рекламную кампанию
-          для РОББО Клуба и создать
-          комплекс материалов,
-          объединённых одной стратегией.
+          <article class="longread-card">
 
-        </div>
-
-      </div>
-
-
-
-      <!-- ВИЗУАЛЬНЫЕ РЕЗУЛЬТАТЫ -->
-
-      <div class="case-results">
-
-        <div class="mini-label">
-          Что я разработала
-        </div>
-
-
-        <div class="case-gallery">
-
-
-          <div class="case-image case-wide">
-
-            <div class="image-placeholder">
-              <span>01</span>
-              Lean Canvas
-            </div>
-
-          </div>
-
-
-          <div class="case-image">
-
-            <div class="image-placeholder">
-              <span>02</span>
-              CJM
-            </div>
-
-          </div>
-
-
-          <div class="case-image">
-
-            <div class="image-placeholder">
-              <span>03</span>
-              Аватар клиента
-            </div>
-
-          </div>
-
-
-          <div class="case-image">
-
-            <div class="image-placeholder">
-              <span>04</span>
-              Email
-            </div>
-
-          </div>
-
-
-          <div class="case-image case-wide">
-
-            <div class="image-placeholder">
-              <span>05</span>
-              Печатная реклама
-            </div>
-
-          </div>
-
-
-          <div class="case-image">
-
-            <div class="image-placeholder">
-              <span>06</span>
-              Наружная реклама
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-
-
-      <div class="case-bottom">
-
-        <p>
-          В рамках проекта были разработаны
-          дополнительные материалы рекламной
-          кампании и проработаны основные
-          коммуникационные точки.
-        </p>
-
-        <a
-          href="#"
-          class="outline-button"
-        >
-          Подробная версия проекта →
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =====================================================
-       05 — ФЕСТИВАЛИ
-  ====================================================== -->
-
-  <section class="portfolio-section festivals-section" id="festivals">
-
-    <div class="container">
-
-      <div class="section-number">
-        05 / Фестивали
-      </div>
-
-
-      <div class="section-heading">
-
-        <h2>
-          Проекты,<br>
-          где важны люди
-        </h2>
-
-        <p>
-          Организация, координация,
-          коммуникация и работа
-          с участниками.
-        </p>
-
-      </div>
-
-
-
-      <div class="festival-grid">
-
-
-        <!-- LETI -->
-
-        <article class="festival-card">
-
-          <div class="festival-photo">
-
-            <div class="image-placeholder">
-              ФОТО
-            </div>
-
-            <span class="photo-number">
-              01
-            </span>
-
-          </div>
-
-
-          <div class="festival-info">
-
-            <div class="festival-meta">
-              LETI Communication Experts Festival
-            </div>
-
-            <h3>
-              Выездные
-              мастер-классы
-            </h3>
-
-            <p class="role">
-              Координатор направления
-              выездных мастер-классов
-            </p>
-
-            <ul>
-
-              <li>
-                Подготовка полного
-                pre-event цикла.
-              </li>
-
-              <li>
-                Поиск площадок и работа
-                с коммерческими предложениями.
-              </li>
-
-              <li>
-                Взаимодействие с подрядчиками
-                и участниками.
-              </li>
-
-              <li>
-                Координация мероприятий
-                и организационных задач.
-              </li>
-
-            </ul>
-
-            <div class="festival-stat">
-              <strong>≈ 25</strong>
-              <span>участников<br>на фестиваль</span>
-            </div>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- ОСВЕТИ НАУКУ -->
-
-        <article class="festival-card">
-
-          <div class="festival-photo festival-photo-alt">
-
-            <div class="image-placeholder">
-              ФОТО
-            </div>
-
-            <span class="photo-number">
-              02
-            </span>
-
-          </div>
-
-
-          <div class="festival-info">
-
-            <div class="festival-meta">
-              «Освети Науку»
-            </div>
-
-            <h3>
-              Научный фестиваль
-            </h3>
-
-            <p class="role">
-              Координатор
-            </p>
-
-            <ul>
-
-              <li>
-                Подготовка материалов
-                к мероприятию.
-              </li>
-
-              <li>
-                Организация и сопровождение
-                участников.
-              </li>
-
-              <li>
-                Координация команды
-                и организационных процессов.
-              </li>
-
-            </ul>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =====================================================
-       06 — КОНТЕНТ И PR
-  ====================================================== -->
-
-  <section class="portfolio-section content-section" id="content">
-
-    <div class="container">
-
-      <div class="section-number">
-        06 / Контент и PR
-      </div>
-
-
-      <div class="section-heading">
-
-        <h2>
-          Тексты,<br>
-          медиа и PR
-        </h2>
-
-        <p>
-          Проекты, в которых я работала
-          с текстом, визуалом и медиа.
-        </p>
-
-      </div>
-
-
-
-      <!-- ETU MEDIA -->
-
-      <div class="content-project">
-
-        <div class="content-project-heading">
-
-          <div>
-
-            <span>
-              01 / ETU Media
-            </span>
-
-            <h3>
-              Креативный контент
-              для медиацентра
-            </h3>
-
-          </div>
-
-          <p>
-            Автор текстов и контента
-            для медиацентра вуза.
-          </p>
-
-        </div>
-
-
-
-        <!-- ПОСТЫ -->
-
-        <div class="content-subsection">
-
-          <div class="mini-label">
-            Посты
-          </div>
-
-          <div class="post-grid">
-
-
-            <div class="post-card">
+            <div class="longread-cover">
               <div class="image-placeholder">
-                ПОСТ 01
+                Лонгрид 01
               </div>
             </div>
 
-
-            <div class="post-card">
-              <div class="image-placeholder">
-                ПОСТ 02
-              </div>
-            </div>
-
-
-            <div class="post-card">
-              <div class="image-placeholder">
-                ПОСТ 03
-              </div>
-            </div>
-
-
-          </div>
-
-
-          <p class="content-note">
-            Посты-карточки · дайджесты · анонсы ·
-            материалы о мероприятиях
-          </p>
-
-        </div>
-
-
-
-        <!-- ЛОНГРИДЫ -->
-
-        <div class="content-subsection">
-
-          <div class="mini-label">
-            Лонгриды
-          </div>
-
-
-          <div class="longread-grid">
-
-
-            <article class="longread-card">
-
-              <div class="longread-cover">
-                <div class="image-placeholder">
-                  ЛОНГРИД 01
-                </div>
-              </div>
-
-              <div class="longread-info">
-
-                <h4>
-                  Название лонгрида
-                </h4>
-
-                <p>
-                  Короткое описание материала
-                  в 1–2 предложения.
-                </p>
-
-                <a href="#">
-                  Читать полностью →
-                </a>
-
-              </div>
-
-            </article>
-
-
-
-            <article class="longread-card">
-
-              <div class="longread-cover">
-                <div class="image-placeholder">
-                  ЛОНГРИД 02
-                </div>
-              </div>
-
-              <div class="longread-info">
-
-                <h4>
-                  Название лонгрида
-                </h4>
-
-                <p>
-                  Короткое описание материала
-                  в 1–2 предложения.
-                </p>
-
-                <a href="#">
-                  Читать полностью →
-                </a>
-
-              </div>
-
-            </article>
-
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-
-      <!-- LAMPA -->
-
-      <div class="content-project lampa-project">
-
-        <div class="content-project-heading">
-
-          <div>
-
-            <span>
-              02 / LAMPA
-            </span>
-
-            <h3>
-              Студенческий журнал
-            </h3>
-
-          </div>
-
-          <p>
-            Автор материалов для журнала:
-            3 опубликованные статьи
-            в двух выпусках.
-          </p>
-
-        </div>
-
-
-        <div class="magazine-grid">
-
-          <div class="magazine-cover">
-            <div class="image-placeholder">
-              ОБЛОЖКА LAMPA
-            </div>
-          </div>
-
-          <div class="magazine-pages">
-
-            <div class="magazine-page">
-              <div class="image-placeholder">
-                РАЗВОРОТ 01
-              </div>
-            </div>
-
-            <div class="magazine-page">
-              <div class="image-placeholder">
-                РАЗВОРОТ 02
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <a href="#" class="outline-button">
-          Открыть выпуски LAMPA →
-        </a>
-
-      </div>
-
-
-
-      <!-- ЛАДОГА -->
-
-      <div class="content-project ladoga-project">
-
-        <div class="content-project-heading">
-
-          <div>
-
-            <span>
-              03 / Ладога — 2024
-            </span>
-
-            <h3>
-              Медиаволонтёр
-            </h3>
-
-          </div>
-
-          <p>
-            Работа с текстом и публикациями
-            по итогам молодёжного форума.
-          </p>
-
-        </div>
-
-
-        <div class="ladoga-grid">
-
-
-          <div class="ladoga-main-image">
-
-            <div class="image-placeholder">
-              ПРЕСС-РЕЛИЗ
-            </div>
-
-          </div>
-
-
-          <div class="media-publications">
-
-            <div class="media-item">
-
-              <div class="image-placeholder">
-                СМИ 01
-              </div>
+            <div class="longread-info">
+
+              <h4>
+                Лонгрид
+              </h4>
+
+              <p>
+                Краткое описание материала.
+              </p>
 
               <a href="#">
-                Читать публикацию →
+                Читать полностью →
               </a>
 
             </div>
 
+          </article>
 
-            <div class="media-item">
 
+          <article class="longread-card">
+
+            <div class="longread-cover">
               <div class="image-placeholder">
-                СМИ 02
+                Лонгрид 02
               </div>
+            </div>
+
+            <div class="longread-info">
+
+              <h4>
+                Лонгрид
+              </h4>
+
+              <p>
+                Краткое описание материала.
+              </p>
 
               <a href="#">
-                Читать публикацию →
+                Читать полностью →
               </a>
 
             </div>
 
-          </div>
+          </article>
 
         </div>
 
@@ -2922,68 +1789,121 @@
 
     </div>
 
-  </section>
 
+    <!-- LAMPA -->
 
+    <div class="content-project">
 
-  <!-- =====================================================
-       07 — КОНТАКТЫ
-  ====================================================== -->
-
-  <section class="portfolio-section final-contact" id="contacts">
-
-    <div class="container">
-
-      <div class="section-number">
-        07 / Контакты
-      </div>
-
-
-      <div class="contact-final-grid">
+      <div class="content-project-heading">
 
         <div>
 
-          <span class="final-kicker">
-            Будем на связи
-          </span>
+          <span>02 / LAMPA</span>
 
-          <h2>
-            Давайте<br>
-            знакомиться
-          </h2>
+          <h3>
+            Студенческий журнал
+          </h3>
+
+        </div>
+
+        <p>
+          Автор материалов для студенческого
+          журнала LAMPA.
+        </p>
+
+      </div>
+
+
+      <div class="magazine-grid">
+
+        <div class="magazine-cover">
+
+          <div class="image-placeholder">
+            Обложка LAMPA
+          </div>
 
         </div>
 
 
-        <div class="final-contact-info">
+        <div class="magazine-pages">
 
-          <p>
-            Если вам интересен мой опыт
-            и подход к работе — буду рада
-            обсудить возможности сотрудничества.
-          </p>
+          <div class="magazine-page">
+            <div class="image-placeholder">
+              Разворот 01
+            </div>
+          </div>
+
+          <div class="magazine-page">
+            <div class="image-placeholder">
+              Разворот 02
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
 
 
-          <div class="final-links">
+    <!-- LADOGA -->
+
+    <div class="content-project">
+
+      <div class="content-project-heading">
+
+        <div>
+
+          <span>03 / Ладога — 2024</span>
+
+          <h3>
+            Медиаволонтёр
+          </h3>
+
+        </div>
+
+        <p>
+          Пресс-релиз по итогам форума
+          и публикации в СМИ.
+        </p>
+
+      </div>
+
+
+      <div class="ladoga-grid">
+
+        <div class="ladoga-main-image">
+
+          <div class="image-placeholder">
+            Скрин пресс-релиза
+          </div>
+
+        </div>
+
+
+        <div class="media-publications">
+
+          <div class="media-item">
+
+            <div class="image-placeholder">
+              СМИ 01
+            </div>
 
             <a href="#">
-              Telegram
-              <span>↗</span>
+              Читать публикацию →
             </a>
 
-            <a href="tel:+00000000000">
-              Телефон
-              <span>↗</span>
-            </a>
+          </div>
 
-            <a href="mailto:your@email.com">
-              Email
-              <span>↗</span>
-            </a>
+
+          <div class="media-item">
+
+            <div class="image-placeholder">
+              СМИ 02
+            </div>
 
             <a href="#">
-              HH.ru
-              <span>↗</span>
+              Читать публикацию →
             </a>
 
           </div>
@@ -2992,26 +1912,89 @@
 
       </div>
 
+    </div>
 
-      <div class="footer-line">
 
-        <span>
-          Дарья Богомолова
-        </span>
+  </div>
 
-        <span>
-          Marketing · Communications · Events
-        </span>
+</section>
 
-        <span>
-          2026
-        </span>
+
+<!-- =========================
+     07 — КОНТАКТЫ
+========================= -->
+
+<section class="final-contact" id="contacts">
+
+  <div class="container">
+
+    <div class="contact-final-grid">
+
+      <div>
+
+        <div class="final-kicker">
+          07 / Контакты
+        </div>
+
+        <h2>
+          Давайте<br>
+          на связи
+        </h2>
+
+      </div>
+
+
+      <div class="final-contact-info">
+
+        <p>
+          Если вам интересен мой опыт
+          и вы хотите обсудить проект —
+          буду рада пообщаться.
+        </p>
+
+
+        <div class="final-links">
+
+          <a href="#">
+            Telegram
+            <span>↗</span>
+          </a>
+
+          <a href="tel:+70000000000">
+            Телефон
+            <span>↗</span>
+          </a>
+
+          <a href="mailto:your@email.com">
+            Email
+            <span>↗</span>
+          </a>
+
+          <a href="#">
+            HH.ru
+            <span>↗</span>
+          </a>
+
+        </div>
 
       </div>
 
     </div>
 
-  </section>
+
+    <div class="footer-line">
+
+      <span>Дарья Богомолова</span>
+
+      <span>Marketing · Communications · PR · Events</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
 
 </body>
 </html>
