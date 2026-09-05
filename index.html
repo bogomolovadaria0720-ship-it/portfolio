@@ -1,1280 +1,2123 @@
 <!DOCTYPE html>
+
 <html lang="ru">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Дарья Богомолова — Ассистент маркетолога</title>
+<title>Дарья Богомолова — Ассистент маркетолога / PR-менеджера</title>
 
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
 
 :root {
+
     --bg: #f5f1eb;
+
     --paper: #fbf9f5;
+
     --dark: #242321;
+
     --muted: #77716a;
+
     --line: #d9d1c7;
+
     --soft: #e9e1d8;
+
     --pink: #ead8d5;
+
     --green: #dce4d8;
+
     --yellow: #eee4c9;
+
 }
 
 * {
+
     box-sizing: border-box;
+
     margin: 0;
+
     padding: 0;
+
 }
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
 body {
+
     background: var(--bg);
+
     color: var(--dark);
+
     font-family: "DM Sans", Arial, sans-serif;
+
     line-height: 1.5;
+
 }
 
 a {
+
     color: inherit;
+
     text-decoration: none;
+
 }
 
 img {
+
     max-width: 100%;
+
     display: block;
+
 }
 
 button {
+
     font-family: inherit;
+
 }
 
 .container {
+
     width: min(1380px, calc(100% - 70px));
+
     margin: 0 auto;
+
 }
 
 /* =========================
+
    NAVIGATION
+
 ========================= */
 
 .topbar {
+
     position: fixed;
+
     top: 18px;
+
     left: 50%;
+
     transform: translateX(-50%);
+
     width: min(1380px, calc(100% - 50px));
+
     z-index: 100;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     padding: 14px 20px;
+
     background: rgba(251,249,245,.88);
+
     backdrop-filter: blur(15px);
+
     border: 1px solid rgba(36,35,33,.1);
+
     border-radius: 50px;
+
 }
 
 .logo {
+
     font-size: 15px;
+
     font-weight: 700;
+
     letter-spacing: -.02em;
+
 }
 
 .nav {
+
     display: flex;
+
     gap: 24px;
+
 }
 
 .nav a {
+
     font-size: 12px;
+
     color: var(--muted);
+
     transition: .25s;
+
 }
 
 .nav a:hover {
+
     color: var(--dark);
+
 }
 
 /* =========================
+
    GENERAL
+
 ========================= */
 
 .section {
+
     padding: 150px 0;
+
     position: relative;
+
 }
 
 .section-label {
+
     font-size: 11px;
+
     text-transform: uppercase;
+
     letter-spacing: .22em;
+
     color: #918980;
+
     margin-bottom: 18px;
+
 }
 
 .section-title {
+
     font-size: clamp(42px, 5vw, 76px);
+
     line-height: .96;
+
     letter-spacing: -.055em;
+
     max-width: 800px;
+
 }
 
 .section-intro {
+
     margin-top: 25px;
+
     max-width: 650px;
+
     color: var(--muted);
+
     font-size: 17px;
+
 }
 
 .divider {
+
     width: 100%;
+
     height: 1px;
+
     background: var(--line);
+
     margin: 70px 0;
+
 }
 
 /* =========================
+
    HERO
+
 ========================= */
 
 .hero {
+
     min-height: 100vh;
+
     padding: 120px 0 70px;
+
     display: grid;
+
     grid-template-columns: 48% 52%;
+
     align-items: center;
+
     gap: 60px;
+
 }
 
 .hero-photo {
+
     position: relative;
+
     min-height: 700px;
+
     background: var(--soft);
+
     border-radius: 0 100px 25px 25px;
+
     overflow: hidden;
+
 }
 
 .hero-photo img {
+
     width: 100%;
+
     height: 100%;
+
     min-height: 700px;
+
     object-fit: cover;
+
     object-position: center top;
+
 }
 
 .photo-label {
+
     position: absolute;
+
     bottom: 24px;
+
     left: 24px;
+
     background: rgba(251,249,245,.94);
+
     padding: 12px 18px;
+
     border-radius: 30px;
+
     font-size: 11px;
+
     text-transform: uppercase;
+
     letter-spacing: .08em;
+
 }
 
 .hero-content {
+
     padding-right: 5%;
+
 }
 
 .eyebrow {
+
     font-size: 12px;
+
     letter-spacing: .25em;
+
     color: #918980;
+
     text-transform: uppercase;
+
     margin-bottom: 35px;
+
 }
 
 .hero h1 {
+
     font-size: clamp(65px, 8vw, 125px);
+
     line-height: .83;
+
     letter-spacing: -.075em;
+
     margin-bottom: 42px;
+
 }
 
 .position {
+
     font-size: clamp(25px, 3vw, 42px);
+
     letter-spacing: -.04em;
+
     margin-bottom: 25px;
+
 }
 
 .hero-line {
+
     height: 1px;
+
     width: 100%;
+
     background: var(--line);
+
     margin-bottom: 27px;
+
 }
 
 .hero-description {
+
     max-width: 610px;
+
     color: var(--muted);
+
     font-size: 17px;
+
 }
 
 .socials {
+
     display: flex;
+
     gap: 12px;
+
     margin: 35px 0;
+
 }
 
 .social {
+
     width: 52px;
+
     height: 52px;
+
     border: 1px solid var(--line);
+
     border-radius: 50%;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     transition: .3s;
+
     background: var(--paper);
+
 }
 
 .social:hover {
+
     transform: translateY(-4px);
+
     background: var(--dark);
+
     color: white;
+
 }
 
 .social svg {
+
     width: 20px;
+
     height: 20px;
+
 }
 
 .hh {
+
     font-weight: 700;
+
     font-size: 16px;
+
     color: #d63c3c;
+
 }
 
 .primary-button {
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 28px;
+
     padding: 8px 9px 8px 25px;
+
     background: var(--dark);
+
     color: white;
+
     border-radius: 50px;
+
     font-size: 14px;
+
     transition: .3s;
+
 }
 
 .primary-button:hover {
+
     transform: translateY(-3px);
+
 }
 
 .primary-button span {
+
     width: 42px;
+
     height: 42px;
+
     border-radius: 50%;
+
     background: #4a4845;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
 }
 
 /* =========================
+
    ABOUT
+
 ========================= */
 
 .about-grid {
+
     display: grid;
+
     grid-template-columns: 1fr 1.4fr;
+
     gap: 100px;
+
     align-items: start;
+
 }
 
 .about-text {
+
     font-size: clamp(25px, 3vw, 43px);
+
     line-height: 1.13;
+
     letter-spacing: -.04em;
+
 }
 
 .about-text em {
+
     font-family: "Playfair Display", serif;
+
     font-weight: 500;
+
 }
 
 .about-side {
+
     color: var(--muted);
+
     font-size: 16px;
+
     max-width: 550px;
+
 }
 
 .about-side p + p {
+
     margin-top: 22px;
+
 }
 
 .about-tags {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 10px;
+
     margin-top: 35px;
+
 }
 
 .tag {
+
     border: 1px solid var(--line);
+
     padding: 9px 15px;
+
     border-radius: 30px;
+
     font-size: 12px;
+
 }
 
 /* =========================
+
    SKILLS
+
 ========================= */
 
 .skill-grid {
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 18px;
+
     margin-top: 65px;
+
 }
 
 .skill-card {
+
     min-height: 330px;
+
     padding: 32px;
+
     border-radius: 28px;
+
     border: 1px solid var(--line);
+
     background: var(--paper);
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
+
     transition: .35s;
+
 }
 
 .skill-card:hover {
+
     transform: translateY(-7px) rotate(-.4deg);
+
 }
 
 .skill-card:nth-child(2) {
+
     background: var(--pink);
+
 }
 
 .skill-card:nth-child(3) {
+
     background: var(--green);
+
 }
 
 .skill-number {
+
     font-size: 11px;
+
     letter-spacing: .18em;
+
     color: var(--muted);
+
 }
 
 .skill-icon {
+
     font-size: 40px;
+
     margin-bottom: 25px;
+
 }
 
 .skill-card h3 {
+
     font-size: 28px;
+
     line-height: 1;
+
     letter-spacing: -.04em;
+
     max-width: 250px;
+
 }
 
 .skill-list {
+
     margin-top: 25px;
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 7px;
+
 }
 
 .skill-list span {
+
     background: rgba(255,255,255,.55);
+
     border-radius: 20px;
+
     padding: 7px 10px;
+
     font-size: 11px;
+
 }
 
 /* TOOLS */
 
 .tools-title {
+
     margin-top: 90px;
+
     font-size: 14px;
+
     text-transform: uppercase;
+
     letter-spacing: .2em;
+
     color: var(--muted);
+
 }
 
 .tools-grid {
+
     margin-top: 25px;
+
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 12px;
+
 }
 
 .tool {
+
     background: var(--paper);
+
     border: 1px solid var(--line);
+
     border-radius: 20px;
+
     padding: 24px;
+
     display: flex;
+
     align-items: center;
+
     gap: 15px;
+
     font-size: 15px;
+
     transition: .25s;
+
 }
 
 .tool:hover {
+
     transform: translateY(-4px);
+
 }
 
 .tool-icon {
+
     width: 40px;
+
     height: 40px;
+
     border-radius: 12px;
+
     background: var(--soft);
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     font-weight: 700;
+
     font-size: 13px;
+
 }
 
 /* =========================
+
    EXPERIENCE
+
 ========================= */
 
 .experience-card {
+
     margin-top: 60px;
+
     background: var(--paper);
+
     border: 1px solid var(--line);
+
     border-radius: 35px;
+
     padding: 50px;
+
 }
 
 .experience-head {
+
     display: flex;
+
     justify-content: space-between;
+
     gap: 30px;
+
     border-bottom: 1px solid var(--line);
+
     padding-bottom: 35px;
+
 }
 
 .company {
+
     font-size: clamp(45px, 6vw, 85px);
+
     line-height: .9;
+
     letter-spacing: -.06em;
+
 }
 
 .role {
+
     margin-top: 15px;
+
     color: var(--muted);
+
     font-size: 17px;
+
 }
 
 .period {
+
     color: var(--muted);
+
     font-size: 13px;
+
     white-space: nowrap;
+
 }
 
 .experience-columns {
+
     display: grid;
+
     grid-template-columns: repeat(3,1fr);
+
     gap: 35px;
+
     margin-top: 45px;
+
 }
 
 .experience-column {
+
     padding-right: 20px;
+
 }
 
 .experience-column h3 {
+
     font-size: 20px;
+
     margin-bottom: 22px;
+
     letter-spacing: -.03em;
+
 }
 
 .experience-column ul {
+
     list-style: none;
+
 }
 
 .experience-column li {
+
     color: var(--muted);
+
     font-size: 14px;
+
     margin-bottom: 14px;
+
     padding-left: 17px;
+
     position: relative;
+
 }
 
 .experience-column li:before {
+
     content: "";
+
     width: 5px;
+
     height: 5px;
+
     border-radius: 50%;
+
     background: var(--dark);
+
     position: absolute;
+
     left: 0;
+
     top: 9px;
+
 }
 
 /* =========================
+
    CASE STUDY
+
 ========================= */
 
 .case-intro {
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 80px;
+
     align-items: end;
+
     margin-bottom: 65px;
+
 }
 
 .case-title {
+
     font-size: clamp(50px, 7vw, 100px);
+
     line-height: .86;
+
     letter-spacing: -.07em;
+
 }
 
 .case-context {
+
     color: var(--muted);
+
     max-width: 500px;
+
 }
 
 .case-context strong {
+
     color: var(--dark);
+
 }
 
 .case-grid {
+
     columns: 2 400px;
+
     column-gap: 20px;
+
 }
 
 .case-item {
+
     break-inside: avoid;
+
     margin-bottom: 20px;
+
     border-radius: 25px;
+
     overflow: hidden;
+
     border: 1px solid var(--line);
+
     background: var(--paper);
+
 }
 
 .case-visual {
+
     min-height: 310px;
+
     padding: 30px;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
+
     position: relative;
+
 }
 
 .case-visual.canvas {
+
     background: var(--yellow);
+
 }
 
 .case-visual.cjm {
+
     background: var(--green);
+
     min-height: 430px;
+
 }
 
 .case-visual.avatar {
+
     background: var(--pink);
+
 }
 
 .case-visual.email {
+
     background: #e5e1dc;
+
     min-height: 390px;
+
 }
 
 .case-visual.print {
+
     background: #ddd8d0;
+
     min-height: 480px;
+
 }
 
 .case-visual.outdoor {
+
     background: #d8d7d0;
+
     min-height: 360px;
+
 }
 
 .visual-label {
+
     font-size: 11px;
+
     text-transform: uppercase;
+
     letter-spacing: .18em;
+
     color: var(--muted);
+
 }
 
 .fake-design {
+
     margin: auto;
+
     width: 82%;
+
     height: 62%;
+
     background: var(--paper);
+
     border-radius: 15px;
+
     padding: 20px;
+
     box-shadow: 0 12px 35px rgba(0,0,0,.08);
+
 }
 
 .fake-line {
+
     height: 7px;
+
     background: var(--dark);
+
     border-radius: 10px;
+
     width: 70%;
+
     margin-bottom: 12px;
+
 }
 
 .fake-line.small {
+
     width: 45%;
+
     opacity: .4;
+
 }
 
 .fake-grid {
+
     display: grid;
+
     grid-template-columns: repeat(3,1fr);
+
     gap: 8px;
+
     margin-top: 20px;
+
 }
 
 .fake-box {
+
     height: 50px;
+
     border: 1px solid var(--line);
+
     border-radius: 7px;
+
 }
 
 .case-caption {
+
     padding: 20px 24px 25px;
+
 }
 
 .case-caption h3 {
+
     font-size: 21px;
+
     letter-spacing: -.03em;
+
 }
 
 .case-caption p {
+
     color: var(--muted);
+
     font-size: 13px;
+
     margin-top: 6px;
+
 }
 
 .case-more {
+
     margin-top: 60px;
+
     padding: 45px;
+
     background: var(--dark);
+
     color: white;
+
     border-radius: 30px;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     gap: 30px;
+
 }
 
 .case-more p {
+
     color: #bdb8b1;
+
     max-width: 600px;
+
 }
 
 .light-button {
+
     background: white;
+
     color: var(--dark);
+
     padding: 15px 22px;
+
     border-radius: 30px;
+
     white-space: nowrap;
+
     font-size: 13px;
+
 }
 
 /* =========================
+
    FESTIVALS
+
 ========================= */
 
 .festival {
+
     margin-top: 60px;
+
     display: grid;
+
     grid-template-columns: 1.15fr .85fr;
+
     gap: 45px;
+
     align-items: stretch;
+
 }
 
 .festival:nth-child(odd) {
+
     direction: rtl;
+
 }
 
 .festival:nth-child(odd) > * {
+
     direction: ltr;
+
 }
 
 .festival-photo {
+
     min-height: 520px;
+
     border-radius: 35px;
+
     overflow: hidden;
+
     background: var(--soft);
+
     position: relative;
+
 }
 
 .festival-photo img {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
+
 }
 
 .photo-placeholder {
+
     width: 100%;
+
     height: 100%;
+
     min-height: 520px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     background: linear-gradient(135deg,#ded7ce,#eee9e2);
+
     color: #8a8178;
+
     font-size: 12px;
+
     text-transform: uppercase;
+
     letter-spacing: .15em;
+
 }
 
 .festival-info {
+
     padding: 35px 10px;
+
 }
 
 .festival-number {
+
     font-size: 11px;
+
     color: var(--muted);
+
     letter-spacing: .2em;
+
 }
 
 .festival h3 {
+
     font-size: clamp(35px, 4vw, 62px);
+
     line-height: .95;
+
     letter-spacing: -.055em;
+
     margin: 30px 0;
+
 }
 
 .festival-role {
+
     display: inline-block;
+
     padding: 8px 13px;
+
     background: var(--pink);
+
     border-radius: 20px;
+
     font-size: 11px;
+
     margin-bottom: 25px;
+
 }
 
 .festival ul {
+
     list-style: none;
+
 }
 
 .festival li {
+
     color: var(--muted);
+
     margin-bottom: 12px;
+
     font-size: 14px;
+
     padding-left: 18px;
+
     position: relative;
+
 }
 
 .festival li:before {
+
     content: "↳";
+
     position: absolute;
+
     left: 0;
+
 }
 
 /* =========================
+
    CONTENT / PR
+
 ========================= */
 
 .content-block {
+
     margin-top: 65px;
+
 }
 
 .content-heading {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: end;
+
     margin-bottom: 25px;
+
 }
 
 .content-heading h3 {
+
     font-size: clamp(35px, 4vw, 58px);
+
     letter-spacing: -.05em;
+
 }
 
 .content-heading p {
+
     color: var(--muted);
+
     max-width: 420px;
+
     font-size: 14px;
+
 }
 
 .masonry {
+
     columns: 3 300px;
+
     column-gap: 15px;
+
 }
 
 .masonry-card {
+
     break-inside: avoid;
+
     margin-bottom: 15px;
+
     background: var(--paper);
+
     border: 1px solid var(--line);
+
     border-radius: 22px;
+
     overflow: hidden;
+
 }
 
 .masonry-image {
+
     min-height: 270px;
+
     background: var(--soft);
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     color: #857d74;
+
     font-size: 11px;
+
     text-transform: uppercase;
+
     letter-spacing: .12em;
+
 }
 
 .masonry-card:nth-child(2) .masonry-image {
+
     min-height: 380px;
+
     background: var(--pink);
+
 }
 
 .masonry-card:nth-child(3) .masonry-image {
+
     min-height: 320px;
+
     background: var(--green);
+
 }
 
 .masonry-card:nth-child(4) .masonry-image {
+
     min-height: 430px;
+
     background: var(--yellow);
+
 }
 
 .masonry-caption {
+
     padding: 18px;
+
 }
 
 .masonry-caption h4 {
+
     font-size: 16px;
+
 }
 
 .masonry-caption p {
+
     color: var(--muted);
+
     font-size: 12px;
+
     margin-top: 5px;
+
 }
 
 /* CAROUSEL */
 
 .carousel-wrapper {
+
     position: relative;
+
 }
 
 .carousel {
+
     display: flex;
+
     gap: 15px;
+
     overflow-x: auto;
+
     scroll-snap-type: x mandatory;
+
     scrollbar-width: none;
+
     padding-bottom: 8px;
+
 }
 
 .carousel::-webkit-scrollbar {
+
     display: none;
+
 }
 
 .carousel-card {
+
     flex: 0 0 330px;
+
     scroll-snap-align: start;
+
     background: var(--paper);
+
     border: 1px solid var(--line);
+
     border-radius: 24px;
+
     overflow: hidden;
+
 }
 
 .carousel-image {
+
     height: 380px;
+
     background: var(--soft);
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     color: #857d74;
+
     font-size: 11px;
+
     text-transform: uppercase;
+
     letter-spacing: .1em;
+
 }
 
 .carousel-card:nth-child(2) .carousel-image {
+
     background: var(--pink);
+
 }
 
 .carousel-card:nth-child(3) .carousel-image {
+
     background: var(--green);
+
 }
 
 .carousel-card:nth-child(4) .carousel-image {
+
     background: var(--yellow);
+
 }
 
 .carousel-caption {
+
     padding: 20px;
+
 }
 
 .carousel-caption h4 {
+
     font-size: 18px;
+
 }
 
 .carousel-caption p {
+
     color: var(--muted);
+
     font-size: 12px;
+
     margin-top: 5px;
+
 }
 
 .read-link {
+
     display: inline-block;
+
     margin-top: 12px;
+
     font-size: 12px;
+
     text-decoration: underline;
+
 }
 
 /* LAMPA */
 
 .lampa {
+
     display: grid;
+
     grid-template-columns: .8fr 1.2fr;
+
     gap: 50px;
+
     margin-top: 60px;
+
     align-items: center;
+
 }
 
 .magazine {
+
     min-height: 550px;
+
     border-radius: 25px;
+
     background: var(--dark);
+
     color: white;
+
     padding: 35px;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
+
 }
 
 .magazine-name {
+
     font-family: "Playfair Display", serif;
+
     font-size: 75px;
+
 }
 
 .magazine-label {
+
     font-size: 11px;
+
     letter-spacing: .2em;
+
 }
 
 .lampa-info h3 {
+
     font-size: 45px;
+
     line-height: 1;
+
     letter-spacing: -.05em;
+
 }
 
 .lampa-info p {
+
     margin-top: 25px;
+
     color: var(--muted);
+
     max-width: 550px;
+
 }
 
 .article-links {
+
     margin-top: 30px;
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 10px;
+
 }
 
 .article-link {
+
     border: 1px solid var(--line);
+
     padding: 11px 16px;
+
     border-radius: 25px;
+
     font-size: 12px;
+
 }
 
 /* LADOGA */
 
 .media-case {
+
     margin-top: 70px;
+
     background: var(--green);
+
     border-radius: 35px;
+
     padding: 45px;
+
 }
 
 .media-grid {
+
     display: grid;
+
     grid-template-columns: repeat(3,1fr);
+
     gap: 15px;
+
     margin-top: 35px;
+
 }
 
 .media-card {
+
     min-height: 300px;
+
     background: var(--paper);
+
     border-radius: 20px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     padding: 25px;
+
     text-align: center;
+
     color: var(--muted);
+
     font-size: 12px;
+
 }
 
 /* =========================
+
    CONTACTS
+
 ========================= */
 
 .contact-section {
+
     min-height: 80vh;
+
     display: flex;
+
     align-items: center;
+
 }
 
 .contact-box {
+
     width: 100%;
+
     background: var(--dark);
+
     color: white;
+
     border-radius: 45px;
+
     padding: 70px;
+
     position: relative;
+
     overflow: hidden;
+
 }
 
 .contact-box:after {
+
     content: "";
+
     width: 350px;
+
     height: 350px;
+
     border: 1px solid rgba(255,255,255,.15);
+
     border-radius: 50%;
+
     position: absolute;
+
     right: -100px;
+
     bottom: -150px;
+
 }
 
 .contact-box .section-label {
+
     color: #aaa49d;
+
 }
 
 .contact-title {
+
     font-size: clamp(60px, 9vw, 140px);
+
     line-height: .8;
+
     letter-spacing: -.075em;
+
     max-width: 950px;
+
 }
 
 .contact-subtitle {
+
     margin-top: 30px;
+
     color: #aaa49d;
+
     max-width: 500px;
+
 }
 
 .contact-links {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 12px;
+
     margin-top: 45px;
+
 }
 
 .contact-link {
+
     border: 1px solid #514e4a;
+
     border-radius: 30px;
+
     padding: 13px 19px;
+
     font-size: 13px;
+
     transition: .25s;
+
 }
 
 .contact-link:hover {
+
     background: white;
+
     color: var(--dark);
+
 }
 
 /* =========================
+
    FOOTER
+
 ========================= */
 
 footer {
+
     padding: 35px 0;
+
     color: var(--muted);
+
     font-size: 11px;
+
     display: flex;
+
     justify-content: space-between;
+
 }
 
 /* =========================
+
    MOBILE
+
 ========================= */
 
 @media (max-width: 900px) {
 
     .container {
+
         width: min(100% - 30px, 700px);
+
     }
 
     .topbar {
+
         width: calc(100% - 20px);
+
     }
 
     .nav {
+
         display: none;
+
     }
 
     .hero {
+
         grid-template-columns: 1fr;
+
         padding-top: 110px;
+
     }
 
     .hero-photo {
+
         min-height: 550px;
+
         order: 1;
+
     }
 
     .hero-photo img {
+
         min-height: 550px;
+
     }
 
     .hero-content {
+
         order: 2;
+
         padding-right: 0;
+
     }
 
     .hero h1 {
+
         font-size: 65px;
+
     }
 
     .about-grid,
+
     .case-intro,
+
     .festival,
+
     .lampa {
+
         grid-template-columns: 1fr;
+
         gap: 35px;
+
     }
 
     .skill-grid {
+
         grid-template-columns: 1fr;
+
     }
 
     .tools-grid {
+
         grid-template-columns: repeat(2,1fr);
+
     }
 
     .experience-columns {
+
         grid-template-columns: 1fr;
+
     }
 
     .experience-card {
+
         padding: 30px;
+
     }
 
     .experience-head {
+
         flex-direction: column;
+
     }
 
     .festival:nth-child(odd) {
+
         direction: ltr;
+
     }
 
     .festival-photo,
+
     .photo-placeholder {
+
         min-height: 400px;
+
     }
 
     .media-grid {
+
         grid-template-columns: 1fr;
+
     }
 
     .media-case {
+
         padding: 25px;
+
     }
 
     .contact-box {
+
         padding: 40px 25px;
+
         border-radius: 30px;
+
     }
 
     .contact-title {
+
         font-size: 65px;
+
     }
 
     footer {
+
         flex-direction: column;
+
         gap: 10px;
+
     }
+
 }
 
 @media (max-width: 500px) {
 
     .section {
+
         padding: 100px 0;
+
     }
 
     .hero {
+
         padding-top: 95px;
+
     }
 
     .hero-photo {
+
         min-height: 450px;
+
         border-radius: 0 60px 20px 20px;
+
     }
 
     .hero-photo img {
+
         min-height: 450px;
+
     }
 
     .hero h1 {
+
         font-size: 55px;
+
     }
 
     .position {
+
         font-size: 27px;
+
     }
 
     .tools-grid {
+
         grid-template-columns: 1fr;
+
     }
 
     .case-grid {
+
         columns: 1;
+
     }
 
     .carousel-card {
+
         flex-basis: 285px;
+
     }
 
     .magazine {
+
         min-height: 420px;
+
     }
 
     .magazine-name {
+
         font-size: 60px;
+
     }
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <!-- =========================
+
      NAVIGATION
+
 ========================= -->
 
 <nav class="topbar">
+
     <a href="#top" class="logo">DB.</a>
 
     <div class="nav">
+
         <a href="#about">Обо мне</a>
+
         <a href="#skills">Навыки</a>
+
         <a href="#experience">Опыт</a>
+
         <a href="#case">Case Study</a>
+
         <a href="#festivals">Фестивали</a>
+
         <a href="#content">Content & PR</a>
+
+        <a href="#recommendation">Рекомендации</a>
         <a href="#contacts">Контакты</a>
+
     </div>
+
 </nav>
 
 
 <main id="top">
 
 <!-- =========================
+
      01 — HERO
+
 ========================= -->
 
 <section class="hero container">
 
     <div class="hero-photo">
 
-        <img src="darya_portrait.png" alt="Дарья Богомолова">
+        <img src="photo1.jpg" alt="Дарья Богомолова">
 
         <div class="photo-label">
+
             Marketing · Communications
+
         </div>
 
     </div>
@@ -1283,62 +2126,86 @@ footer {
     <div class="hero-content">
 
         <div class="eyebrow">
+
             Portfolio / 2026
+
         </div>
 
         <h1>
+
             Дарья<br>
+
             Богомолова
+
         </h1>
 
         <div class="position">
+
             Ассистент маркетолога
+
         </div>
 
         <div class="hero-line"></div>
 
         <p class="hero-description">
+
             Развиваюсь в направлениях бренд-маркетинга,
+
             коммуникаций, PR и event-проектов.
+
             Люблю идеи, людей и проекты, которые объединяют.
+
         </p>
 
 
         <div class="socials">
 
             <!-- Telegram -->
-            <a class="social" href="#" aria-label="Telegram">
+
+            <a class="social" href="https://t.me/dariia1" target="_blank" rel="noopener" aria-label="Telegram">
+
                 <svg viewBox="0 0 24 24" fill="none">
+
                     <path d="M21.5 4.5L18.3 19.6C18.1 20.7 17.5 21 16.6 20.5L11.3 16.6L8.7 19.1C8.4 19.4 8.1 19.7 7.5 19.7L7.9 14.3L17.7 5.5C18.1 5.1 17.6 4.9 17.1 5.2L5 12.8L-.2 11.2C-1.3 10.9-1.3 10.1.1 9.5L20.2 1.7C21.2 1.3 22 1.9 21.5 4.5Z" fill="currentColor"/>
+
                 </svg>
+
             </a>
 
             <!-- Phone -->
-            <a class="social" href="tel:+70000000000" aria-label="Телефон">
+
+            <a class="social" href="tel:+79772650578" aria-label="Телефон">
+
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
                     <path d="M6.5 3.5l3 2.2-1.7 3.1c1 2.1 2.3 3.4 4.4 4.4l3.1-1.7 2.2 3c.4.6.3 1.4-.2 1.9l-1.5 1.5c-.5.5-1.3.7-2 .4C7.9 16.2 4.8 13.1 2.4 7.2c-.3-.7-.1-1.5.4-2l1.7-1.7c.5-.5 1.4-.4 2 .0Z"/>
+
                 </svg>
+
             </a>
 
             <!-- Email -->
-            <a class="social" href="mailto:your-email@example.com" aria-label="Email">
+
+            <a class="social" href="mailto:Bogomolova20403@yandex.ru" aria-label="Email">
+
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
                     <rect x="3" y="5" width="18" height="14" rx="2"/>
+
                     <path d="M4 7l8 6 8-6"/>
+
                 </svg>
-            </a>
 
-            <!-- HH -->
-            <a class="social hh" href="#" aria-label="HH.ru">
-                hh
             </a>
-
-        </div>
+</div>
 
 
         <a href="#case" class="primary-button">
+
             Посмотреть проекты
+
             <span>→</span>
+
         </a>
 
     </div>
@@ -1347,54 +2214,45 @@ footer {
 
 
 <!-- =========================
+
      ОБО МНЕ
+
 ========================= -->
 
 <section class="section container" id="about">
 
     <div class="section-label">
+
         01 / About me
+
     </div>
 
     <div class="about-grid">
 
         <div>
+
             <h2 class="section-title">
+
                 Обо<br>
+
                 мне
+
             </h2>
+
         </div>
 
         <div>
 
-            <div class="about-text">
-                Маркетинг для меня — это способ
-                <em>соединять идеи, людей и задачи</em>
-                в понятные коммуникации.
-            </div>
-
             <div class="about-side">
-
                 <p>
-                    Интересуюсь бренд-маркетингом,
-                    коммуникациями, PR и event-проектами.
-                    Мне интересно работать на стыке аналитики,
-                    контента и визуальной подачи.
+                    Учусь на последнем курсе СПбГЭТУ «ЛЭТИ» по направлению «Реклама и связи с общественностью», развиваюсь в маркетинге и коммуникациях. За время учёбы получила практический опыт в ПСБ и МТС, а также поработала над учебными маркетинговыми и коммуникационными проектами.
                 </p>
-
                 <p>
-                    Умею работать с задачами от подготовки
-                    материалов и коммуникаций до организации
-                    мероприятий и создания маркетинговых решений.
+                    Мне интересно разбираться, как бренд выстраивает коммуникацию с аудиторией: исследовать её потребности, искать идеи, работать с контентом и рекламными материалами. В учебных проектах уже занималась анализом целевой аудитории и конкурентов, разработкой коммуникационных решений, медиапланированием и подготовкой материалов для разных каналов.
                 </p>
-
                 <p>
-                    Хочу развиваться в маркетинге,
-                    брать больше самостоятельных задач
-                    и постепенно переходить к полноценной
-                    работе над проектами.
+                    Сейчас ищу позицию ассистента маркетолога или PR-менеджера, где смогу применять полученные навыки, брать на себя задачи команды и расти в направлении маркетинга, коммуникаций и PR.
                 </p>
-
                 <div class="about-tags">
                     <span class="tag">Brand Marketing</span>
                     <span class="tag">Communications</span>
@@ -1402,6 +2260,7 @@ footer {
                     <span class="tag">Events</span>
                     <span class="tag">Content</span>
                 </div>
+            </div>
 
             </div>
 
@@ -1413,172 +2272,160 @@ footer {
 
 
 <!-- =========================
+
      02 — SKILLS
+
 ========================= -->
 
 <section class="section container" id="skills">
 
     <div class="section-label">
+
         02 / Skills
+
     </div>
 
-    <h2 class="section-title">
-        Что я умею<br>
-        и чем работаю
-    </h2>
+    <h2 class="section-title">Ключевые навыки</h2>
 
-    <p class="section-intro">
-        Компетенции, которые помогают мне работать
-        с задачами от идеи до реализации.
-    </p>
+    <p class="section-intro">Работала с маркетинговыми задачами на разных этапах: анализировала аудиторию, планировала коммуникации, готовила материалы и координировала их реализацию.</p>
 
 
+    
     <div class="skill-grid">
-
         <div class="skill-card">
-
-            <div class="skill-number">01 / MARKETING</div>
-
+            <div class="skill-number">01</div>
             <div>
                 <div class="skill-icon">✦</div>
-
-                <h3>
-                    Маркетинг<br>
-                    и аналитика
-                </h3>
-
+                <h3>Анализ и планирование</h3>
                 <div class="skill-list">
-                    <span>Анализ ЦА</span>
-                    <span>Сегментация</span>
-                    <span>Конкурентный анализ</span>
-                    <span>CJM</span>
-                    <span>SWOT</span>
-                    <span>Рекламные стратегии</span>
-                    <span>Медиапланирование</span>
-                    <span>KPI</span>
+                    <span>Анализ ЦА и конкурентов</span><span>Сегментация</span><span>CJM</span>
+                    <span>SWOT</span><span>Рекламные кампании</span><span>Медиапланирование</span>
                 </div>
             </div>
-
         </div>
-
-
         <div class="skill-card">
-
-            <div class="skill-number">02 / CONTENT & PR</div>
-
+            <div class="skill-number">02</div>
             <div>
                 <div class="skill-icon">✎</div>
-
-                <h3>
-                    Контент<br>
-                    и коммуникации
-                </h3>
-
+                <h3>Реклама и коммуникации</h3>
                 <div class="skill-list">
-                    <span>Тексты</span>
-                    <span>Социальные сети</span>
-                    <span>PR</span>
-                    <span>Пресс-релизы</span>
-                    <span>Email</span>
-                    <span>Рекламные тексты</span>
+                    <span>Рекламные концепции</span><span>Тексты</span><span>PR-коммуникации</span>
+                    <span>Пресс-релизы</span><span>Email</span><span>Контент</span><span>ТЗ</span>
                 </div>
             </div>
-
         </div>
-
-
         <div class="skill-card">
-
-            <div class="skill-number">03 / EVENTS</div>
-
+            <div class="skill-number">03</div>
+            <div>
+                <div class="skill-icon">↗</div>
+                <h3>Проектная координация</h3>
+                <div class="skill-list">
+                    <span>Подрядчики</span><span>Коммерческие предложения</span><span>Производство материалов</span>
+                    <span>Сроки</span><span>Документы</span><span>Отчётность</span>
+                </div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-number">04</div>
             <div>
                 <div class="skill-icon">◎</div>
-
-                <h3>
-                    Event
-                </h3>
-
+                <h3>Event</h3>
                 <div class="skill-list">
-                    <span>Организация мероприятий</span>
-                    <span>Площадки</span>
-                    <span>Подрядчики</span>
-                    <span>Участники</span>
-                    <span>Логистика</span>
-                    <span>Материалы</span>
-                    <span>Командная работа</span>
+                    <span>Площадки</span><span>Партнёры</span><span>Участники</span>
+                    <span>Материалы</span><span>Логистика</span><span>Сопровождение мероприятий</span>
                 </div>
             </div>
-
         </div>
-
+        <div class="skill-card">
+            <div class="skill-number">05</div>
+            <div>
+                <div class="skill-icon">⌁</div>
+                <h3>Аналитика</h3>
+                <div class="skill-list">
+                    <span>Работа с данными</span><span>Маркетинговые показатели</span>
+                    <span>Таблицы</span><span>Отчёты</span><span>Презентации</span>
+                </div>
+            </div>
+        </div>
     </div>
 
+    
+    <div class="tools-title">Tools / Инструменты</div>
+    <p class="section-intro" style="margin-top:18px;max-width:760px;">
+        Использую эти инструменты для анализа данных, подготовки презентаций и маркетинговых материалов, работы с визуалом и ускорения исследовательских и контентных задач.
+    </p>
 
-    <div class="tools-title">
-        Tools / Инструменты
-    </div>
-
-
+    <div class="tools-category">Аналитика и работа с данными</div>
     <div class="tools-grid">
-
-        <div class="tool">
-            <div class="tool-icon">T</div>
-            Tilda
+        <div class="tool" onclick="toggleTool(this)">
+            <div class="tool-inner"><div class="tool-icon">G</div><div class="tool-name">Google Таблицы</div><div class="tool-arrow">+</div></div>
+            <div class="tool-details">Рабочие таблицы, реестры, структурирование данных, базовые расчёты, фильтры, сводные таблицы и диаграммы.</div>
         </div>
-
-        <div class="tool">
-            <div class="tool-icon">F</div>
-            Figma
+        <div class="tool" onclick="toggleTool(this)">
+            <div class="tool-inner"><div class="tool-icon">X</div><div class="tool-name">Excel</div><div class="tool-arrow">+</div></div>
+            <div class="tool-details">Базовая работа с таблицами, фильтрация и сортировка данных, простые формулы, сводные таблицы, диаграммы.</div>
         </div>
+    </div>
 
-        <div class="tool">
-            <div class="tool-icon">C</div>
-            Canva
+    <div class="tools-category">Презентации и визуал</div>
+    <div class="tools-grid">
+        <div class="tool" onclick="toggleTool(this)">
+            <div class="tool-inner"><div class="tool-icon">P</div><div class="tool-name">Google Презентации</div><div class="tool-arrow">+</div></div>
+            <div class="tool-details">Подготовка аналитических и отчётных презентаций, структурирование информации и визуальная подача результатов.</div>
         </div>
-
-        <div class="tool">
-            <div class="tool-icon">Ps</div>
-            Photoshop
+        <div class="tool" onclick="toggleTool(this)">
+            <div class="tool-inner"><div class="tool-icon">C</div><div class="tool-name">Canva</div><div class="tool-arrow">+</div></div>
+            <div class="tool-details">Создание презентационных, рекламных и коммуникационных материалов.</div>
         </div>
-
-        <div class="tool">
-            <div class="tool-icon">G</div>
-            Google Sheets
+        <div class="tool" onclick="toggleTool(this)">
+            <div class="tool-inner"><div class="tool-icon">F</div><div class="tool-name">Figma</div><div class="tool-arrow">+</div></div>
+            <div class="tool-details">Работа с текстом, компоновкой и оформлением визуальных материалов.</div>
         </div>
-
-        <div class="tool">
-            <div class="tool-icon">P</div>
-            Google Презентации
+        <div class="tool" onclick="toggleTool(this)">
+            <div class="tool-inner"><div class="tool-icon">Ps</div><div class="tool-name">Photoshop</div><div class="tool-arrow">+</div></div>
+            <div class="tool-details">Базовая обработка и подготовка визуальных материалов для учебных проектов.</div>
         </div>
+    </div>
 
-        <div class="tool">
-            <div class="tool-icon">AI</div>
-            AI-инструменты
+    <div class="tools-category">Сайты и контент</div>
+    <div class="tools-grid">
+        <div class="tool" onclick="toggleTool(this)">
+            <div class="tool-inner"><div class="tool-icon">T</div><div class="tool-name">Tilda</div><div class="tool-arrow">+</div></div>
+            <div class="tool-details">Создание и оформление лендингов в рамках учебных проектов.</div>
         </div>
+    </div>
 
-        <div class="tool">
-            <div class="tool-icon">Я</div>
-            Яндекс Директ
+    <div class="tools-category">AI-инструменты</div>
+    <div class="tools-grid">
+        <div class="tool" onclick="toggleTool(this)">
+            <div class="tool-inner"><div class="tool-icon">AI</div><div class="tool-name">ChatGPT · Claude · Perplexity</div><div class="tool-arrow">+</div></div>
+            <div class="tool-details">Использую для поиска и структурирования информации, анализа материалов, генерации и проверки идей, подготовки черновиков текстов и исследовательских задач.</div>
         </div>
-
     </div>
 
 </section>
 
 
 <!-- =========================
+
      03 — EXPERIENCE
+
 ========================= -->
 
 <section class="section container" id="experience">
 
     <div class="section-label">
+
         03 / Experience
+
     </div>
 
     <h2 class="section-title">
+
         Опыт<br>
+
         работы
+
     </h2>
 
 
@@ -1589,227 +2436,111 @@ footer {
         <div class="experience-head">
 
             <div>
+
                 <div class="company">ПСБ</div>
-                <div class="role">Маркетинг</div>
+
+                <div class="role">Младший специалист отдела маркетинга</div>
+
             </div>
 
-            <div class="period">
-                Опыт работы
-            </div>
+            <div class="period">октябрь 2025 – апрель 2026</div>
 
         </div>
 
 
         <div class="experience-columns">
-
             <div class="experience-column">
-
                 <h3>Мероприятия</h3>
-
                 <ul>
-                    <li>
-                        Подготовка и координация мероприятий.
-                    </li>
-
-                    <li>
-                        Поиск площадок и взаимодействие
-                        с подрядчиками.
-                    </li>
-
-                    <li>
-                        Организационное сопровождение
-                        участников и контроль тайминга.
-                    </li>
-
-                    <li>
-                        Подготовка материалов
-                        и пост-отчётности по мероприятиям.
-                    </li>
+                    <li>Участвовала в организации 20+ клиентских мероприятий для VIP-клиентов и партнёров банка. Для четырёх проектов (до 200 участников) сопровождала полный цикл подготовки: подбирала площадки, запрашивала и анализировала КП, координировала подрядчиков, готовила раздаточные материалы и обеспечивала организационную поддержку в день проведения мероприятий.</li>
+                    <li>Подготовила 50+ аналитических и отчётных презентаций по итогам клиентских мероприятий, обеспечению офисов рекламными материалами и обновлению рекламных конструкций.</li>
                 </ul>
-
             </div>
-
-
             <div class="experience-column">
-
                 <h3>Организация и взаимодействие</h3>
-
                 <ul>
-
-                    <li>
-                        Взаимодействие с подразделениями
-                        по организационным задачам.
-                    </li>
-
-                    <li>
-                        Работа с документами.
-                    </li>
-
-                    <li>
-                        Координация организационных вопросов
-                        и поставок.
-                    </li>
-
-                    <li>
-                        Взаимодействие с подрядчиками.
-                    </li>
-
+                    <li>Вела полный цикл документооборота по маркетинговым проектам: ежемесячно передавала в бухгалтерию 100+ документов, контролировала комплектность первичной документации и соблюдение внутренних сроков.</li>
+                    <li>Координировала организационные задачи в рамках маркетинговых проектов: формировала списки гостей, готовила рабочие таблицы и материалы, контролировала сроки выполнения задач.</li>
                 </ul>
-
             </div>
-
-
             <div class="experience-column">
-
                 <h3>Рекламные материалы</h3>
-
                 <ul>
-
-                    <li>
-                        Заказ рекламных и информационных материалов.
-                    </li>
-
-                    <li>
-                        Работа с полиграфической продукцией.
-                    </li>
-
-                    <li>
-                        Заказ сувенирной продукции.
-                    </li>
-
-                    <li>
-                        Контроль потребностей подразделений
-                        и пополнения материалов.
-                    </li>
-
+                    <li>Организовала полный цикл работы с 10+ подрядчиками по производству полиграфической и рекламной продукции для сети из 22 доп. офисов банка: искала и отбирала типографии, запрашивала КП, согласовывала условия и сопровождала выполнение заказов.</li>
+                    <li>Координировала 3+ процесса обновления рекламных материалов для офисов банка в соответствии с маркетинговыми приоритетами: взаимодействовала с головным офисом и подрядчиками, согласовывала бюджет, контролировала сроки производства и размещения.</li>
+                    <li>Контролировала наличие рекламной и сувенирной продукции в доп. офисах: анализировала потребности подразделений, вела учёт материалов, инициировала пополнение запасов и координировала поставки.</li>
                 </ul>
-
             </div>
-
         </div>
+
+    </div>
 
     </div>
 
 
     <!-- MTS -->
-
     <div class="experience-card">
-
         <div class="experience-head">
-
             <div>
-                <div class="company">МТС</div>
-                <div class="role">
-                    Опыт в маркетинговом направлении
-                </div>
+                <div class="company">МТС Финтех</div>
+                <div class="role">Клиентский менеджер-стажёр</div>
             </div>
-
-            <div class="period">
-                MTS
-            </div>
-
+            <div class="period">март 2024 – май 2024</div>
         </div>
-
-
         <div class="experience-columns">
-
             <div class="experience-column">
-
-                <h3>Задачи</h3>
-
                 <ul>
-                    <li>
-                        Работа с маркетинговыми задачами
-                        и коммуникациями.
-                    </li>
-
-                    <li>
-                        Подготовка материалов.
-                    </li>
-
-                    <li>
-                        Взаимодействие с командой.
-                    </li>
+                    <li>Взаимодействовала с клиентами и коллегами смежных подразделений по операционным вопросам.</li>
+                    <li>Вела рабочие реестры и помогала в подготовке документации.</li>
                 </ul>
-
             </div>
-
-
             <div class="experience-column">
-
-                <h3>Проекты</h3>
-
                 <ul>
-                    <li>
-                        Участие в рабочих задачах
-                        маркетингового направления.
-                    </li>
-
-                    <li>
-                        Подготовка и оформление информации
-                        для внутренних задач.
-                    </li>
+                    <li>Вела деловую переписку в рамках рабочих процессов.</li>
+                    <li>Получила практический опыт административного сопровождения рабочих процессов и взаимодействия со смежными подразделениями.</li>
                 </ul>
-
             </div>
-
-
-            <div class="experience-column">
-
-                <h3>Результат</h3>
-
-                <ul>
-                    <li>
-                        Практический опыт работы
-                        внутри крупной компании.
-                    </li>
-                </ul>
-
-            </div>
-
         </div>
-
     </div>
-
 </section>
 
 
 <!-- =========================
+
      04 — CASE STUDY
+
 ========================= -->
 
 <section class="section container" id="case">
 
     <div class="section-label">
+
         04 / Case Study
+
     </div>
 
 
     <div class="case-intro">
 
         <div>
-            <div class="case-title">
-                РОББО<br>
-                Клуб
-            </div>
+
+            <div class="case-title">РОББО</div>
+
         </div>
 
         <div class="case-context">
 
             <p>
-                <strong>Учебный проект, выполненный
-                в рамках обучения на реальном брифе
-                компании РОББО Клуб.</strong>
+
+                <strong>Учебный проект на реальном брифе компании «РОББО»</strong>
+
             </p>
 
             <br>
 
-            <p>
-                В рамках проекта я работала над рекламной
-                кампанией и разрабатывала маркетинговые
-                материалы, опираясь на анализ аудитории,
-                задачи бренда и выбранную коммуникационную стратегию.
-            </p>
+            <p>В рамках последнего учебного проекта работала над кейсом для «РОББО» – международной сети клубов робототехники для детей. Задача заказчика – повысить узнаваемость бренда среди родителей детей среднего и школьного возраста и привлечь внимание к занятиям в клубах.</p>
+            <br>
+            <p>На основе анализа целевой аудитории, её потребностей и пути принятия решения разработала коммуникационную стратегию рекламной кампании и рекламные продукты для разных точек контакта с аудиторией.</p>
 
         </div>
 
@@ -1821,30 +2552,10 @@ footer {
 
         <div class="case-item">
 
-            <div class="case-visual canvas">
-
-                <div class="visual-label">
-                    Strategy / 01
-                </div>
-
-                <div class="fake-design">
-
-                    <div class="fake-line"></div>
-                    <div class="fake-line small"></div>
-
-                    <div class="fake-grid">
-                        <div class="fake-box"></div>
-                        <div class="fake-box"></div>
-                        <div class="fake-box"></div>
-                        <div class="fake-box"></div>
-                        <div class="fake-box"></div>
-                        <div class="fake-box"></div>
-                    </div>
-
-                </div>
-
+            <div class="case-visual canvas has-image">
+                <div class="visual-label">Portfolio / Lean Canvas</div>
+                <img class="case-image" src="Lean-canvas.png" alt="Lean Canvas">
             </div>
-
             <div class="case-caption">
                 <h3>Lean Canvas</h3>
                 <p>Структурирование идеи и бизнес-модели проекта.</p>
@@ -1855,38 +2566,10 @@ footer {
 
         <div class="case-item">
 
-            <div class="case-visual cjm">
-
-                <div class="visual-label">
-                    Research / 02
-                </div>
-
-                <div class="fake-design">
-
-                    <div class="fake-line"></div>
-
-                    <div class="fake-grid">
-                        <div class="fake-box"></div>
-                        <div class="fake-box"></div>
-                        <div class="fake-box"></div>
-                    </div>
-
-                    <div class="fake-grid">
-                        <div class="fake-box"></div>
-                        <div class="fake-box"></div>
-                        <div class="fake-box"></div>
-                    </div>
-
-                    <div class="fake-grid">
-                        <div class="fake-box"></div>
-                        <div class="fake-box"></div>
-                        <div class="fake-box"></div>
-                    </div>
-
-                </div>
-
+            <div class="case-visual cjm has-image">
+                <div class="visual-label">Portfolio / CJM</div>
+                <img class="case-image" src="cjm.png" alt="CJM">
             </div>
-
             <div class="case-caption">
                 <h3>CJM</h3>
                 <p>Путь клиента и ключевые точки взаимодействия.</p>
@@ -1897,32 +2580,10 @@ footer {
 
         <div class="case-item">
 
-            <div class="case-visual avatar">
-
-                <div class="visual-label">
-                    Audience / 03
-                </div>
-
-                <div class="fake-design">
-
-                    <div class="fake-line"></div>
-                    <div class="fake-line small"></div>
-
-                    <div style="
-                        width:90px;
-                        height:90px;
-                        border-radius:50%;
-                        background:#d9d0c7;
-                        margin:25px auto;
-                    "></div>
-
-                    <div class="fake-line"></div>
-                    <div class="fake-line small"></div>
-
-                </div>
-
+            <div class="case-visual avatar has-image">
+                <div class="visual-label">Portfolio / Аватар клиента</div>
+                <img class="case-image" src="avatar.png" alt="Аватар клиента">
             </div>
-
             <div class="case-caption">
                 <h3>Аватар клиента</h3>
                 <p>Портрет целевой аудитории.</p>
@@ -1933,30 +2594,10 @@ footer {
 
         <div class="case-item">
 
-            <div class="case-visual email">
-
-                <div class="visual-label">
-                    Communication / 04
-                </div>
-
-                <div class="fake-design">
-
-                    <div class="fake-line"></div>
-
-                    <div style="
-                        height:70px;
-                        background:#e9e1d8;
-                        border-radius:8px;
-                        margin:15px 0;
-                    "></div>
-
-                    <div class="fake-line small"></div>
-                    <div class="fake-line small"></div>
-
-                </div>
-
+            <div class="case-visual email has-image">
+                <div class="visual-label">Portfolio / Email</div>
+                <img class="case-image" src="email.png" alt="Email">
             </div>
-
             <div class="case-caption">
                 <h3>Email</h3>
                 <p>Макет рекламного письма.</p>
@@ -1967,36 +2608,10 @@ footer {
 
         <div class="case-item">
 
-            <div class="case-visual print">
-
-                <div class="visual-label">
-                    Advertising / 05
-                </div>
-
-                <div class="fake-design">
-
-                    <div style="
-                        font-size:34px;
-                        font-weight:700;
-                        line-height:.9;
-                        margin-bottom:20px;
-                    ">
-                        РОББО
-                    </div>
-
-                    <div style="
-                        height:100px;
-                        background:#e4dbcf;
-                        border-radius:8px;
-                    "></div>
-
-                    <div class="fake-line" style="margin-top:20px"></div>
-                    <div class="fake-line small"></div>
-
-                </div>
-
+            <div class="case-visual print has-image">
+                <div class="visual-label">Portfolio / Печатная реклама</div>
+                <img class="case-image" src="reklama.png" alt="Печатная реклама">
             </div>
-
             <div class="case-caption">
                 <h3>Печатная реклама</h3>
                 <p>Разработка рекламного макета.</p>
@@ -2007,32 +2622,10 @@ footer {
 
         <div class="case-item">
 
-            <div class="case-visual outdoor">
-
-                <div class="visual-label">
-                    Outdoor / 06
-                </div>
-
-                <div class="fake-design">
-
-                    <div style="
-                        font-size:26px;
-                        font-weight:700;
-                        margin-bottom:15px;
-                    ">
-                        РОББО КЛУБ
-                    </div>
-
-                    <div style="
-                        height:80px;
-                        background:#e2dbd1;
-                        border-radius:8px;
-                    "></div>
-
-                </div>
-
+            <div class="case-visual outdoor has-image">
+                <div class="visual-label">Portfolio / Наружная реклама</div>
+                <img class="case-image" src="narys.png" alt="Наружная реклама">
             </div>
-
             <div class="case-caption">
                 <h3>Наружная реклама</h3>
                 <p>Визуальные рекламные решения.</p>
@@ -2044,42 +2637,38 @@ footer {
 
 
     <div class="case-more">
-
-        <div>
-
-            <h3 style="font-size:30px; margin-bottom:12px;">
-                Подробная версия проекта
-            </h3>
-
-            <p>
-                Полный проект с исследованием,
-                анализом и всеми разработанными материалами.
-            </p>
-
+        <div class="case-more-text">
+            <h3 style="font-size:30px; margin-bottom:12px;">Подробная версия проекта</h3>
+            <p>Представленные материалы – часть разработанной кампании. В работе также провела конкурентный и SWOT-анализ, определила ключевые точки контакта с аудиторией, подобрала каналы коммуникации и разработала медиаплан с метриками и бюджетом. Отдельно проработала концепцию участия в фестивале, триггерную рассылку и ТЗ для видеоконтента.</p>
         </div>
-
-        <a href="#" class="light-button">
-            Открыть Google Документ →
-        </a>
-
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="https://miro.com/app/board/uXjVIMeBAwY=/" target="_blank" rel="noopener" class="light-button">Открыть в Miro →</a>
+            <a href="https://docs.google.com/document/d/19D_8ntPKuDdbA8H5NZSiAdjQy-QPNhIQkev-k888f8w/edit?usp=sharing" target="_blank" rel="noopener" class="light-button">Открыть Google Документ →</a>
+        </div>
     </div>
-
 </section>
 
 
 <!-- =========================
+
      05 — FESTIVALS
+
 ========================= -->
 
 <section class="section container" id="festivals">
 
     <div class="section-label">
+
         05 / Festivals
+
     </div>
 
     <h2 class="section-title">
+
         Фестивали<br>
+
         и события
+
     </h2>
 
 
@@ -2087,51 +2676,65 @@ footer {
 
     <div class="festival">
 
-        <div class="festival-photo">
-
-            <div class="photo-placeholder">
-                Фото фестиваля
-            </div>
-
-        </div>
+        <div class="festival-photo"><img src="Leti-fest.png" alt="LETI Communication Experts Festival"></div>
 
 
         <div class="festival-info">
 
             <div class="festival-number">
+
                 01 / LETI
+
             </div>
 
             <h3>
+
                 LETI Communication
+
                 Experts Festival
+
             </h3>
 
             <div class="festival-role">
+
                 Координатор направления
+
                 выездных мастер-классов
+
             </div>
 
             <ul>
 
                 <li>
+
                     Подготовка и организация мастер-класса
+
                     в рамках фестиваля.
+
                 </li>
 
                 <li>
+
                     Взаимодействие с участниками,
+
                     площадкой и командой организаторов.
+
                 </li>
 
                 <li>
+
                     Координация участников
+
                     и организационных процессов.
+
                 </li>
 
                 <li>
+
                     Подготовка необходимых материалов
+
                     и сопровождение мероприятия.
+
                 </li>
 
             </ul>
@@ -2145,50 +2748,63 @@ footer {
 
     <div class="festival">
 
-        <div class="festival-photo">
-
-            <div class="photo-placeholder">
-                Фото фестиваля
-            </div>
-
-        </div>
+        <div class="festival-photo"><img src="osveti.jpg" alt="Фестиваль «Освети Науку»"></div>
 
 
         <div class="festival-info">
 
             <div class="festival-number">
+
                 02 / EVENT
+
             </div>
 
             <h3>
+
                 «Освети<br>
+
                 Науку»
+
             </h3>
 
             <div class="festival-role">
+
                 Координатор
+
             </div>
 
             <ul>
 
                 <li>
+
                     Подготовка материалов
+
                     и организационных процессов.
+
                 </li>
 
                 <li>
+
                     Координация участников
+
                     и команды.
+
                 </li>
 
                 <li>
+
                     Взаимодействие с площадкой
+
                     и участниками мероприятия.
+
                 </li>
 
                 <li>
+
                     Сопровождение мероприятия
+
                     от подготовки до завершения.
+
                 </li>
 
             </ul>
@@ -2201,18 +2817,25 @@ footer {
 
 
 <!-- =========================
+
      06 — CONTENT & PR
+
 ========================= -->
 
 <section class="section container" id="content">
 
     <div class="section-label">
+
         06 / Content & PR
+
     </div>
 
     <h2 class="section-title">
+
         Контент<br>
+
         и PR
+
     </h2>
 
 
@@ -2225,73 +2848,42 @@ footer {
             <h3>ETU Media</h3>
 
             <p>
+
                 Креативный контент для медиацентра
+
                 университета: тексты, карточки,
+
                 дайджесты и материалы о мероприятиях.
+
             </p>
 
         </div>
 
 
         <div class="carousel">
-
-            <div class="carousel-card">
-
-                <div class="carousel-image">
-                    Карточка публикации
-                </div>
-
-                <div class="carousel-caption">
-                    <h4>Пост-карточка</h4>
-                    <p>Автор текста и контент.</p>
-                </div>
-
-            </div>
-
-
-            <div class="carousel-card">
-
-                <div class="carousel-image">
-                    Скрин публикации
-                </div>
-
-                <div class="carousel-caption">
-                    <h4>Дайджест</h4>
-                    <p>Контент для социальных сетей.</p>
-                </div>
-
-            </div>
-
-
-            <div class="carousel-card">
-
-                <div class="carousel-image">
-                    Материал медиа
-                </div>
-
-                <div class="carousel-caption">
-                    <h4>Анонс</h4>
-                    <p>Материалы о мероприятиях.</p>
-                </div>
-
-            </div>
-
-
-            <div class="carousel-card">
-
-                <div class="carousel-image">
-                    Публикация
-                </div>
-
-                <div class="carousel-caption">
-                    <h4>Контент</h4>
-                    <p>Текст + визуальная подача.</p>
-                </div>
-
-            </div>
-
+    <div class="carousel-card">
+        <div class="carousel-image"><img src="kart.png" alt="Пост-карточки"></div>
+        <div class="carousel-caption">
+            <h4>Пост-карточки</h4>
+            <a href="https://vk.ru/wall-215518898_3133" target="_blank" rel="noopener" class="mini-button">Смотреть публикацию</a>
         </div>
-
+    </div>
+    <div class="carousel-card">
+        <div class="carousel-image"><img src="dayjust.png" alt="Дайджест"></div>
+        <div class="carousel-caption">
+            <h4>Дайджест</h4>
+            <a href="https://vk.ru/wall-215518898_1976" target="_blank" rel="noopener" class="mini-button">Смотреть публикацию</a>
+        </div>
+    </div>
+    <div class="carousel-card">
+        <div class="carousel-image"><img src="kart2.png" alt="Пост-карточки"></div>
+        <div class="carousel-caption">
+            <h4>Пост-карточки</h4>
+            <a href="https://vk.ru/wall-215518898_1766" target="_blank" rel="noopener" class="mini-button">Смотреть публикацию</a>
+        </div>
+    </div>
+</div>
+</div>
 
         <div style="margin-top:70px;">
 
@@ -2300,76 +2892,34 @@ footer {
                 <h3>Лонгриды</h3>
 
                 <p>
+
                     Авторские материалы
+
                     для университетского медиа.
+
                 </p>
 
             </div>
 
 
-            <div class="masonry">
-
-                <div class="masonry-card">
-
-                    <div class="masonry-image">
-                        Обложка лонгрида
-                    </div>
-
-                    <div class="masonry-caption">
-                        <h4>Лонгрид 01</h4>
-                        <p>
-                            Авторский материал
-                            для ETU Media.
-                        </p>
-
-                        <a href="#" class="read-link">
-                            Читать полностью →
-                        </a>
-                    </div>
-
-                </div>
-
-
-                <div class="masonry-card">
-
-                    <div class="masonry-image">
-                        Обложка лонгрида
-                    </div>
-
-                    <div class="masonry-caption">
-                        <h4>Лонгрид 02</h4>
-                        <p>
-                            Авторский материал
-                            для университетского медиа.
-                        </p>
-
-                        <a href="#" class="read-link">
-                            Читать полностью →
-                        </a>
-                    </div>
-
-                </div>
-
-
-                <div class="masonry-card">
-
-                    <div class="masonry-image">
-                        Материал
-                    </div>
-
-                    <div class="masonry-caption">
-                        <h4>Публикация</h4>
-                        <p>Контент и коммуникации.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
+            <div class="masonry" style="columns:2 420px;">
+    <div class="masonry-card">
+        <div class="masonry-image"><img src="long1.png" alt="Лонгрид 01"></div>
+        <div class="masonry-caption">
+            <h4>Лонгрид 01</h4>
+            <a href="https://vk.ru/wall-215518898_2446" target="_blank" rel="noopener" class="read-link">Читать полностью →</a>
         </div>
-
     </div>
-
+    <div class="masonry-card">
+        <div class="masonry-image"><img src="long2.png" alt="Лонгрид 02"></div>
+        <div class="masonry-caption">
+            <h4>Лонгрид 02</h4>
+            <a href="https://vk.ru/wall-215518898_1602" target="_blank" rel="noopener" class="read-link">Читать полностью →</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
 
     <!-- LAMPA -->
 
@@ -2380,63 +2930,26 @@ footer {
             <h3>LAMPA</h3>
 
             <p>
+
                 Автор материалов для студенческого журнала.
+
             </p>
 
         </div>
 
 
-        <div class="lampa">
-
-            <div class="magazine">
-
-                <div class="magazine-label">
-                    Student magazine
-                </div>
-
-                <div class="magazine-name">
-                    LAMPA
-                </div>
-
-                <div class="magazine-label">
-                    3 published articles
-                </div>
-
-            </div>
-
-
-            <div class="lampa-info">
-
-                <h3>
-                    Тексты,<br>
-                    которые стали<br>
-                    публикациями.
-                </h3>
-
-                <p>
-                    Автор материалов для студенческого
-                    журнала LAMPA: 3 опубликованные статьи
-                    в двух выпусках.
-                </p>
-
-                <div class="article-links">
-
-                    <a href="#" class="article-link">
-                        Выпуск №1 →
-                    </a>
-
-                    <a href="#" class="article-link">
-                        Выпуск №2 →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
+        <div class="lampa-stack">
+    <div class="lampa-card">
+        <img src="lampa1.png" alt="Разворот LAMPA №019">
+        <a href="https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2FL13g1R2rhEyzXaqxFR1Ur%2BsLgOLby3gcwivcw9414fNKQHPg2dxxkUuIxKxu8i4fq%2FJ6bpmRyOJonT3VoXnDag%3D%3D%3A%2F%D0%A1%D0%9F%D0%B1%D0%93%D0%AD%D0%A2%D0%A3_%D0%9B%D0%AD%D0%A2%D0%98_LAMPA_019.pdf&name=%D0%A1%D0%9F%D0%93%D0%AD%D0%A2%D0%A3_%D0%9B%D0%AD%D0%A2%D0%98_LAMPA_019.pdf&nosw=1" target="_blank" rel="noopener" class="mini-button">Читать выпуск</a>
     </div>
-
+    <div class="lampa-card">
+        <img src="lampa2.png" alt="Разворот LAMPA №020">
+        <a href="https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2FL13g1R2rhEyzXaqxFR1Ur%2BsLgOLby3gcwivcw9414fNKQHPg2dxxkUuIxKxu8i4fq%2FJ6bpmRyOJonT3VoXnDag%3D%3D%3A%2F%D0%A1%D0%9F%D0%93%D0%AD%D0%A2%D0%A3_%D0%9B%D0%AD%D0%A2%D0%98_LAMPA_020.pdf&name=%D0%A1%D0%9F%D0%93%D0%AD%D0%A2%D0%A3_%D0%9B%D0%AD%D0%A2%D0%98_LAMPA_020.pdf&nosw=1" target="_blank" rel="noopener" class="mini-button">Читать выпуск</a>
+    </div>
+</div>
+        </div>
+    </div>
 
     <!-- LADOGA -->
 
@@ -2447,51 +2960,37 @@ footer {
             <div class="content-heading">
 
                 <h3>
+
                     «Ладога — 2024»
+
                 </h3>
 
                 <p>
+
                     Медиаволонтёр на молодёжном форуме.
+
                 </p>
 
             </div>
 
 
             <p style="max-width:650px;color:#6d766b;font-size:15px;">
+
                 Написала пресс-релиз по итогам форума.
+
                 Материал был опубликован в двух онлайн-СМИ
+
                 Псковской области.
+
             </p>
 
 
             <div class="media-grid">
-
-                <div class="media-card">
-                    Скрин пресс-релиза
-                </div>
-
-                <div class="media-card">
-                    Публикация СМИ №1
-                </div>
-
-                <div class="media-card">
-                    Публикация СМИ №2
-                </div>
-
-            </div>
-
-
-            <div class="article-links">
-
-                <a href="#" class="article-link">
-                    Читать публикацию №1 →
-                </a>
-
-                <a href="#" class="article-link">
-                    Читать публикацию №2 →
-                </a>
-
-            </div>
+        <div class="media-card"><img src="anons.png" alt="Анонс пресс-релиза"></div>
+        <div class="media-card"><img src="lenta.png" alt="Псковская лента новостей"></div>
+        <div class="media-card"><img src="lenta2.png" alt="Псковское агентство информации"></div>
+    </div>
+    <div class="article-links"><a href="https://disk.yandex.ru/edit/disk/disk%2F%D0%9F%D0%BE%D1%80%D1%82%D1%84%D0%BE%D0%BB%D0%B8%D0%BE_%D0%91%D0%BE%D0%B3%D0%BE%D0%BC%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0%20%D0%94%D0%B0%D1%80%D1%8C%D1%8F%2F%D0%A4%D0%BE%D1%80%D1%83%D0%BC%20%C2%AB%D0%9B%D0%B0%D0%B4%D0%BE%D0%B3%D0%B0%C2%BB%2F%D0%9F%D1%80%D0%B5%D1%81%D1%81-%D1%80%D0%B5%D0%BB%D0%B8%D0%B7.docx?sk=y985e9a5f03119cfcd7bba54f1da1db7d" target="_blank" rel="noopener" class="article-link">Читать пресс-релиз →</a></div>
 
         </div>
 
@@ -2501,45 +3000,56 @@ footer {
 
 
 <!-- =========================
+
      07 — CONTACTS
+
 ========================= -->
+
+<!-- =========================
+     07 — RECOMMENDATION
+========================= -->
+<section class="section container" id="recommendation">
+    <div class="section-label">07 / Recommendation</div>
+    <h2 class="section-title">Рекомендации</h2>
+    <div class="recommendation-card">
+        <div class="recommendation-title">Рекомендательное письмо от руководителя по маркетинговым проектам ПСБ</div>
+        <img class="recommendation-image" src="pismo.png" alt="Рекомендательное письмо">
+    </div>
+</section>
 
 <section class="section container contact-section" id="contacts">
 
     <div class="contact-box">
 
         <div class="section-label">
-            07 / Contacts
+
+            08 / Contacts
+
         </div>
 
-        <div class="contact-title">
-            Давайте<br>
-            на связи
-        </div>
+        <div class="contact-title">Будем<br>на связи</div>
 
-        <p class="contact-subtitle">
-            Открыта к интересным проектам,
-            новым задачам и возможностям
-            развиваться в маркетинге.
-        </p>
+        <p class="contact-subtitle">Если вам откликается мой опыт и подход к работе, буду рада познакомиться и обсудить возможное сотрудничество.</p>
 
 
         <div class="contact-links">
 
             <a href="#" class="contact-link">
+
                 Telegram →
+
             </a>
 
-            <a href="tel:+70000000000" class="contact-link">
+            <a href="tel:+79772650578" class="contact-link">
+
                 Телефон →
+
             </a>
 
-            <a href="mailto:your-email@example.com" class="contact-link">
+            <a href="mailto:Bogomolova20403@yandex.ru" class="contact-link">
+
                 Email →
-            </a>
 
-            <a href="#" class="contact-link">
-                HH.ru →
             </a>
 
         </div>
@@ -2554,15 +3064,32 @@ footer {
 <footer class="container">
 
     <div>
+
         Дарья Богомолова · Portfolio 2026
+
     </div>
 
     <div>
+
         Marketing · Communications · Events
+
     </div>
 
 </footer>
 
 
+
+<script>
+function toggleTool(el) {
+    document.querySelectorAll('.tool.open').forEach(function(item) {
+        if (item !== el) item.classList.remove('open');
+    });
+    el.classList.toggle('open');
+    var arrow = el.querySelector('.tool-arrow');
+    if (arrow) arrow.textContent = el.classList.contains('open') ? '−' : '+';
+}
+</script>
+
 </body>
+
 </html>
