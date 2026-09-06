@@ -11,647 +11,647 @@
 
 :root {
 
-    --bg: #f5f1eb;
+    --bg: #f5f1eb;
 
-    --paper: #fbf9f5;
+    --paper: #fbf9f5;
 
-    --dark: #242321;
+    --dark: #242321;
 
-    --muted: #77716a;
+    --muted: #77716a;
 
-    --line: #d9d1c7;
+    --line: #d9d1c7;
 
-    --soft: #e9e1d8;
+    --soft: #e9e1d8;
 
-    --pink: #ead8d5;
+    --pink: #ead8d5;
 
-    --green: #dce4d8;
+    --green: #dce4d8;
 
-    --yellow: #eee4c9;
+    --yellow: #eee4c9;
 
 }
 
 * {
 
-    box-sizing: border-box;
+    box-sizing: border-box;
 
-    margin: 0;
+    margin: 0;
 
-    padding: 0;
+    padding: 0;
 
 }
 
 html {
 
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;
 
 }
 
 body {
 
-    background: var(--bg);
+    background: var(--bg);
 
-    color: var(--dark);
+    color: var(--dark);
 
-    font-family: "DM Sans", Arial, sans-serif;
+    font-family: "DM Sans", Arial, sans-serif;
 
-    line-height: 1.5;
+    line-height: 1.5;
 
 }
 
 a {
 
-    color: inherit;
+    color: inherit;
 
-    text-decoration: none;
+    text-decoration: none;
 
 }
 
 img {
 
-    max-width: 100%;
+    max-width: 100%;
 
-    display: block;
+    display: block;
 
 }
 
 button {
 
-    font-family: inherit;
+    font-family: inherit;
 
 }
 
 .container {
 
-    width: min(1380px, calc(100% - 70px));
+    width: min(1380px, calc(100% - 70px));
 
-    margin: 0 auto;
+    margin: 0 auto;
 
 }
 
 /* =========================
 
-   NAVIGATION
+   NAVIGATION
 
 ========================= */
 
 .topbar {
 
-    position: fixed;
+    position: fixed;
 
-    top: 18px;
+    top: 18px;
 
-    left: 50%;
+    left: 50%;
 
-    transform: translateX(-50%);
+    transform: translateX(-50%);
 
-    width: min(1380px, calc(100% - 50px));
+    width: min(1380px, calc(100% - 50px));
 
-    z-index: 100;
+    z-index: 100;
 
-    display: flex;
+    display: flex;
 
-    align-items: center;
+    align-items: center;
 
-    justify-content: space-between;
+    justify-content: space-between;
 
-    padding: 14px 20px;
+    padding: 14px 20px;
 
-    background: rgba(251,249,245,.88);
+    background: rgba(251,249,245,.88);
 
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 
-    border: 1px solid rgba(36,35,33,.1);
+    border: 1px solid rgba(36,35,33,.1);
 
-    border-radius: 50px;
+    border-radius: 50px;
 
 }
 
 .logo {
 
-    font-size: 15px;
+    font-size: 15px;
 
-    font-weight: 700;
+    font-weight: 700;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.02em;
 
 }
 
 .nav {
 
-    display: flex;
+    display: flex;
 
-    gap: 24px;
+    gap: 24px;
 
 }
 
 .nav a {
 
-    font-size: 12px;
+    font-size: 12px;
 
-    color: var(--muted);
+    color: var(--muted);
 
-    transition: .25s;
+    transition: .25s;
 
 }
 
 .nav a:hover {
 
-    color: var(--dark);
+    color: var(--dark);
 
 }
 
 /* =========================
 
-   GENERAL
+   GENERAL
 
 ========================= */
 
 .section {
 
-    padding: 150px 0;
+    padding: 150px 0;
 
-    position: relative;
+    position: relative;
 
 }
 
 .section-label {
 
-    font-size: 11px;
+    font-size: 11px;
 
-    text-transform: uppercase;
+    text-transform: uppercase;
 
-    letter-spacing: .22em;
+    letter-spacing: .22em;
 
-    color: #918980;
+    color: #918980;
 
-    margin-bottom: 18px;
+    margin-bottom: 18px;
 
 }
 
 .section-title {
 
-    font-size: clamp(42px, 5vw, 76px);
+    font-size: clamp(42px, 5vw, 76px);
 
-    line-height: .96;
+    line-height: .96;
 
-    letter-spacing: -.055em;
+    letter-spacing: -.055em;
 
-    max-width: 800px;
+    max-width: 800px;
 
 }
 
 .section-intro {
 
-    margin-top: 25px;
+    margin-top: 25px;
 
-    max-width: 650px;
+    max-width: 650px;
 
-    color: var(--muted);
+    color: var(--muted);
 
-    font-size: 17px;
+    font-size: 17px;
 
 }
 
 .divider {
 
-    width: 100%;
+    width: 100%;
 
-    height: 1px;
+    height: 1px;
 
-    background: var(--line);
+    background: var(--line);
 
-    margin: 70px 0;
+    margin: 70px 0;
 
 }
 
 /* =========================
 
-   HERO
+   HERO
 
 ========================= */
 
 .hero {
 
-    min-height: 100vh;
+    min-height: 100vh;
 
-    padding: 120px 0 70px;
+    padding: 120px 0 70px;
 
-    display: grid;
+    display: grid;
 
-    grid-template-columns: 48% 52%;
+    grid-template-columns: 48% 52%;
 
-    align-items: center;
+    align-items: center;
 
-    gap: 60px;
+    gap: 60px;
 
 }
 
 .hero-photo {
 
-    position: relative;
+    position: relative;
 
-    min-height: 700px;
+    min-height: 700px;
 
-    background: var(--soft);
+    background: var(--soft);
 
-    border-radius: 0 100px 25px 25px;
+    border-radius: 0 100px 25px 25px;
 
-    overflow: hidden;
+    overflow: hidden;
 
 }
 
 .hero-photo img {
 
-    width: 100%;
+    width: 100%;
 
-    height: 100%;
+    height: 100%;
 
-    min-height: 700px;
+    min-height: 700px;
 
-    object-fit: cover;
+    object-fit: cover;
 
-    object-position: center top;
+    object-position: center top;
 
 }
 
 .photo-label {
 
-    position: absolute;
+    position: absolute;
 
-    bottom: 24px;
+    bottom: 24px;
 
-    left: 24px;
+    left: 24px;
 
-    background: rgba(251,249,245,.94);
+    background: rgba(251,249,245,.94);
 
-    padding: 12px 18px;
+    padding: 12px 18px;
 
-    border-radius: 30px;
+    border-radius: 30px;
 
-    font-size: 11px;
+    font-size: 11px;
 
-    text-transform: uppercase;
+    text-transform: uppercase;
 
-    letter-spacing: .08em;
+    letter-spacing: .08em;
 
 }
 
 .hero-content {
 
-    padding-right: 5%;
+    padding-right: 5%;
 
 }
 
 .eyebrow {
 
-    font-size: 12px;
+    font-size: 12px;
 
-    letter-spacing: .25em;
+    letter-spacing: .25em;
 
-    color: #918980;
+    color: #918980;
 
-    text-transform: uppercase;
+    text-transform: uppercase;
 
-    margin-bottom: 35px;
+    margin-bottom: 35px;
 
 }
 
 .hero h1 {
 
-    font-size: clamp(65px, 8vw, 125px);
+    font-size: clamp(65px, 8vw, 125px);
 
-    line-height: .83;
+    line-height: .83;
 
-    letter-spacing: -.075em;
+    letter-spacing: -.075em;
 
-    margin-bottom: 42px;
+    margin-bottom: 42px;
 
 }
 
 .position {
 
-    font-size: clamp(25px, 3vw, 42px);
+    font-size: clamp(25px, 3vw, 42px);
 
-    letter-spacing: -.04em;
+    letter-spacing: -.04em;
 
-    margin-bottom: 25px;
+    margin-bottom: 25px;
 
 }
 
 .hero-line {
 
-    height: 1px;
+    height: 1px;
 
-    width: 100%;
+    width: 100%;
 
-    background: var(--line);
+    background: var(--line);
 
-    margin-bottom: 27px;
+    margin-bottom: 27px;
 
 }
 
 .hero-description {
 
-    max-width: 610px;
+    max-width: 610px;
 
-    color: var(--muted);
+    color: var(--muted);
 
-    font-size: 17px;
+    font-size: 17px;
 
 }
 
 .socials {
 
-    display: flex;
+    display: flex;
 
-    gap: 12px;
+    gap: 12px;
 
-    margin: 35px 0;
+    margin: 35px 0;
 
 }
 
 .social {
 
-    width: 52px;
+    width: 52px;
 
-    height: 52px;
+    height: 52px;
 
-    border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-    border-radius: 50%;
+    border-radius: 50%;
 
-    display: flex;
+    display: flex;
 
-    align-items: center;
+    align-items: center;
 
-    justify-content: center;
+    justify-content: center;
 
-    transition: .3s;
+    transition: .3s;
 
-    background: var(--paper);
+    background: var(--paper);
 
 }
 
 .social:hover {
 
-    transform: translateY(-4px);
+    transform: translateY(-4px);
 
-    background: var(--dark);
+    background: var(--dark);
 
-    color: white;
+    color: white;
 
 }
 
 .social svg {
 
-    width: 20px;
+    width: 20px;
 
-    height: 20px;
+    height: 20px;
 
 }
 
 .hh {
 
-    font-weight: 700;
+    font-weight: 700;
 
-    font-size: 16px;
+    font-size: 16px;
 
-    color: #d63c3c;
+    color: #d63c3c;
 
 }
 
 .primary-button {
 
-    display: inline-flex;
+    display: inline-flex;
 
-    align-items: center;
+    align-items: center;
 
-    gap: 28px;
+    gap: 28px;
 
-    padding: 8px 9px 8px 25px;
+    padding: 8px 9px 8px 25px;
 
-    background: var(--dark);
+    background: var(--dark);
 
-    color: white;
+    color: white;
 
-    border-radius: 50px;
+    border-radius: 50px;
 
-    font-size: 14px;
+    font-size: 14px;
 
-    transition: .3s;
+    transition: .3s;
 
 }
 
 .primary-button:hover {
 
-    transform: translateY(-3px);
+    transform: translateY(-3px);
 
 }
 
 .primary-button span {
 
-    width: 42px;
+    width: 42px;
 
-    height: 42px;
+    height: 42px;
 
-    border-radius: 50%;
+    border-radius: 50%;
 
-    background: #4a4845;
+    background: #4a4845;
 
-    display: flex;
+    display: flex;
 
-    align-items: center;
+    align-items: center;
 
-    justify-content: center;
+    justify-content: center;
 
 }
 
 /* =========================
 
-   ABOUT
+   ABOUT
 
 ========================= */
 
 .about-grid {
 
-    display: grid;
+    display: grid;
 
-    grid-template-columns: 1fr 1.4fr;
+    grid-template-columns: 1fr 1.4fr;
 
-    gap: 100px;
+    gap: 100px;
 
-    align-items: start;
+    align-items: start;
 
 }
 
 .about-text {
 
-    font-size: clamp(25px, 3vw, 43px);
+    font-size: clamp(25px, 3vw, 43px);
 
-    line-height: 1.13;
+    line-height: 1.13;
 
-    letter-spacing: -.04em;
+    letter-spacing: -.04em;
 
 }
 
 .about-text em {
 
-    font-family: "Playfair Display", serif;
+    font-family: "Playfair Display", serif;
 
-    font-weight: 500;
+    font-weight: 500;
 
 }
 
 .about-side {
 
-    color: var(--muted);
+    color: var(--muted);
 
-    font-size: 16px;
+    font-size: 16px;
 
-    max-width: 550px;
+    max-width: 550px;
 
 }
 
 .about-side p + p {
 
-    margin-top: 22px;
+    margin-top: 22px;
 
 }
 
 .about-tags {
 
-    display: flex;
+    display: flex;
 
-    flex-wrap: wrap;
+    flex-wrap: wrap;
 
-    gap: 10px;
+    gap: 10px;
 
-    margin-top: 35px;
+    margin-top: 35px;
 
 }
 
 .tag {
 
-    border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-    padding: 9px 15px;
+    padding: 9px 15px;
 
-    border-radius: 30px;
+    border-radius: 30px;
 
-    font-size: 12px;
+    font-size: 12px;
 
 }
 
 /* =========================
 
-   SKILLS
+   SKILLS
 
 ========================= */
 
 .skill-grid {
 
-    display: grid;
+    display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-    gap: 18px;
+    gap: 18px;
 
-    margin-top: 65px;
+    margin-top: 65px;
 
 }
 
 .skill-card {
 
-    min-height: 330px;
+    min-height: 330px;
 
-    padding: 32px;
+    padding: 32px;
 
-    border-radius: 28px;
+    border-radius: 28px;
 
-    border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-    background: var(--paper);
+    background: var(--paper);
 
-    display: flex;
+    display: flex;
 
-    flex-direction: column;
+    flex-direction: column;
 
-    justify-content: space-between;
+    justify-content: space-between;
 
-    transition: .35s;
+    transition: .35s;
 
 }
 
 .skill-card:hover {
 
-    transform: translateY(-7px) rotate(-.4deg);
+    transform: translateY(-7px) rotate(-.4deg);
 
 }
 
 .skill-card:nth-child(2) {
 
-    background: var(--pink);
+    background: var(--pink);
 
 }
 
 .skill-card:nth-child(3) {
 
-    background: var(--green);
+    background: var(--green);
 
 }
 
 .skill-number {
 
-    font-size: 11px;
+    font-size: 11px;
 
-    letter-spacing: .18em;
+    letter-spacing: .18em;
 
-    color: var(--muted);
+    color: var(--muted);
 
 }
 
 .skill-icon {
 
-    font-size: 40px;
+    font-size: 40px;
 
-    margin-bottom: 25px;
+    margin-bottom: 25px;
 
 }
 
 .skill-card h3 {
 
-    font-size: 28px;
+    font-size: 28px;
 
-    line-height: 1;
+    line-height: 1;
 
-    letter-spacing: -.04em;
+    letter-spacing: -.04em;
 
-    max-width: 250px;
+    max-width: 250px;
 
 }
 
 .skill-list {
 
-    margin-top: 25px;
+    margin-top: 25px;
 
-    display: flex;
+    display: flex;
 
-    flex-wrap: wrap;
+    flex-wrap: wrap;
 
-    gap: 7px;
+    gap: 7px;
 
 }
 
 .skill-list span {
 
-    background: rgba(255,255,255,.55);
+    background: rgba(255,255,255,.55);
 
-    border-radius: 20px;
+    border-radius: 20px;
 
-    padding: 7px 10px;
+    padding: 7px 10px;
 
-    font-size: 11px;
+    font-size: 11px;
 
 }
 
@@ -659,771 +659,771 @@ button {
 
 .tools-title {
 
-    margin-top: 90px;
+    margin-top: 90px;
 
-    font-size: 14px;
+    font-size: 14px;
 
-    text-transform: uppercase;
+    text-transform: uppercase;
 
-    letter-spacing: .2em;
+    letter-spacing: .2em;
 
-    color: var(--muted);
+    color: var(--muted);
 
 }
 
 .tools-grid {
 
-    margin-top: 25px;
+    margin-top: 25px;
 
-    display: grid;
+    display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
-    gap: 12px;
+    gap: 12px;
 
 }
 
 .tool {
 
-    background: var(--paper);
+    background: var(--paper);
 
-    border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-    border-radius: 20px;
+    border-radius: 20px;
 
-    padding: 24px;
+    padding: 24px;
 
-    display: flex;
+    display: flex;
 
-    align-items: center;
+    align-items: center;
 
-    gap: 15px;
+    gap: 15px;
 
-    font-size: 15px;
+    font-size: 15px;
 
-    transition: .25s;
+    transition: .25s;
 
 }
 
 .tool:hover {
 
-    transform: translateY(-4px);
+    transform: translateY(-4px);
 
 }
 
 .tool-icon {
 
-    width: 40px;
+    width: 40px;
 
-    height: 40px;
+    height: 40px;
 
-    border-radius: 12px;
+    border-radius: 12px;
 
-    background: var(--soft);
+    background: var(--soft);
 
-    display: flex;
+    display: flex;
 
-    align-items: center;
+    align-items: center;
 
-    justify-content: center;
+    justify-content: center;
 
-    font-weight: 700;
+    font-weight: 700;
 
-    font-size: 13px;
+    font-size: 13px;
 
 }
 
 /* =========================
 
-   EXPERIENCE
+   EXPERIENCE
 
 ========================= */
 
 .experience-card {
 
-    margin-top: 60px;
+    margin-top: 60px;
 
-    background: var(--paper);
+    background: var(--paper);
 
-    border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-    border-radius: 35px;
+    border-radius: 35px;
 
-    padding: 50px;
+    padding: 50px;
 
 }
 
 .experience-head {
 
-    display: flex;
+    display: flex;
 
-    justify-content: space-between;
+    justify-content: space-between;
 
-    gap: 30px;
+    gap: 30px;
 
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
 
-    padding-bottom: 35px;
+    padding-bottom: 35px;
 
 }
 
 .company {
 
-    font-size: clamp(45px, 6vw, 85px);
+    font-size: clamp(45px, 6vw, 85px);
 
-    line-height: .9;
+    line-height: .9;
 
-    letter-spacing: -.06em;
+    letter-spacing: -.06em;
 
 }
 
 .role {
 
-    margin-top: 15px;
+    margin-top: 15px;
 
-    color: var(--muted);
+    color: var(--muted);
 
-    font-size: 17px;
+    font-size: 17px;
 
 }
 
 .period {
 
-    color: var(--muted);
+    color: var(--muted);
 
-    font-size: 13px;
+    font-size: 13px;
 
-    white-space: nowrap;
+    white-space: nowrap;
 
 }
 
 .experience-columns {
 
-    display: grid;
+    display: grid;
 
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
 
-    gap: 35px;
+    gap: 35px;
 
-    margin-top: 45px;
+    margin-top: 45px;
 
 }
 
 .experience-column {
 
-    padding-right: 20px;
+    padding-right: 20px;
 
 }
 
 .experience-column h3 {
 
-    font-size: 20px;
+    font-size: 20px;
 
-    margin-bottom: 22px;
+    margin-bottom: 22px;
 
-    letter-spacing: -.03em;
+    letter-spacing: -.03em;
 
 }
 
 .experience-column ul {
 
-    list-style: none;
+    list-style: none;
 
 }
 
 .experience-column li {
 
-    color: var(--muted);
+    color: var(--muted);
 
-    font-size: 14px;
+    font-size: 14px;
 
-    margin-bottom: 14px;
+    margin-bottom: 14px;
 
-    padding-left: 17px;
+    padding-left: 17px;
 
-    position: relative;
+    position: relative;
 
 }
 
 .experience-column li:before {
 
-    content: "";
+    content: "";
 
-    width: 5px;
+    width: 5px;
 
-    height: 5px;
+    height: 5px;
 
-    border-radius: 50%;
+    border-radius: 50%;
 
-    background: var(--dark);
+    background: var(--dark);
 
-    position: absolute;
+    position: absolute;
 
-    left: 0;
+    left: 0;
 
-    top: 9px;
+    top: 9px;
 
 }
 
 /* =========================
 
-   CASE STUDY
+   CASE STUDY
 
 ========================= */
 
 .case-intro {
 
-    display: grid;
+    display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
-    gap: 80px;
+    gap: 80px;
 
-    align-items: end;
+    align-items: end;
 
-    margin-bottom: 65px;
+    margin-bottom: 65px;
 
 }
 
 .case-title {
 
-    font-size: clamp(50px, 7vw, 100px);
+    font-size: clamp(50px, 7vw, 100px);
 
-    line-height: .86;
+    line-height: .86;
 
-    letter-spacing: -.07em;
+    letter-spacing: -.07em;
 
 }
 
 .case-context {
 
-    color: var(--muted);
+    color: var(--muted);
 
-    max-width: 500px;
+    max-width: 500px;
 
 }
 
 .case-context strong {
 
-    color: var(--dark);
+    color: var(--dark);
 
 }
 
 .case-grid {
 
-    columns: 2 400px;
+    columns: 2 400px;
 
-    column-gap: 20px;
+    column-gap: 20px;
 
 }
 
 .case-item {
 
-    break-inside: avoid;
+    break-inside: avoid;
 
-    margin-bottom: 20px;
+    margin-bottom: 20px;
 
-    border-radius: 25px;
+    border-radius: 25px;
 
-    overflow: hidden;
+    overflow: hidden;
 
-    border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-    background: var(--paper);
+    background: var(--paper);
 
 }
 
 .case-visual {
 
-    min-height: 310px;
+    min-height: 310px;
 
-    padding: 30px;
+    padding: 30px;
 
-    display: flex;
+    display: flex;
 
-    flex-direction: column;
+    flex-direction: column;
 
-    justify-content: space-between;
+    justify-content: space-between;
 
-    position: relative;
+    position: relative;
 
 }
 
 .case-visual.canvas {
 
-    background: var(--yellow);
+    background: var(--yellow);
 
 }
 
 .case-visual.cjm {
 
-    background: var(--green);
+    background: var(--green);
 
-    min-height: 430px;
+    min-height: 430px;
 
 }
 
 .case-visual.avatar {
 
-    background: var(--pink);
+    background: var(--pink);
 
 }
 
 .case-visual.email {
 
-    background: #e5e1dc;
+    background: #e5e1dc;
 
-    min-height: 390px;
+    min-height: 390px;
 
 }
 
 .case-visual.print {
 
-    background: #ddd8d0;
+    background: #ddd8d0;
 
-    min-height: 480px;
+    min-height: 480px;
 
 }
 
 .case-visual.outdoor {
 
-    background: #d8d7d0;
+    background: #d8d7d0;
 
-    min-height: 360px;
+    min-height: 360px;
 
 }
 
 .visual-label {
 
-    font-size: 11px;
+    font-size: 11px;
 
-    text-transform: uppercase;
+    text-transform: uppercase;
 
-    letter-spacing: .18em;
+    letter-spacing: .18em;
 
-    color: var(--muted);
+    color: var(--muted);
 
 }
 
 .fake-design {
 
-    margin: auto;
+    margin: auto;
 
-    width: 82%;
+    width: 82%;
 
-    height: 62%;
+    height: 62%;
 
-    background: var(--paper);
+    background: var(--paper);
 
-    border-radius: 15px;
+    border-radius: 15px;
 
-    padding: 20px;
+    padding: 20px;
 
-    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
 
 }
 
 .fake-line {
 
-    height: 7px;
+    height: 7px;
 
-    background: var(--dark);
+    background: var(--dark);
 
-    border-radius: 10px;
+    border-radius: 10px;
 
-    width: 70%;
+    width: 70%;
 
-    margin-bottom: 12px;
+    margin-bottom: 12px;
 
 }
 
 .fake-line.small {
 
-    width: 45%;
+    width: 45%;
 
-    opacity: .4;
+    opacity: .4;
 
 }
 
 .fake-grid {
 
-    display: grid;
+    display: grid;
 
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
 
-    gap: 8px;
+    gap: 8px;
 
-    margin-top: 20px;
+    margin-top: 20px;
 
 }
 
 .fake-box {
 
-    height: 50px;
+    height: 50px;
 
-    border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-    border-radius: 7px;
+    border-radius: 7px;
 
 }
 
 .case-caption {
 
-    padding: 20px 24px 25px;
+    padding: 20px 24px 25px;
 
 }
 
 .case-caption h3 {
 
-    font-size: 21px;
+    font-size: 21px;
 
-    letter-spacing: -.03em;
+    letter-spacing: -.03em;
 
 }
 
 .case-caption p {
 
-    color: var(--muted);
+    color: var(--muted);
 
-    font-size: 13px;
+    font-size: 13px;
 
-    margin-top: 6px;
+    margin-top: 6px;
 
 }
 
 .case-more {
 
-    margin-top: 60px;
+    margin-top: 60px;
 
-    padding: 45px;
+    padding: 45px;
 
-    background: var(--dark);
+    background: var(--dark);
 
-    color: white;
+    color: white;
 
-    border-radius: 30px;
+    border-radius: 30px;
 
-    display: flex;
+    display: flex;
 
-    justify-content: space-between;
+    justify-content: space-between;
 
-    align-items: center;
+    align-items: center;
 
-    gap: 30px;
+    gap: 30px;
 
 }
 
 .case-more p {
 
-    color: #bdb8b1;
+    color: #bdb8b1;
 
-    max-width: 600px;
+    max-width: 600px;
 
 }
 
 .light-button {
 
-    background: white;
+    background: white;
 
-    color: var(--dark);
+    color: var(--dark);
 
-    padding: 15px 22px;
+    padding: 15px 22px;
 
-    border-radius: 30px;
+    border-radius: 30px;
 
-    white-space: nowrap;
+    white-space: nowrap;
 
-    font-size: 13px;
+    font-size: 13px;
 
 }
 
 /* =========================
 
-   FESTIVALS
+   FESTIVALS
 
 ========================= */
 
 .festival {
 
-    margin-top: 60px;
+    margin-top: 60px;
 
-    display: grid;
+    display: grid;
 
-    grid-template-columns: 1.15fr .85fr;
+    grid-template-columns: 1.15fr .85fr;
 
-    gap: 45px;
+    gap: 45px;
 
-    align-items: stretch;
+    align-items: stretch;
 
 }
 
 .festival:nth-child(odd) {
 
-    direction: rtl;
+    direction: rtl;
 
 }
 
 .festival:nth-child(odd) > * {
 
-    direction: ltr;
+    direction: ltr;
 
 }
 
 .festival-photo {
 
-    min-height: 520px;
+    min-height: 520px;
 
-    border-radius: 35px;
+    border-radius: 35px;
 
-    overflow: hidden;
+    overflow: hidden;
 
-    background: var(--soft);
+    background: var(--soft);
 
-    position: relative;
+    position: relative;
 
 }
 
 .festival-photo img {
 
-    width: 100%;
+    width: 100%;
 
-    height: 100%;
+    height: 100%;
 
-    object-fit: cover;
+    object-fit: cover;
 
 }
 
 .photo-placeholder {
 
-    width: 100%;
+    width: 100%;
 
-    height: 100%;
+    height: 100%;
 
-    min-height: 520px;
+    min-height: 520px;
 
-    display: flex;
+    display: flex;
 
-    align-items: center;
+    align-items: center;
 
-    justify-content: center;
+    justify-content: center;
 
-    background: linear-gradient(135deg,#ded7ce,#eee9e2);
+    background: linear-gradient(135deg,#ded7ce,#eee9e2);
 
-    color: #8a8178;
+    color: #8a8178;
 
-    font-size: 12px;
+    font-size: 12px;
 
-    text-transform: uppercase;
+    text-transform: uppercase;
 
-    letter-spacing: .15em;
+    letter-spacing: .15em;
 
 }
 
 .festival-info {
 
-    padding: 35px 10px;
+    padding: 35px 10px;
 
 }
 
 .festival-number {
 
-    font-size: 11px;
+    font-size: 11px;
 
-    color: var(--muted);
+    color: var(--muted);
 
-    letter-spacing: .2em;
+    letter-spacing: .2em;
 
 }
 
 .festival h3 {
 
-    font-size: clamp(35px, 4vw, 62px);
+    font-size: clamp(35px, 4vw, 62px);
 
-    line-height: .95;
+    line-height: .95;
 
-    letter-spacing: -.055em;
+    letter-spacing: -.055em;
 
-    margin: 30px 0;
+    margin: 30px 0;
 
 }
 
 .festival-role {
 
-    display: inline-block;
+    display: inline-block;
 
-    padding: 8px 13px;
+    padding: 8px 13px;
 
-    background: var(--pink);
+    background: var(--pink);
 
-    border-radius: 20px;
+    border-radius: 20px;
 
-    font-size: 11px;
+    font-size: 11px;
 
-    margin-bottom: 25px;
+    margin-bottom: 25px;
 
 }
 
 .festival ul {
 
-    list-style: none;
+    list-style: none;
 
 }
 
 .festival li {
 
-    color: var(--muted);
+    color: var(--muted);
 
-    margin-bottom: 12px;
+    margin-bottom: 12px;
 
-    font-size: 14px;
+    font-size: 14px;
 
-    padding-left: 18px;
+    padding-left: 18px;
 
-    position: relative;
+    position: relative;
 
 }
 
 .festival li:before {
 
-    content: "↳";
+    content: "↳";
 
-    position: absolute;
+    position: absolute;
 
-    left: 0;
+    left: 0;
 
 }
 
 /* =========================
 
-   CONTENT / PR
+   CONTENT / PR
 
 ========================= */
 
 .content-block {
 
-    margin-top: 65px;
+    margin-top: 65px;
 
 }
 
 .content-heading {
 
-    display: flex;
+    display: flex;
 
-    justify-content: space-between;
+    justify-content: space-between;
 
-    align-items: end;
+    align-items: end;
 
-    margin-bottom: 25px;
+    margin-bottom: 25px;
 
 }
 
 .content-heading h3 {
 
-    font-size: clamp(35px, 4vw, 58px);
+    font-size: clamp(35px, 4vw, 58px);
 
-    letter-spacing: -.05em;
+    letter-spacing: -.05em;
 
 }
 
 .content-heading p {
 
-    color: var(--muted);
+    color: var(--muted);
 
-    max-width: 420px;
+    max-width: 420px;
 
-    font-size: 14px;
+    font-size: 14px;
 
 }
 
 .masonry {
 
-    columns: 3 300px;
+    columns: 3 300px;
 
-    column-gap: 15px;
+    column-gap: 15px;
 
 }
 
 .masonry-card {
 
-    break-inside: avoid;
+    break-inside: avoid;
 
-    margin-bottom: 15px;
+    margin-bottom: 15px;
 
-    background: var(--paper);
+    background: var(--paper);
 
-    border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-    border-radius: 22px;
+    border-radius: 22px;
 
-    overflow: hidden;
+    overflow: hidden;
 
 }
 
 .masonry-image {
 
-    min-height: 270px;
+    min-height: 270px;
 
-    background: var(--soft);
+    background: var(--soft);
 
-    display: flex;
+    display: flex;
 
-    align-items: center;
+    align-items: center;
 
-    justify-content: center;
+    justify-content: center;
 
-    color: #857d74;
+    color: #857d74;
 
-    font-size: 11px;
+    font-size: 11px;
 
-    text-transform: uppercase;
+    text-transform: uppercase;
 
-    letter-spacing: .12em;
+    letter-spacing: .12em;
 
 }
 
 .masonry-card:nth-child(2) .masonry-image {
 
-    min-height: 380px;
+    min-height: 380px;
 
-    background: var(--pink);
+    background: var(--pink);
 
 }
 
 .masonry-card:nth-child(3) .masonry-image {
 
-    min-height: 320px;
+    min-height: 320px;
 
-    background: var(--green);
+    background: var(--green);
 
 }
 
 .masonry-card:nth-child(4) .masonry-image {
 
-    min-height: 430px;
+    min-height: 430px;
 
-    background: var(--yellow);
+    background: var(--yellow);
 
 }
 
 .masonry-caption {
 
-    padding: 18px;
+    padding: 18px;
 
 }
 
 .masonry-caption h4 {
 
-    font-size: 16px;
+    font-size: 16px;
 
 }
 
 .masonry-caption p {
 
-    color: var(--muted);
+    color: var(--muted);
 
-    font-size: 12px;
+    font-size: 12px;
 
-    margin-top: 5px;
+    margin-top: 5px;
 
 }
 
@@ -1431,119 +1431,119 @@ button {
 
 .carousel-wrapper {
 
-    position: relative;
+    position: relative;
 
 }
 
 .carousel {
 
-    display: flex;
+    display: flex;
 
-    gap: 15px;
+    gap: 15px;
 
-    overflow-x: auto;
+    overflow-x: auto;
 
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
 
-    scrollbar-width: none;
+    scrollbar-width: none;
 
-    padding-bottom: 8px;
+    padding-bottom: 8px;
 
 }
 
 .carousel::-webkit-scrollbar {
 
-    display: none;
+    display: none;
 
 }
 
 .carousel-card {
 
-    flex: 0 0 330px;
+    flex: 0 0 330px;
 
-    scroll-snap-align: start;
+    scroll-snap-align: start;
 
-    background: var(--paper);
+    background: var(--paper);
 
-    border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-    border-radius: 24px;
+    border-radius: 24px;
 
-    overflow: hidden;
+    overflow: hidden;
 
 }
 
 .carousel-image {
 
-    height: 380px;
+    height: 380px;
 
-    background: var(--soft);
+    background: var(--soft);
 
-    display: flex;
+    display: flex;
 
-    align-items: center;
+    align-items: center;
 
-    justify-content: center;
+    justify-content: center;
 
-    color: #857d74;
+    color: #857d74;
 
-    font-size: 11px;
+    font-size: 11px;
 
-    text-transform: uppercase;
+    text-transform: uppercase;
 
-    letter-spacing: .1em;
+    letter-spacing: .1em;
 
 }
 
 .carousel-card:nth-child(2) .carousel-image {
 
-    background: var(--pink);
+    background: var(--pink);
 
 }
 
 .carousel-card:nth-child(3) .carousel-image {
 
-    background: var(--green);
+    background: var(--green);
 
 }
 
 .carousel-card:nth-child(4) .carousel-image {
 
-    background: var(--yellow);
+    background: var(--yellow);
 
 }
 
 .carousel-caption {
 
-    padding: 20px;
+    padding: 20px;
 
 }
 
 .carousel-caption h4 {
 
-    font-size: 18px;
+    font-size: 18px;
 
 }
 
 .carousel-caption p {
 
-    color: var(--muted);
+    color: var(--muted);
 
-    font-size: 12px;
+    font-size: 12px;
 
-    margin-top: 5px;
+    margin-top: 5px;
 
 }
 
 .read-link {
 
-    display: inline-block;
+    display: inline-block;
 
-    margin-top: 12px;
+    margin-top: 12px;
 
-    font-size: 12px;
+    font-size: 12px;
 
-    text-decoration: underline;
+    text-decoration: underline;
 
 }
 
@@ -1551,95 +1551,95 @@ button {
 
 .lampa {
 
-    display: grid;
+    display: grid;
 
-    grid-template-columns: .8fr 1.2fr;
+    grid-template-columns: .8fr 1.2fr;
 
-    gap: 50px;
+    gap: 50px;
 
-    margin-top: 60px;
+    margin-top: 60px;
 
-    align-items: center;
+    align-items: center;
 
 }
 
 .magazine {
 
-    min-height: 550px;
+    min-height: 550px;
 
-    border-radius: 25px;
+    border-radius: 25px;
 
-    background: var(--dark);
+    background: var(--dark);
 
-    color: white;
+    color: white;
 
-    padding: 35px;
+    padding: 35px;
 
-    display: flex;
+    display: flex;
 
-    flex-direction: column;
+    flex-direction: column;
 
-    justify-content: space-between;
+    justify-content: space-between;
 
 }
 
 .magazine-name {
 
-    font-family: "Playfair Display", serif;
+    font-family: "Playfair Display", serif;
 
-    font-size: 75px;
+    font-size: 75px;
 
 }
 
 .magazine-label {
 
-    font-size: 11px;
+    font-size: 11px;
 
-    letter-spacing: .2em;
+    letter-spacing: .2em;
 
 }
 
 .lampa-info h3 {
 
-    font-size: 45px;
+    font-size: 45px;
 
-    line-height: 1;
+    line-height: 1;
 
-    letter-spacing: -.05em;
+    letter-spacing: -.05em;
 
 }
 
 .lampa-info p {
 
-    margin-top: 25px;
+    margin-top: 25px;
 
-    color: var(--muted);
+    color: var(--muted);
 
-    max-width: 550px;
+    max-width: 550px;
 
 }
 
 .article-links {
 
-    margin-top: 30px;
+    margin-top: 30px;
 
-    display: flex;
+    display: flex;
 
-    flex-wrap: wrap;
+    flex-wrap: wrap;
 
-    gap: 10px;
+    gap: 10px;
 
 }
 
 .article-link {
 
-    border: 1px solid var(--line);
+    border: 1px solid var(--line);
 
-    padding: 11px 16px;
+    padding: 11px 16px;
 
-    border-radius: 25px;
+    border-radius: 25px;
 
-    font-size: 12px;
+    font-size: 12px;
 
 }
 
@@ -1647,413 +1647,413 @@ button {
 
 .media-case {
 
-    margin-top: 70px;
+    margin-top: 70px;
 
-    background: var(--green);
+    background: var(--green);
 
-    border-radius: 35px;
+    border-radius: 35px;
 
-    padding: 45px;
+    padding: 45px;
 
 }
 
 .media-grid {
 
-    display: grid;
+    display: grid;
 
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
 
-    gap: 15px;
+    gap: 15px;
 
-    margin-top: 35px;
+    margin-top: 35px;
 
 }
 
 .media-card {
 
-    min-height: 300px;
+    min-height: 300px;
 
-    background: var(--paper);
+    background: var(--paper);
 
-    border-radius: 20px;
+    border-radius: 20px;
 
-    display: flex;
+    display: flex;
 
-    align-items: center;
+    align-items: center;
 
-    justify-content: center;
+    justify-content: center;
 
-    padding: 25px;
+    padding: 25px;
 
-    text-align: center;
+    text-align: center;
 
-    color: var(--muted);
+    color: var(--muted);
 
-    font-size: 12px;
+    font-size: 12px;
 
 }
 
 /* =========================
 
-   CONTACTS
+   CONTACTS
 
 ========================= */
 
 .contact-section {
 
-    min-height: 80vh;
+    min-height: 80vh;
 
-    display: flex;
+    display: flex;
 
-    align-items: center;
+    align-items: center;
 
 }
 
 .contact-box {
 
-    width: 100%;
+    width: 100%;
 
-    background: var(--dark);
+    background: var(--dark);
 
-    color: white;
+    color: white;
 
-    border-radius: 45px;
+    border-radius: 45px;
 
-    padding: 70px;
+    padding: 70px;
 
-    position: relative;
+    position: relative;
 
-    overflow: hidden;
+    overflow: hidden;
 
 }
 
 .contact-box:after {
 
-    content: "";
+    content: "";
 
-    width: 350px;
+    width: 350px;
 
-    height: 350px;
+    height: 350px;
 
-    border: 1px solid rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.15);
 
-    border-radius: 50%;
+    border-radius: 50%;
 
-    position: absolute;
+    position: absolute;
 
-    right: -100px;
+    right: -100px;
 
-    bottom: -150px;
+    bottom: -150px;
 
 }
 
 .contact-box .section-label {
 
-    color: #aaa49d;
+    color: #aaa49d;
 
 }
 
 .contact-title {
 
-    font-size: clamp(60px, 9vw, 140px);
+    font-size: clamp(60px, 9vw, 140px);
 
-    line-height: .8;
+    line-height: .8;
 
-    letter-spacing: -.075em;
+    letter-spacing: -.075em;
 
-    max-width: 950px;
+    max-width: 950px;
 
 }
 
 .contact-subtitle {
 
-    margin-top: 30px;
+    margin-top: 30px;
 
-    color: #aaa49d;
+    color: #aaa49d;
 
-    max-width: 500px;
+    max-width: 500px;
 
 }
 
 .contact-links {
 
-    display: flex;
+    display: flex;
 
-    flex-wrap: wrap;
+    flex-wrap: wrap;
 
-    gap: 12px;
+    gap: 12px;
 
-    margin-top: 45px;
+    margin-top: 45px;
 
 }
 
 .contact-link {
 
-    border: 1px solid #514e4a;
+    border: 1px solid #514e4a;
 
-    border-radius: 30px;
+    border-radius: 30px;
 
-    padding: 13px 19px;
+    padding: 13px 19px;
 
-    font-size: 13px;
+    font-size: 13px;
 
-    transition: .25s;
+    transition: .25s;
 
 }
 
 .contact-link:hover {
 
-    background: white;
+    background: white;
 
-    color: var(--dark);
+    color: var(--dark);
 
 }
 
 /* =========================
 
-   FOOTER
+   FOOTER
 
 ========================= */
 
 footer {
 
-    padding: 35px 0;
+    padding: 35px 0;
 
-    color: var(--muted);
+    color: var(--muted);
 
-    font-size: 11px;
+    font-size: 11px;
 
-    display: flex;
+    display: flex;
 
-    justify-content: space-between;
+    justify-content: space-between;
 
 }
 
 /* =========================
 
-   MOBILE
+   MOBILE
 
 ========================= */
 
 @media (max-width: 900px) {
 
-    .container {
+    .container {
 
-        width: min(100% - 30px, 700px);
+        width: min(100% - 30px, 700px);
 
-    }
+    }
 
-    .topbar {
+    .topbar {
 
-        width: calc(100% - 20px);
+        width: calc(100% - 20px);
 
-    }
+    }
 
-    .nav {
+    .nav {
 
-        display: none;
+        display: none;
 
-    }
+    }
 
-    .hero {
+    .hero {
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
 
-        padding-top: 110px;
+        padding-top: 110px;
 
-    }
+    }
 
-    .hero-photo {
+    .hero-photo {
 
-        min-height: 550px;
+        min-height: 550px;
 
-        order: 1;
+        order: 1;
 
-    }
+    }
 
-    .hero-photo img {
+    .hero-photo img {
 
-        min-height: 550px;
+        min-height: 550px;
 
-    }
+    }
 
-    .hero-content {
+    .hero-content {
 
-        order: 2;
+        order: 2;
 
-        padding-right: 0;
+        padding-right: 0;
 
-    }
+    }
 
-    .hero h1 {
+    .hero h1 {
 
-        font-size: 65px;
+        font-size: 65px;
 
-    }
+    }
 
-    .about-grid,
+    .about-grid,
 
-    .case-intro,
+    .case-intro,
 
-    .festival,
+    .festival,
 
-    .lampa {
+    .lampa {
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
 
-        gap: 35px;
+        gap: 35px;
 
-    }
+    }
 
-    .skill-grid {
+    .skill-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
 
-    }
+    }
 
-    .tools-grid {
+    .tools-grid {
 
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
 
-    }
+    }
 
-    .experience-columns {
+    .experience-columns {
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
 
-    }
+    }
 
-    .experience-card {
+    .experience-card {
 
-        padding: 30px;
+        padding: 30px;
 
-    }
+    }
 
-    .experience-head {
+    .experience-head {
 
-        flex-direction: column;
+        flex-direction: column;
 
-    }
+    }
 
-    .festival:nth-child(odd) {
+    .festival:nth-child(odd) {
 
-        direction: ltr;
+        direction: ltr;
 
-    }
+    }
 
-    .festival-photo,
+    .festival-photo,
 
-    .photo-placeholder {
+    .photo-placeholder {
 
-        min-height: 400px;
+        min-height: 400px;
 
-    }
+    }
 
-    .media-grid {
+    .media-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
 
-    }
+    }
 
-    .media-case {
+    .media-case {
 
-        padding: 25px;
+        padding: 25px;
 
-    }
+    }
 
-    .contact-box {
+    .contact-box {
 
-        padding: 40px 25px;
+        padding: 40px 25px;
 
-        border-radius: 30px;
+        border-radius: 30px;
 
-    }
+    }
 
-    .contact-title {
+    .contact-title {
 
-        font-size: 65px;
+        font-size: 65px;
 
-    }
+    }
 
-    footer {
+    footer {
 
-        flex-direction: column;
+        flex-direction: column;
 
-        gap: 10px;
+        gap: 10px;
 
-    }
+    }
 
 }
 
 @media (max-width: 500px) {
 
-    .section {
+    .section {
 
-        padding: 100px 0;
+        padding: 100px 0;
 
-    }
+    }
 
-    .hero {
+    .hero {
 
-        padding-top: 95px;
+        padding-top: 95px;
 
-    }
+    }
 
-    .hero-photo {
+    .hero-photo {
 
-        min-height: 450px;
+        min-height: 450px;
 
-        border-radius: 0 60px 20px 20px;
+        border-radius: 0 60px 20px 20px;
 
-    }
+    }
 
-    .hero-photo img {
+    .hero-photo img {
 
-        min-height: 450px;
+        min-height: 450px;
 
-    }
+    }
 
-    .hero h1 {
+    .hero h1 {
 
-        font-size: 55px;
+        font-size: 55px;
 
-    }
+    }
 
-    .position {
+    .position {
 
-        font-size: 27px;
+        font-size: 27px;
 
-    }
+    }
 
-    .tools-grid {
+    .tools-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
 
-    }
+    }
 
-    .case-grid {
+    .case-grid {
 
-        columns: 1;
+        columns: 1;
 
-    }
+    }
 
-    .carousel-card {
+    .carousel-card {
 
-        flex-basis: 285px;
+        flex-basis: 285px;
 
-    }
+    }
 
-    .magazine {
+    .magazine {
 
-        min-height: 420px;
+        min-height: 420px;
 
-    }
+    }
 
-    .magazine-name {
+    .magazine-name {
 
-        font-size: 60px;
+        font-size: 60px;
 
-    }
+    }
 
 }
 
@@ -2586,146 +2586,146 @@ img { max-width: 100%; }
 <body>
 <!-- =========================
 
-     NAVIGATION
+     NAVIGATION
 
 ========================= -->
 <nav class="topbar">
 
-    <a class="logo" href="#top">DB.</a>
+    <a class="logo" href="#top">DB.</a>
 
-    <div class="nav">
+    <div class="nav">
 
-        <a href="#about">Обо мне</a>
+        <a href="#about">Обо мне</a>
 
-        <a href="#skills">Навыки</a>
+        <a href="#skills">Навыки</a>
 
-        <a href="#experience">Опыт</a>
+        <a href="#experience">Опыт</a>
 
-        <a href="#case">Case Study</a>
+        <a href="#case">Case Study</a>
 
-        <a href="#festivals">Фестивали</a>
+        <a href="#festivals">Фестивали</a>
 
-        <a href="#content">Content &amp; PR</a>
+        <a href="#content">Content &amp; PR</a>
 
-        <a href="#recommendation">Рекомендации</a>
+        <a href="#recommendation">Рекомендации</a>
 <a href="#contacts">Контакты</a>
 
-    </div>
+    </div>
 <button aria-label="Открыть меню" class="burger" type="button"><span></span><span></span><span></span></button><div class="mobile-nav"><a href="#about">Обо мне</a><a href="#skills">Навыки</a><a href="#experience">Опыт</a><a href="#case">Case Study</a><a href="#festivals">Фестивали</a><a href="#content">Content &amp; PR</a><a href="#recommendation">Рекомендации</a><a href="#contacts">Контакты</a></div></nav>
 <main id="top">
 <!-- =========================
 
-     01 — HERO
+     01 — HERO
 
 ========================= -->
 <section class="hero container">
 
-    <div class="hero-photo">
+    <div class="hero-photo">
 
-        <img alt="Дарья Богомолова" src="photo1.jpg"/>
+        <img alt="Дарья Богомолова" src="photo1.jpg"/>
 
-        <div class="photo-label">
+        <div class="photo-label">
 
-            Marketing · Communications
+            Marketing · Communications
 
-        </div>
+        </div>
 
-    </div>
-
-
-    <div class="hero-content">
-
-        <div class="eyebrow">
-
-            Portfolio / 2026
-
-        </div>
-
-        <h1><span>Дарья</span><span>Богомолова</span></h1>
-
-        <div class="position">Ассистент маркетолога /<br/><span class="position-second-line">PR-менеджера</span></div>
-
-        <div class="hero-line"></div>
-
-        <p class="hero-description">Развиваюсь в сфере маркетинга, PR и event. Верю, что хороший проект начинается с искреннего интереса к делу.</p>
+    </div>
 
 
-        <div class="socials">
+    <div class="hero-content">
 
-            <!-- Telegram -->
+        <div class="eyebrow">
 
-            <a aria-label="Telegram" class="social" href="https://t.me/dariia1" rel="noopener" target="_blank">
+            Portfolio / 2026
 
-                <svg fill="none" viewbox="0 0 24 24">
+        </div>
 
-                    <path d="M21.5 4.5L18.3 19.6C18.1 20.7 17.5 21 16.6 20.5L11.3 16.6L8.7 19.1C8.4 19.4 8.1 19.7 7.5 19.7L7.9 14.3L17.7 5.5C18.1 5.1 17.6 4.9 17.1 5.2L5 12.8L-.2 11.2C-1.3 10.9-1.3 10.1.1 9.5L20.2 1.7C21.2 1.3 22 1.9 21.5 4.5Z" fill="currentColor"></path>
+        <h1><span>Дарья</span><span>Богомолова</span></h1>
 
-                </svg>
+        <div class="position">Ассистент маркетолога /<br/><span class="position-second-line">PR-менеджера</span></div>
 
-            </a>
+        <div class="hero-line"></div>
 
-            <!-- Phone -->
+        <p class="hero-description">Развиваюсь в сфере маркетинга, PR и event. Верю, что хороший проект начинается с искреннего интереса к делу.</p>
 
-            <a aria-label="Телефон" class="social" href="tel:+79772650578">
 
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+        <div class="socials">
 
-                    <path d="M6.5 3.5l3 2.2-1.7 3.1c1 2.1 2.3 3.4 4.4 4.4l3.1-1.7 2.2 3c.4.6.3 1.4-.2 1.9l-1.5 1.5c-.5.5-1.3.7-2 .4C7.9 16.2 4.8 13.1 2.4 7.2c-.3-.7-.1-1.5.4-2l1.7-1.7c.5-.5 1.4-.4 2 .0Z"></path>
+            <!-- Telegram -->
 
-                </svg>
+            <a aria-label="Telegram" class="social" href="https://t.me/dariia1" rel="noopener" target="_blank">
 
-            </a>
+                <svg fill="none" viewbox="0 0 24 24">
 
-            <!-- Email -->
+                    <path d="M21.5 4.5L18.3 19.6C18.1 20.7 17.5 21 16.6 20.5L11.3 16.6L8.7 19.1C8.4 19.4 8.1 19.7 7.5 19.7L7.9 14.3L17.7 5.5C18.1 5.1 17.6 4.9 17.1 5.2L5 12.8L-.2 11.2C-1.3 10.9-1.3 10.1.1 9.5L20.2 1.7C21.2 1.3 22 1.9 21.5 4.5Z" fill="currentColor"></path>
 
-            <a aria-label="Email" class="social" href="mailto:Bogomolova20403@yandex.ru">
+                </svg>
 
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+            </a>
 
-                    <rect height="14" rx="2" width="18" x="3" y="5"></rect>
+            <!-- Phone -->
 
-                    <path d="M4 7l8 6 8-6"></path>
+            <a aria-label="Телефон" class="social" href="tel:+79772650578">
 
-                </svg>
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
 
-            </a>
+                    <path d="M6.5 3.5l3 2.2-1.7 3.1c1 2.1 2.3 3.4 4.4 4.4l3.1-1.7 2.2 3c.4.6.3 1.4-.2 1.9l-1.5 1.5c-.5.5-1.3.7-2 .4C7.9 16.2 4.8 13.1 2.4 7.2c-.3-.7-.1-1.5.4-2l1.7-1.7c.5-.5 1.4-.4 2 .0Z"></path>
+
+                </svg>
+
+            </a>
+
+            <!-- Email -->
+
+            <a aria-label="Email" class="social" href="mailto:Bogomolova20403@yandex.ru">
+
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+
+                    <rect height="14" rx="2" width="18" x="3" y="5"></rect>
+
+                    <path d="M4 7l8 6 8-6"></path>
+
+                </svg>
+
+            </a>
 </div>
 
 
-        <a class="primary-button" href="#case">
+        <a class="primary-button" href="#case">
 
-            Посмотреть проекты
+            Посмотреть проекты
 
-            <span>→</span>
+            <span>→</span>
 
-        </a>
+        </a>
 
-    </div>
+    </div>
 </section>
 <!-- =========================
 
-     ОБО МНЕ
+     ОБО МНЕ
 
 ========================= -->
 <section class="section container" id="about">
 
-    <div class="section-label">
+    <div class="section-label">
 
-        01 / About me
+        01 / About me
 
-    </div>
+    </div>
 
-    <div class="about-grid">
+    <div class="about-grid">
 
-        <div>
+        <div>
 
-            <h2 class="section-title">Обо мне</h2>
+            <h2 class="section-title">Обо мне</h2>
 
-        </div>
+        </div>
 
-        <div>
+        <div>
 
-            <div class="about-side">
+            <div class="about-side">
 <p>
                     Учусь на последнем курсе СПбГЭТУ «ЛЭТИ» по направлению «Реклама и связи с общественностью», развиваюсь в маркетинге и коммуникациях. За время учёбы получила практический опыт в ПСБ и МТС, а также поработала над учебными маркетинговыми и коммуникационными проектами.
                 </p>
@@ -2744,31 +2744,31 @@ img { max-width: 100%; }
 </div>
 </div>
 
-            </div>
+            </div>
 
-        </div>
+        </div>
 
-    
+    
 </section>
 <!-- =========================
 
-     02 — SKILLS
+     02 — SKILLS
 
 ========================= -->
 <section class="section container" id="skills">
 
-    <div class="section-label">
+    <div class="section-label">
 
-        02 / Skills
+        02 / Skills
 
-    </div>
+    </div>
 
-    <h2 class="section-title">Ключевые навыки</h2>
+    <h2 class="section-title">Ключевые навыки</h2>
 
-    <p class="section-intro">Работала с маркетинговыми задачами на разных этапах: анализировала аудиторию, планировала коммуникации, готовила материалы и координировала их реализацию.</p>
+    <p class="section-intro">Работала с маркетинговыми задачами на разных этапах: анализировала аудиторию, планировала коммуникации, готовила материалы и координировала их реализацию.</p>
 
 
-    
+    
     <div class="skill-grid">
 <div class="skill-card">
 <div class="skill-number">01</div>
@@ -2857,46 +2857,46 @@ img { max-width: 100%; }
 </div></div></section>
 <!-- =========================
 
-     03 — EXPERIENCE
+     03 — EXPERIENCE
 
 ========================= -->
 <section class="section container" id="experience">
 
-    <div class="section-label">
+    <div class="section-label">
 
-        03 / Experience
+        03 / Experience
 
-    </div>
+    </div>
 
-    <h2 class="section-title">
+    <h2 class="section-title">
 
-        Опыт<br/>
+        Опыт<br/>
 
-        работы
+        работы
 
-    </h2>
-
-
-    <!-- PSB -->
-
-    <div class="experience-card">
-
-        <div class="experience-head">
-
-            <div>
-
-                <div class="company">ПСБ</div>
-
-                <div class="role">Младший специалист отдела маркетинга</div>
-
-            </div>
-
-            <div class="period">октябрь 2025 – апрель 2026</div>
-
-        </div>
+    </h2>
 
 
-        <div class="experience-columns">
+    <!-- PSB -->
+
+    <div class="experience-card">
+
+        <div class="experience-head">
+
+            <div>
+
+                <div class="company">ПСБ</div>
+
+                <div class="role">Младший специалист отдела маркетинга</div>
+
+            </div>
+
+            <div class="period">октябрь 2025 – апрель 2026</div>
+
+        </div>
+
+
+        <div class="experience-columns">
 <div class="experience-column">
 <h3>Мероприятия</h3>
 <ul>
@@ -2922,10 +2922,10 @@ img { max-width: 100%; }
 </div>
 </div>
 
-    
+    
 
 
-    <!-- MTS -->
+    <!-- MTS -->
 <div class="experience-card">
 <div class="experience-head">
 <div>
@@ -2952,45 +2952,45 @@ img { max-width: 100%; }
 </section>
 <!-- =========================
 
-     04 — CASE STUDY
+     04 — CASE STUDY
 
 ========================= -->
 <section class="section container" id="case">
 
-    <div class="section-label">
+    <div class="section-label">
 
-        04 / Case Study
+        04 / Case Study
 
-    </div>
+    </div>
 
 
-    <div class="case-intro">
+    <div class="case-intro">
 <div class="case-title-wrap"><div class="case-title case-title-inline">РОББО</div></div>
 <div class="case-context">
 
-            <p>
+            <p>
 
-                <strong>Учебный проект на реальном брифе компании «РОББО»</strong>
+                <strong>Учебный проект на реальном брифе компании «РОББО»</strong>
 
-            </p>
+            </p>
 
-            <br/>
+            <br/>
 
-            <p>В рамках последнего учебного проекта работала над кейсом для «РОББО» – международной сети клубов робототехники для детей. Задача заказчика – повысить узнаваемость бренда среди родителей детей среднего и школьного возраста и привлечь внимание к занятиям в клубах.</p>
+            <p>В рамках последнего учебного проекта работала над кейсом для «РОББО» – международной сети клубов робототехники для детей. Задача заказчика – повысить узнаваемость бренда среди родителей детей среднего и школьного возраста и привлечь внимание к занятиям в клубах.</p>
 <br/>
 <p>На основе анализа целевой аудитории, её потребностей и пути принятия решения разработала коммуникационную стратегию рекламной кампании и рекламные продукты для разных точек контакта с аудиторией.</p>
 
-        </div>
+        </div>
 
-    </div>
-
-
-    <div class="case-grid">
+    </div>
 
 
-        <div class="case-item">
+    <div class="case-grid">
 
-            <div class="case-visual canvas has-image">
+
+        <div class="case-item">
+
+            <div class="case-visual canvas has-image">
 <div class="visual-label">Portfolio / Lean Canvas</div>
 <img alt="Lean Canvas" class="case-image" src="Lean-canvas.png"/>
 </div>
@@ -2999,12 +2999,12 @@ img { max-width: 100%; }
 <p>Структурирование идеи и бизнес-модели проекта.</p>
 </div>
 
-        </div>
+        </div>
 
 
-        <div class="case-item">
+        <div class="case-item">
 
-            <div class="case-visual cjm has-image">
+            <div class="case-visual cjm has-image">
 <div class="visual-label">Portfolio / CJM</div>
 <img alt="CJM" class="case-image" src="cjm.png"/>
 </div>
@@ -3013,12 +3013,12 @@ img { max-width: 100%; }
 <p>Путь клиента и ключевые точки взаимодействия.</p>
 </div>
 
-        </div>
+        </div>
 
 
-        <div class="case-item">
+        <div class="case-item">
 
-            <div class="case-visual avatar has-image">
+            <div class="case-visual avatar has-image">
 <div class="visual-label">Portfolio / Аватар клиента</div>
 <img alt="Аватар клиента" class="case-image" src="avatar.png"/>
 </div>
@@ -3027,12 +3027,12 @@ img { max-width: 100%; }
 <p>Портрет целевой аудитории.</p>
 </div>
 
-        </div>
+        </div>
 
 
-        <div class="case-item">
+        <div class="case-item">
 
-            <div class="case-visual email has-image">
+            <div class="case-visual email has-image">
 <div class="visual-label">Portfolio / Email</div>
 <img alt="Email" class="case-image" src="email.png"/>
 </div>
@@ -3041,12 +3041,12 @@ img { max-width: 100%; }
 <p>Макет рекламного письма.</p>
 </div>
 
-        </div>
+        </div>
 
 
-        <div class="case-item">
+        <div class="case-item">
 
-            <div class="case-visual print has-image">
+            <div class="case-visual print has-image">
 <div class="visual-label">Portfolio / Печатная реклама</div>
 <img alt="Печатная реклама" class="case-image" src="reklama.png"/>
 </div>
@@ -3055,12 +3055,12 @@ img { max-width: 100%; }
 <p>Разработка рекламного макета.</p>
 </div>
 
-        </div>
+        </div>
 
 
-        <div class="case-item">
+        <div class="case-item">
 
-            <div class="case-visual outdoor has-image">
+            <div class="case-visual outdoor has-image">
 <div class="visual-label">Portfolio / Наружная реклама</div>
 <img alt="Наружная реклама" class="case-image" src="narys.png"/>
 </div>
@@ -3069,12 +3069,12 @@ img { max-width: 100%; }
 <p>Визуальные рекламные решения.</p>
 </div>
 
-        </div>
+        </div>
 
-    </div>
+    </div>
 
 
-    <div class="case-more">
+    <div class="case-more">
 <div class="case-more-text">
 <h3 style="font-size:30px; margin-bottom:12px;">Подробная версия проекта</h3>
 <p>Представленные материалы – часть разработанной кампании. В работе также провела конкурентный и SWOT-анализ, определила ключевые точки контакта с аудиторией, подобрала каналы коммуникации и разработала медиаплан с метриками и бюджетом. Отдельно проработала концепцию участия в фестивале, триггерную рассылку и ТЗ для видеоконтента.</p>
@@ -3087,123 +3087,123 @@ img { max-width: 100%; }
 </section>
 <!-- =========================
 
-     05 — FESTIVALS
+     05 — FESTIVALS
 
 ========================= -->
 <section class="section container" id="festivals">
 
-    <div class="section-label">
+    <div class="section-label">
 
-        05 / Festivals
+        05 / Festivals
 
-    </div>
+    </div>
 
-    <h2 class="section-title">
+    <h2 class="section-title">
 
-        Фестивали<br/>
+        Фестивали<br/>
 
-        и события
+        и события
 
-    </h2>
-
-
-    <!-- LETI -->
-
-    <div class="festival">
-
-        <div class="festival-photo"><img alt="LETI Communication Experts Festival" src="Leti-fest.png"/></div>
+    </h2>
 
 
-        <div class="festival-info">
+    <!-- LETI -->
 
-            <div class="festival-number">
+    <div class="festival">
 
-                01 / LETI
-
-            </div>
-
-            <h3>
-
-                LETI Communication
-
-                Experts Festival
-
-            </h3>
-
-            <div class="festival-role">Куратор направления выездных мастер-классов</div>
-
-            <ul><li>Сопровождала группы участников (до 20 человек) на выездные мастер-классы в компании и культурные центры Санкт-Петербурга (Design District DAA, завод «Балтика», «Петрович Тех»): организовывала сбор и сверку списков, контролировала своевременное прибытие групп без сбоев в расписании и потерь участников.</li><li>Оказывала организационную поддержку мастер-классов в вузе: проверяла техническую готовность аудиторий, встречала спикеров, вручала подарки.</li><li>Участвовала в разработке квеста для команд-участников: формулировала задания, готовила маршрутные листы и инструкции для организаторов.</li><li>В форс-мажорной ситуации (опоздание команд на старт) предложила решение — корректировку времени на точках с помощью таймеров, что позволило избежать спорных ситуаций и уложиться в график.</li><li>Готовила документацию направления (списки участников, организаторов, спикеров, маршрутные листы, чек-листы), что упрощало взаимодействие между 15 членами команды.</li></ul>
-
-        </div>
-
-    </div>
+        <div class="festival-photo"><img alt="LETI Communication Experts Festival" src="Leti-fest.png"/></div>
 
 
-    <!-- OSVETI NAUKU -->
+        <div class="festival-info">
 
-    <div class="festival">
+            <div class="festival-number">
 
-        <div class="festival-photo"><img alt="Фестиваль «Освети Науку»" src="osveti.jpg"/></div>
+                01 / LETI
+
+            </div>
+
+            <h3>
+
+                LETI Communication
+
+                Experts Festival
+
+            </h3>
+
+            <div class="festival-role">Куратор направления выездных мастер-классов</div>
+
+            <ul><li>Сопровождала группы участников (до 20 человек) на выездные мастер-классы в компании и культурные центры Санкт-Петербурга (Design District DAA, завод «Балтика», «Петрович Тех»): организовывала сбор и сверку списков, контролировала своевременное прибытие групп без сбоев в расписании и потерь участников.</li><li>Оказывала организационную поддержку мастер-классов в вузе: проверяла техническую готовность аудиторий, встречала спикеров, вручала подарки.</li><li>Участвовала в разработке квеста для команд-участников: формулировала задания, готовила маршрутные листы и инструкции для организаторов.</li><li>В форс-мажорной ситуации (опоздание команд на старт) предложила решение — корректировку времени на точках с помощью таймеров, что позволило избежать спорных ситуаций и уложиться в график.</li><li>Готовила документацию направления (списки участников, организаторов, спикеров, маршрутные листы, чек-листы), что упрощало взаимодействие между 15 членами команды.</li></ul>
+
+        </div>
+
+    </div>
 
 
-        <div class="festival-info">
+    <!-- OSVETI NAUKU -->
 
-            <div class="festival-number">
+    <div class="festival">
 
-                02 / EVENT
+        <div class="festival-photo"><img alt="Фестиваль «Освети Науку»" src="osveti.jpg"/></div>
 
-            </div>
 
-            <h3>
+        <div class="festival-info">
 
-                «Освети<br/>
+            <div class="festival-number">
 
-                Науку»
+                02 / EVENT
 
-            </h3>
+            </div>
 
-            <div class="festival-role">
+            <h3>
 
-                Координатор
+                «Освети<br/>
 
-            </div>
+                Науку»
 
-            <ul><li>Провела двухэтапную информационную кампанию – разослала 37 писем-приглашений в вузы СЗФО и России (23 в первом сезоне, 14 во втором) и прямые контакты с 20+ медиацентрами и студенческими научными обществами. Результат – рост заявок на 50% (со 100 до 150) во втором сезоне относительно плана.</li><li>Проверила 50+ заявок по направлению «журналистика», выявляла несоответствия критериям и запрашивала недостающие данные – обеспечила точность итоговых списков для жюри.</li><li>Прямая коммуникация с участниками: обзвонила более 20 финалистов для подтверждения участия и записи на экскурсии (редакция «Российской газеты», ТАСС, Музей-квартира А. С. Попова), оперативно решала логистические вопросы на площадке.</li><li>В команде из 6 человек отвечала за встречу гостей, регистрацию, выдачу бейджей и материалов, сопровождение экскурсий.</li></ul>
+            </h3>
 
-        </div>
+            <div class="festival-role">
 
-    </div>
+                Координатор
+
+            </div>
+
+            <ul><li>Провела двухэтапную информационную кампанию – разослала 37 писем-приглашений в вузы СЗФО и России (23 в первом сезоне, 14 во втором) и прямые контакты с 20+ медиацентрами и студенческими научными обществами. Результат – рост заявок на 50% (со 100 до 150) во втором сезоне относительно плана.</li><li>Проверила 50+ заявок по направлению «журналистика», выявляла несоответствия критериям и запрашивала недостающие данные – обеспечила точность итоговых списков для жюри.</li><li>Прямая коммуникация с участниками: обзвонила более 20 финалистов для подтверждения участия и записи на экскурсии (редакция «Российской газеты», ТАСС, Музей-квартира А. С. Попова), оперативно решала логистические вопросы на площадке.</li><li>В команде из 6 человек отвечала за встречу гостей, регистрацию, выдачу бейджей и материалов, сопровождение экскурсий.</li></ul>
+
+        </div>
+
+    </div>
 </section>
 <!-- =========================
 
-     06 — CONTENT & PR
+     06 — CONTENT & PR
 
 ========================= -->
 <section class="section container" id="content">
 
-    <div class="section-label">
+    <div class="section-label">
 
-        06 / Content &amp; PR
+        06 / Content &amp; PR
 
-    </div>
+    </div>
 
-    <h2 class="section-title content-section-title">Контент и PR</h2>
-
-
-    <!-- ETU MEDIA -->
-
-    <div class="content-block">
-
-        <div class="content-heading">
-
-            <h3>ETU Media</h3>
-
-            <p>Участвовала в продвижении медиацентра университета: писала тексты для постов в группу медиацентра во «ВКонтакте» (дайджесты, креативные подборки на студенческую тематику), а также лонгриды и статьи для студенческого журнала LAMPA.</p>
-
-        </div>
+    <h2 class="section-title content-section-title">Контент и PR</h2>
 
 
-        <div class="carousel">
+    <!-- ETU MEDIA -->
+
+    <div class="content-block">
+
+        <div class="content-heading">
+
+            <h3>ETU Media</h3>
+
+            <p>Участвовала в продвижении медиацентра университета: писала тексты для постов в группу медиацентра во «ВКонтакте» (дайджесты, креативные подборки на студенческую тематику), а также лонгриды и статьи для студенческого журнала LAMPA.</p>
+
+        </div>
+
+
+        <div class="carousel">
 <div class="carousel-card">
 <div class="carousel-image"><img alt="Пост-карточки" src="kart.png"/></div>
 <div class="carousel-caption">
@@ -3229,22 +3229,22 @@ img { max-width: 100%; }
 </div>
 <div style="margin-top:70px;">
 
-            <div class="content-heading">
+            <div class="content-heading">
 
-                <h3>Лонгриды</h3>
+                <h3>Лонгриды</h3>
 
-                <p>
+                <p>
 
-                    Авторские материалы
+                    Авторские материалы
 
-                    для университетского медиа.
+                    для университетского медиа.
 
-                </p>
+                </p>
 
-            </div>
+            </div>
 
 
-            <div class="masonry" style="columns:2 420px;">
+            <div class="masonry" style="columns:2 420px;">
 <div class="masonry-card">
 <div class="masonry-image"><img alt="Лонгрид 01" src="long1.png"/></div>
 <div class="masonry-caption">
@@ -3263,22 +3263,22 @@ img { max-width: 100%; }
 </div>
 <!-- LAMPA -->
 
-    <div class="content-block">
+    <div class="content-block">
 
-        <div class="content-heading">
+        <div class="content-heading">
 
-            <h3>LAMPA</h3>
+            <h3>LAMPA</h3>
 
-            <p>
+            <p>
 
-                Автор материалов для студенческого журнала.
+                Автор материалов для студенческого журнала.
 
-            </p>
+            </p>
 
-        </div>
+        </div>
 
 
-        <div class="lampa-stack">
+        <div class="lampa-stack">
 <div class="lampa-card">
 <img alt="Разворот LAMPA №019" src="lampa1.png"/>
 <a class="mini-button" href="https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2FL13g1R2rhEyzXaqxFR1Ur%2BsLgOLby3gcwivcw9414fNKQHPg2dxxkUuIxKxu8i4fq%2FJ6bpmRyOJonT3VoXnDag%3D%3D%3A%2F%D0%A1%D0%9F%D0%B1%D0%93%D0%AD%D0%A2%D0%A3_%D0%9B%D0%AD%D0%A2%D0%98_LAMPA_019.pdf&amp;name=%D0%A1%D0%9F%D0%93%D0%AD%D0%A2%D0%A3_%D0%9B%D0%AD%D0%A2%D0%98_LAMPA_019.pdf&amp;nosw=1" rel="noopener" target="_blank">Читать выпуск</a>
@@ -3291,44 +3291,44 @@ img { max-width: 100%; }
 </div>
 <!-- LADOGA -->
 
-    <div class="content-block">
+    <div class="content-block">
 
-        <div class="media-case">
+        <div class="media-case">
 
-            <div class="content-heading">
+            <div class="content-heading">
 
-                <h3>
+                <h3>
 
-                    «Ладога — 2024»
+                    «Ладога — 2024»
 
-                </h3>
+                </h3>
 
-                <p>
+                <p>
 
-                    Медиаволонтёр на молодёжном форуме.
+                    Медиаволонтёр на молодёжном форуме.
 
-                </p>
+                </p>
 
-            </div>
-
-
-            <p style="max-width:650px;color:#6d766b;font-size:15px;">Написала пресс-релиз по итогам форума, который организаторы направили в рассылку СМИ; материал был опубликован в двух онлайн-изданиях Псковской области – «Псковском агентстве информации» и «Псковской ленте новостей».</p>
+            </div>
 
 
-            <div class="media-grid">
+            <p style="max-width:650px;color:#6d766b;font-size:15px;">Написала пресс-релиз по итогам форума, который организаторы направили в рассылку СМИ; материал был опубликован в двух онлайн-изданиях Псковской области – «Псковском агентстве информации» и «Псковской ленте новостей».</p>
+
+
+            <div class="media-grid">
 <div class="media-card"><img alt="Анонс пресс-релиза" src="anons.png"/></div>
 <div class="media-card"><img alt="Псковская лента новостей" src="lenta.png"/></div>
 <div class="media-card"><img alt="Псковское агентство информации" src="lenta2.png"/></div>
 </div>
 <div class="article-links"><a class="article-link" href="https://disk.yandex.ru/edit/disk/disk%2F%D0%9F%D0%BE%D1%80%D1%82%D1%84%D0%BE%D0%BB%D0%B8%D0%BE_%D0%91%D0%BE%D0%B3%D0%BE%D0%BC%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0%20%D0%94%D0%B0%D1%80%D1%8C%D1%8F%2F%D0%A4%D0%BE%D1%80%D1%83%D0%BC%20%C2%AB%D0%9B%D0%B0%D0%B4%D0%BE%D0%B3%D0%B0%C2%BB%2F%D0%9F%D1%80%D0%B5%D1%81%D1%81-%D1%80%D0%B5%D0%BB%D0%B8%D0%B7.docx?sk=y985e9a5f03119cfcd7bba54f1da1db7d" rel="noopener" target="_blank">Читать пресс-релиз →</a></div>
 
-        </div>
+        </div>
 
-    </div>
+    </div>
 </section>
 <!-- =========================
 
-     07 — CONTACTS
+     07 — CONTACTS
 
 ========================= -->
 <!-- =========================
@@ -3347,57 +3347,57 @@ img { max-width: 100%; }
 </section>
 <section class="section container contact-section" id="contacts">
 
-    <div class="contact-box">
+    <div class="contact-box">
 
-        <div class="section-label">
+        <div class="section-label">
 
-            08 / Contacts
+            08 / Contacts
 
-        </div>
+        </div>
 
-        <div class="contact-title">Будем<br/>на связи</div>
+        <div class="contact-title">Будем<br/>на связи</div>
 
-        <p class="contact-subtitle">Если вам откликается мой опыт и подход к работе, буду рада познакомиться и обсудить возможное сотрудничество.</p>
+        <p class="contact-subtitle">Если вам откликается мой опыт и подход к работе, буду рада познакомиться и обсудить возможное сотрудничество.</p>
 
 
-        <div class="contact-links">
+        <div class="contact-links">
 
-            <a class="contact-link" href="https://t.me/dariia1" rel="noopener" target="_blank">
+            <a class="contact-link" href="https://t.me/dariia1" rel="noopener" target="_blank">
 
-                Telegram →
+                Telegram →
 
-            </a>
+            </a>
 
-            <a class="contact-link" href="tel:+79772650578">
+            <a class="contact-link" href="tel:+79772650578">
 
-                Телефон →
+                Телефон →
 
-            </a>
+            </a>
 
-            <a class="contact-link" href="mailto:Bogomolova20403@yandex.ru">
+            <a class="contact-link" href="mailto:Bogomolova20403@yandex.ru">
 
-                Email →
+                Email →
 
-            </a>
+            </a>
 
-        </div>
+        </div>
 
-    </div>
+    </div>
 </section>
 </main>
 <footer class="container">
 
-    <div>
+    <div>
 
-        Дарья Богомолова · Portfolio 2026
+        Дарья Богомолова · Portfolio 2026
 
-    </div>
+    </div>
 
-    <div>
+    <div>
 
-        Marketing · Communications · Events
+        Marketing · Communications · Events
 
-    </div>
+    </div>
 </footer>
 <script>
 const burger = document.querySelector('.burger');
