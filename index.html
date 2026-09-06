@@ -2546,6 +2546,41 @@ img { max-width: 100%; }
   #about .section-title { font-size:42px; }
   .contact-title { font-size:52px; }
 }
+
+/* LAST TYPOGRAPHIC + GRID POLISH */
+@media (min-width:901px) {
+  /* Put festival images on the same visual baseline as their main titles,
+     rather than floating above the title block. */
+  .festival-photo { margin-top:42px; }
+
+  /* Side descriptions never sit above their corresponding headings. */
+  .content-heading { align-items:start; }
+  .content-heading h3 { margin:0; line-height:1; }
+  .content-heading p { margin:2px 0 0; }
+
+  /* Slightly larger longread windows for better image readability. */
+  .masonry-image { height:300px; min-height:300px !important; }
+
+  /* Recommendation uses exactly the same image window scale as longreads. */
+  .recommendation-image-wrap { height:300px; }
+  .recommendation-copy { padding-top:10px; }
+}
+
+.recommendation-link { margin-top:14px; text-transform:none; }
+
+@media (max-width:900px) {
+  .festival-photo { margin-top:0; }
+  .content-heading h3 { margin:0; }
+  .content-heading p { margin:0; }
+  .masonry-image { height:280px; min-height:280px !important; }
+  .recommendation-image-wrap { height:280px; }
+}
+
+@media (max-width:520px) {
+  .masonry-image { height:250px; min-height:250px !important; }
+  .recommendation-image-wrap { height:250px; }
+}
+
 </style>
 </head>
 <body>
@@ -3306,6 +3341,7 @@ img { max-width: 100%; }
 <div class="recommendation-image-wrap"><img alt="Рекомендательное письмо" class="recommendation-image" src="pismo.png"/></div>
 <div class="recommendation-copy">
 <div class="recommendation-title">Рекомендательное письмо от руководителя по маркетинговым проектам ПСБ</div>
+<a class="read-link recommendation-link" href="https://docs.yandex.ru/docs/view?url=ya-disk%3A%2F%2F%2Fdisk%2F%D0%9F%D0%BE%D1%80%D1%82%D1%84%D0%BE%D0%BB%D0%B8%D0%BE_%D0%91%D0%BE%D0%B3%D0%BE%D0%BC%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0%20%D0%94%D0%B0%D1%80%D1%8C%D1%8F%2F%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%B0%2F%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE.pdf&amp;name=%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE.pdf&amp;uid=418909401&amp;nosw=1" rel="noopener" target="_blank">читать письмо →</a>
 </div>
 </div>
 </section>
